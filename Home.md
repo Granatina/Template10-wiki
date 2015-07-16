@@ -1,5 +1,7 @@
 ##Frequently Asked Questions about Template 10
 
+* **Is Template 10 ready to use?** No. Not yet. Wait until Windows 10 RTM.
+
 * **What is Template 10?** Template 10 is a better project template for Windows UWP apps. For 90% of app developers, Template 10 is the ideal project template. It was inspired by the Microsoft Patterns & Practices team.  
 
 * **Why would I use Template 10?** There no good reason for you to use Template 10 until you understand it. If you aren't great at reverse-engineering our code in GitHub, then you better wait for documentation (soon).
