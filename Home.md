@@ -18,6 +18,8 @@
 
 * **What's the motivation behind Template 10?** Honestly? The OOB VS templates just make us angry. In Windows 8 templates had all kinds of insanity and in Windows 10 there's only Blank. Template 10 tries to strike a balance. 
 
+* **Is Template 10 related to Microsoft Patterns & Practices' Prism?** No. But, yes - at least in spirit. Some of the code in Template 10 is highly inspired by the code from Prism for StoreApps (which was for Windows 8 apps). In addition, the APIs in Template 10 are intentionally reflective of Prism for WPF so our WPF-XAML brothers and sisters can find some familiarity in Windows UWP apps, as they begin to transition. But, Template 10 is written from scratch.
+
 * **Can I contribute to Template 10?** Yes. Just submit a pull request. 
 
 * **Can Template 10 work with existing apps?** Yes. Template 10 is enabled by the external [Template 10 Library], which can be referenced in and used by existing Windows app projects. 
@@ -25,6 +27,8 @@
 * **Does Template 10 support Visual Basic?** Not as a project template, no. But, Template 10 is enabled by the external [Template 10 Library], it can be referenced in and used by Visual Basic apps.
 
 * **How do I use the Template 10 project template?** [Updated 7/16/2015] The plan is to put the project template into the Visual Studio gallery within a week or so of Windows 10 RTM (7/29). In the meantime, you have two options. 1) you can clone the project and just use the blank project as your base. Or, 2) .. nope, just one option right now. Sorry. 
+
+* **Is the Template 10 Library in NuGet yet?** No, not yet. We'll put it up there around Windows 10 RTM.
 
 * **Will Template 10 use NuGet 2.0 or NuGet 3.0?** We're upgrading it now to NuGet 3.0. This means the project will require VS RTM which isn't released yet. So, we won't commit NuGet 3.0 changes for a while.
 
