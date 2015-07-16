@@ -1,6 +1,4 @@
-Welcome to the Template10 wiki!
-
-##Frequently Asked Questions
+##Frequently Asked Questions about Template 10
 
 * **What is Template 10?** Template 10 is a better project template for Windows UWP apps. For 90% of app developers, Template 10 is the ideal project template. It was inspired by the Microsoft Patterns & Practices team.  
 
@@ -14,7 +12,11 @@ Welcome to the Template10 wiki!
 
 * **Does Template 10 require MMVM?** No, but we certainly love MVVM and can hardly imagine why a developer would not use it. But if your project doesn't, that's cool. Template 10 doesn't require it in any way.
 
+* **Does Template 10 require Dependency Injection?** No. But this is another one of those things that's difficult to see writing a Windows XAML app without. But, no, there's no dependency on DI in Template 10.
+
 * **Is Template 10 free?** I guess, yes. Template 10 is an open source project for use in any project for any purpose. There is no copyright, no attribution or anything else. Take the code and use it as you need it.
+
+* **What's the motivation behind Template 10?** Honestly? The OOB VS templates just make us angry. In Windows 8 templates had all kinds of insanity and in Windows 10 there's only Blank. Template 10 tries to strike a balance. 
 
 * **Can I contribute to Template 10?** Yes. Just submit a pull request. 
 
