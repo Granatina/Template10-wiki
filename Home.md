@@ -4,6 +4,8 @@
 
 * **What is Template 10?** Template 10 is a better project template for Windows UWP apps. For 90% of app developers, Template 10 is the ideal project template. It was inspired by the Microsoft Patterns & Practices team.  
 
+* **What about the other 10%?** Those guys typically already have a framework they use, a base project they use, and love to write stuff from scratch anyway. The rest of us love to code, too, but only the code that's super-important to our apps. Template 10 tries to fill the boilerplate-gap. 
+
 * **Why would I use Template 10?** There no good reason for you to use Template 10 until you understand it. If you aren't great at reverse-engineering our code in GitHub, then you better wait for documentation (soon).
 
 * **Who is the author of Template 10?** Template 10 was born in Microsoft Developer Evangelism, but is ultimately the work of the Microsoft developer community. Any developer is welcome to join the team. 
