@@ -1,4 +1,4 @@
-##Frequently Asked Questions about Template 10
+##Frequently Questions
 
 * **Is Template 10 ready to use?** No. Not yet. Wait until Windows 10 RTM.
 
