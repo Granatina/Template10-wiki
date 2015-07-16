@@ -1,21 +1,23 @@
-##Template 10 features
+##Unify activation to OnStartAsync()
+Lorem ipsum.
 
-[under construction]
+##Simple to handle Windows 10 prelaunch
+Lorem ipsum.
 
-**Unify activation to OnStartAsync()**
+##Simple to handle extended splash screen
+Lorem ipsum.
 
-**Simple to handle Windows 10 prelaunch**
+##Add OnNavigatedTo() to ViewModels
+Lorem ipsum.
 
-**Simple to handle extended splash screen**
+##Add OnNavigatedFrom() to ViewModels
+Lorem ipsum.
 
-**Add OnNavigatedTo() to ViewModels**
+##Add OnNavigatingFrom() to ViewModels
+Lorem ipsum.
 
-**Add OnNavigatedFrom() to ViewModels**
+##Central UI thread dispatcher
+Lorem ipsum.
 
-**Add OnNavigatingFrom() to ViewModels**
-
-**Central UI thread dispatcher**
-
-**Auto-implement new Windows 10 transitions**
-
-**
+##Auto-implement new Windows 10 transitions
+Lorem ipsum.
