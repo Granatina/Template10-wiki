@@ -1,4 +1,4 @@
-* **Is Template 10 ready to use?** No. Not yet. Wait until Windows 10 RTM.
+* **Is Template 10 ready to use?** Almost. Since Windows 10 hit RTM we've been upgrading and documenting the library. The projects are stable and clean. And we should be submitting them to the Visual Studio Gallery soon. PLEASE clone this repo and test with us, it's very appreciated. 
 
 * **What is Template 10?** Template 10 is a better project template for Windows UWP apps. For 90% of app developers, Template 10 is the ideal project template. 
 
