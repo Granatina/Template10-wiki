@@ -1,5 +1,7 @@
 * **Is Template 10 ready to use?** Almost. Since Windows 10 hit RTM we've been upgrading and documenting the library. The projects are stable and clean. And we should be submitting them to the Visual Studio Gallery soon. PLEASE clone this repo and test with us, it's very appreciated. 
 
+* **Could I go ahead and use Template10?** Sure. Since [Template10Library] is separate, you can update it easily as we finalize Template 10 here in GitHub. Just get the SLN and use the Blank or Minimal projects as the starting point for your app. There is no project template just yet. But it's very stable.
+ 
 * **What is Template 10?** Template 10 is a better project template for Windows UWP apps. For 90% of app developers, Template 10 is the ideal project template. 
 
 * **What about the other 10%?** Those guys typically already have a framework they use, a base project they use, and love to write stuff from scratch anyway. The rest of us love to code, too, but only the code that's super-important to our apps. Template 10 tries to fill the boilerplate-gap. 
