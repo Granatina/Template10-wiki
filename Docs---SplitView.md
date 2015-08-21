@@ -1,0 +1,1 @@
+Documentation describing SplitView technique
