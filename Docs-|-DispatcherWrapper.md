@@ -1,0 +1,1 @@
+Describes dispatcher wrapper
