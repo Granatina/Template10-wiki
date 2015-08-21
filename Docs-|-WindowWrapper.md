@@ -1,0 +1,1 @@
+Describes the use of Window wrapper
