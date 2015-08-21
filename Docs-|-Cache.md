@@ -1,0 +1,1 @@
+Describes using page cache
