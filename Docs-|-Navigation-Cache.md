@@ -35,7 +35,7 @@ Remember you only need to mess with this in view-models associated to views that
 public DetailPage()
 {
     InitializeComponent();
-    NavigationCacheMode = NavigationCacheMode.Disabled;
+    NavigationCacheMode = NavigationCacheMode.Enabled;
 }
 ```
 
