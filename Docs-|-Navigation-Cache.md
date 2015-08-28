@@ -17,7 +17,6 @@ Caching is difficult on machines that have limited memory. Because every cached 
 ### CONSIDER THIS
 
 1. If some view causes the data displayed in another view to change, the data should keep itself up-to-date if you are sharing models in memory. If, however, you are using copies of models in memory, the first view-model will need to signal the second view-model through some type of messaging solution. 
-
 > Messaging is a pattern for view-models to communicate without requiring a reference to one another. It’s powerful, common, and gets the job done. Template 10 does not ship with a messaging solution, but we like the PubSubEvents created by Microsoft in NuGet, and the Messenger class in MVVM Light. Again, there are many out there and they are all effective.
 
 2. If some view causes the data displayed in another view to be deleted, the developer cannot allow the user to navigate forward (or back) and view the data that is dead. In this case, the developer would need to clear the BackStack  or ForwardStack of the container XAML frame. In Template 10, this is done with NavigationService.Frame.BackStack.Clear();. Some of the visual controls on your view may need to be manually updated to reflect the change in navigation.
