@@ -1,4 +1,4 @@
-### HANDLING FORWARD & BACK
+## HANDLING FORWARD & BACK
 
 When a user navigates from one page to another in a Windows app, the target view and associated view-model is instantiated every time. This is even true when the user goes to a view, goes to a second view, and returns to the first view. 
 
@@ -23,11 +23,11 @@ Caching is difficult on machines that have limited memory. Because every cached 
 
 3. You should assume your view is new every time. What I mean is, you can’t rely on caching. Either the system or some freak of nature is going to cause your view or view-model to be re-instantiated on navigation. No matter how you use cache, you must write your code defensively so that if caching should not work or be overloaded in some way, your app continues to deliver an excellent user experience.
 
-### IMPLEMENTATION
+## IMPLEMENTATION
 
 Let’s take a minute and talk about how you would introduce the basic caching functionality of caching in a Template 10 Windows app. Once you have enabled caching in the constructor of your page(s) it’s time to update your view-models to handle this special navigation.
 
-## TURN IT ON
+### TURN IT ON
 
 Remember you only need to mess with this in view-models associated to views that actually enable the NavigationCache. Here's how you enable it.
 
