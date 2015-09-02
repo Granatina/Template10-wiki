@@ -204,23 +204,57 @@ Here's a comparison to consider:
 
 ## PAGEHEADER AND THE HAMBURGERMENU 
 
-The PageHeader control is the perfect companion for the HamburgerMenu one: if you set  the HeaderBackground property of the PageHeader with the same color you've assigned to the HamburgherBackground property of the HamburgerMenu control, you'll be able to recreate the same look and feel of many native Windows 10 apps.
+The PageHeader control is the perfect companion for the HamburgerMenu control (also part of Template 10). 
 
-In addition, the PageHeader control supports two visual states, which have been specifically created to support the HamburgerMenu control:
+> In this case, a developer would typically choose to set the PageHeader.HeaderBackground property to match the HamburgerMenu.HamburgerBackground property. 
 
-1. In the **Normal** state, the header's text is placed near the margin. This is possible because, when there's enough space (like on a desktop), the icons of the HamburgerMenu are always visible and, consequently, the whole header is already shifted to make room for the column of icons.
-2. In the **Narrow** state the icons are collapsed since there isn't enough space to keep them always visible. Consequently, the header's text is shifted to make room for the button used to open / collapse the HamburgerMenu's panel.
+## Visual States for the Hamburger Button
 
-You can control the two visual states by defining which is the minimum width that triggers them, thanks to the **VisualStateNarrowMinWidth** and **VisualStateNormalMinWidth** properties.
-For example, take a look at the following code:
+The PageHeader control has two built-in visual states - VisualStateNarrow and VisualStateNormal. These have been specifically created to support the HamburgerMenu control which has the identical visual states. 
 
+1. The PageHeader's VisualStateNarrow effects the UI in only one way, it shifts the Text of the control 48 pixels to the right. This provides the on-screen real estate required to display the stand alone hamburger button. 
+
+2. The PageHeader's VisualStateNormal effects the UI in no way, other than removing the effects applied by the PageHeader's VisualStateNarrow - effectively shifting the Text left 48 pixels. 
+
+## Controlling the Visual States
+
+You can control the PageHeader's visual states by defining the minimum widths that triggers them. The **VisualStateNarrowMinWidth** and **VisualStateNormalMinWidth** properties accomplish this.
+
+You can apply these values like this:
 
 ```XAML
-<controls:PageHeader Text="Main page" 
-                     Frame="{x:Bind Frame}"
-                     VisualStateNarrowMinWidth="800" />
+<Page x:Class="Controls.MainPage"
+      xmlns:controls="using:Template10.Controls">
+
+    <controls:PageHeader Text="Main page" 
+        Frame="{x:Bind Frame}"
+        VisualStateNarrowMinWidth="0"
+        VisualStateNormalMinWidth="800" />
+
+</Page>
 ```
 
-When the size of the windows is between 0 and 800, the Narrow visual state will be triggered and, consequently, the header's text will be shifted. To achieve the best result, the VisualStateNarrowMinWidth property of the HamburgerMenu control should be set to the same value.
+In the case above, when the width of the window is greater than 0 effective pixels but less than 800, the VisualStateNarrow visual state will be triggered. Concurrently, when the width of the window is equal to or greater than 800 effective pixels, the VisualStateNormal visual state will be triggered - shifted the PageHeader.Text 48 pixels to the right. 
+
+> Remember: to achieve the best result, the VisualStateNarrowMinWidth property of the HamburgerMenu control should be set to the same value.
+
+Here's how your UI will behave:
 
 ![](http://i.imgur.com/dKh4yUm.gif)
+
+## Disable the Visual States
+
+Some developers may not want the Narrow View State to be applied to the PageHeader. This will certainly be true if the developer is not implementing the hamburger button. In this case, setting the ViewStateNarrowMinWidth to the value of -1 will cause it to never qualify and never be applied.
+
+You would handle this scenario like this:
+
+```XAML
+<Page x:Class="Controls.MainPage"
+      xmlns:controls="using:Template10.Controls">
+
+    <controls:PageHeader Text="Main page" 
+        Frame="{x:Bind Frame}"
+        VisualStateNarrowMinWidth="-1" />
+
+</Page>
+```
