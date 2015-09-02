@@ -2,6 +2,8 @@
 
 The control to create a common page element including header text, primary buttons, and secondary buttons. 
 
+![](http://i.imgur.com/BFG3pSB.png)
+
 ## Contents overview
 
 - [Properties](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-PageHeader#properties)
