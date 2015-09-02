@@ -40,7 +40,10 @@ The PageHeader control offers some properties to customize its look & feel. The 
 Here is a sample customization:
 
 ```XAML
-<controls:PageHeader Text="Main Page" Frame="{x:Bind Frame}" HeaderBackground="Orange" HeaderForeground="Red" />
+<controls:PageHeader Text="Main Page" 
+                     Frame="{x:Bind Frame}" 
+                     HeaderBackground="Orange" 
+                     HeaderForeground="Red" />
 ```
 ![](http://i.imgur.com/xvwCFXf.png)
 
@@ -55,7 +58,8 @@ Specifically:
 
 
 ```XAML
-<controls:PageHeader Text="Detail" Frame="{x:Bind Frame}" BackButtonVisibility="Visible" />
+<controls:PageHeader Text="Detail" Frame="{x:Bind Frame}" 
+                     BackButtonVisibility="Visible" />
 ```
 ![](http://i.imgur.com/rKLWSCm.png)
 
