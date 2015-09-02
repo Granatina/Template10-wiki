@@ -45,10 +45,14 @@ Here is a sample customization:
 ![](http://i.imgur.com/xvwCFXf.png)
 
 ## NAVIGATION ##
-The PageHeader control offers a property to define the visibility of the navigation buttons, called **BackButtonVisibility**. When it's set to **Visible**, the control will display an arrow to perform the navigation. Setting the Frame property makes sure that the arrow is visible only if there are pages in the stack. For example, if you’re in the first page of your application the arrow will always be hidden since the back stack is empty, even if the BackButtonVisibility property is set to Visible.
-By default, the visibility of the navigation buttons on the desktop is connected to the **ShowShellBackButton** property of the bootstrapper. If this property is set to true (which means that, on desktop, you’re going to take advantage of the virtual back button that is embedded in the chrome of the app), the Back button in the PageHeader control will always be hidden, to avoid generating confusion for the user.
+The PageHeader control offers a property to define the visibility of the navigation buttons, called **BackButtonVisibility**. When it's set to **Visible**, the control will display an arrow to perform the navigation. However, the visibility of the button isn't controlloed just by this property, but also from other factors that are controlled by the operating system.
 
-You can control the visibility of the navigation buttons using the BackButtonVisibility property, but you can't override the standard behavior of the operating system. For example, no matter if you set the BackButtonVisibility property to Visible, if you're on a mobile device the button will always be hidden.
+Specifically:
+
+1. The PageHeader control is connected to the Frame of the application, so it knows the state of the navigation stack. As such, the Back button will be displayed only if there are pages in the stack. For example, the user will never see the back button on the main page of the application, since the back stack is empty.
+2. Even if the navigation system is unique across the different device families where Windows 10 runs, there are some minor differences. On desktop, you can choose to display a virtual back button in the chrome of the app or to include it into the layout of your page. On mobile, instead, backward navigation is always controlled by the hardware back button and you shouldn't have any visual element to handle it. Consequently, even if you set the BackButtonVisibility property to Visible, on a mobile device the button will always be hidden.
+3. As already mentioned, on desktop a Windows 10 application can take advantage of a virtual back button embedded in the chrome of the app to handle the backward navigation. This feature, in Template10, is controlled by the **ShowShellBackButton** property of the BootStrapper class (which is true by default). If the shell button is enabled, the back button of the PageHeader control will always be hidden, even if the BackButtonVisibility property is set to Visible, to avoid generating confusion for the user. 
+
 
 ```XAML
 <controls:PageHeader Text="Detail" Frame="{x:Bind Frame}" BackButtonVisibility="Visible" />
@@ -82,10 +86,7 @@ The following sample code shows how to define a set of commands:
 ![](http://i.imgur.com/NYQTfCg.png)
 
 ## PHONE VS DESKTOP ##
-It’s very important to remember a couple of differences in using the PageHeader control when you're targeting a mobile application rather than a desktop one.
 
-- From a UI point of view, the size of the PageHeader control can be very different when it’s used on a desktop / tablet rather than on a phone. As such, on the phone you should privilege the secondary commands and add as primary commands no more than one or two options; otherwise, the space wouldn’t be enough to display both the buttons and the text of the header.
+From a UI point of view, the size of the PageHeader control can be very different when it’s used on a desktop / tablet rather than on a phone. As such, on the phone you should privilege the secondary commands and add as primary commands no more than one or two options; otherwise, the space wouldn’t be enough to display both the buttons and the text of the header.
 
 ![](http://i.imgur.com/3KUiKFs.png)
-
-- The navigation system between the two device families has some minor differences. On the desktop, you can choose to use the virtual Back button embedded in the shell, by enabling the ShowShellBackButton property of the bootstrapper, or you can choose leverage the Back button in the PageHeader control. On the phone, instead, the back button in the PageHeader is always hidden: the backward navigation on a mobile device should always rely on the hardware back button.
