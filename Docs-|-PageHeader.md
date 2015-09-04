@@ -250,7 +250,7 @@ In the case above, when the width of the window is greater than 0 effective pixe
 
 Here's how your UI will behave:
 
-![](http://i.imgur.com/dKh4yUm.gif)
+![](http://i.imgur.com/07deVoH.gif)
 
 ## Disable the Visual States
 
