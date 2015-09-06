@@ -5,12 +5,12 @@ The control to create a hamburger menu based navigation pattern in your applicat
 ![](http://i.imgur.com/YXAtzYy.png)
 
 ## Contents overview
-
-- [Properties](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-HamburgerControl#inspiration)
-- [Implementation](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-HamburgerControl#splitview)
-- [Navigation](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-PageHeader#navigation)
-- [Commands](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-PageHeader#commands)
-- [Hamburger menu](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-PageHeader#pageheader-and-the-hamburgermenu)
+- [Properties](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-HamburgerMenu#properties)
+- [Implementation](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-HamburgerMenu#implementation)
+- [Customization](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-HamburgerMenu#customization)
+- [Buttons](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-HamburgerMenu#buttons)
+- [Implementing a shell](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-HamburgerMenu#implementing-a-shell)
+- [VisualStates for the HamburgerMenu](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-HamburgerMenu#visual-states-for-the-hamburgermenu)
 
 ## Inspiration
 
