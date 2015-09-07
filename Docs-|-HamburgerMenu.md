@@ -281,6 +281,7 @@ public sealed partial class Shell : Page
 }
 ```
 Now we need to:
+
 1. Define this new page as main content of the application's window, in replacement of the standard Frame
 2. Pass a reference to the NavigationService to the page, so that it can be assigned to the HamburgerMenu control
 
