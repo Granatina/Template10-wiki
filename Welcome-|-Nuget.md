@@ -47,3 +47,10 @@ The reason Template 10 exists is NOT to change your framework if you already hav
 Template 10 is a labor of love by the developers writing it. 
 
 Have a great time using Template 10.
+
+## Known issues
+
+For the time being, there are a few known issues in this release of the library.
+
+1. There is no support for x64. It's coming, just not in this version. This has to do with the internal structure change to NuGet packs. There's only a little documentation for this. We'll figure it out soon.
+2. Styles for our custom controls don't properly appear in Mobile. We believe this is a big in Mobile and not a big in the library. But a new build of mobile is coming and we will test it there.
