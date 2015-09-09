@@ -1,0 +1,1 @@
+Welcome | Minimal Template
