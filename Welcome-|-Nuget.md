@@ -2,6 +2,8 @@
 
 There was a recurring pattern to the Windows UWP app questions I received and the answers I was giving. The questions about simple start-up stuff were endlessly recurring, and my answers were tirelessly preceded with painful comments like, “First you need to figure out navigation” or “First you need to figure out suspension” or fill-in-the-blank with boilerplate code. 
 
+> Jump to [known issues](https://github.com/Windows-XAML/Template10/wiki/Welcome-%7C-Nuget#known-issues).
+
 ### GENESIS
 
 This was the genesis of Template 10. Originally, it was only a project template, but as we wrote boilerplate solutions that every project would need, it became quickly clear a nuGet library was developing. The library is intended to enable the Template 10 project templates as well as be perfectly fine for existing projects who want the many benefits it brings.
