@@ -55,4 +55,4 @@ Have a great time using Template 10.
 For the time being, there are a few known issues in this release of the library.
 
 1. There is no support for x64 yet. It's coming, just not in this version. The problem has to do with the internal structure changes made to NuGet packages. There's only a little documentation for handling this. We'll figure it out soon.
-2. Styles for our custom controls don't properly appear in Mobile. We believe this is a bug in Windows 10 Mobile and not a bug in the library itself. A new Mobile build is coming soon and we will test it there.
+2. Styles for our custom controls don't render properly in Windows 10 Mobile. We believe this is a bug in Windows 10 Mobile and not a bug in the library itself. A new Mobile build is coming soon and we will test it there.
