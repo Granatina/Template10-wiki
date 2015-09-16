@@ -1,1 +1,1 @@
-Describes the bootstrapper - really!
+Describes the bootstrapper
