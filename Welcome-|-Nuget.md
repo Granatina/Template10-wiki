@@ -14,17 +14,17 @@ This was the genesis of Template 10. Originally, it was only a project template,
 
 ### WE LOVE CONVENTIONS
 
-Template 10 was inspired by the Asp.NET MVC project template included with Visual Studio. What’s terrific about that project template is that it includes empty folders. Those give direction on conventions for where files and classes belong – if a developer doesn’t already have an established pattern. Template 10 does the same thing, shipping with empty folders like Converts and Models to make simple things no-brainers. And, like MVC, Template 10 doesn't require you to follow our folder conventions.
+Template 10 was inspired by the Asp.NET MVC project template. which is included with Visual Studio. What’s terrific about that project template is that it includes empty folders. Don't get it? Those folders give developers conventions for where files and classes belong, right out of the box – if a developer doesn’t already have an established pattern. Template 10 does the same thing, shipping with empty folders like Converters and Models to make simple things no-brainers. And, like MVC, Template 10 doesn't require you to follow our folder conventions.
 
 ### WE'RE WARMING-UP TO OPEN SOURCE
 
-Though some Microsoft people are contributors to this project, it’s important you realize that this is open source and a product of community contribution. This is awesome, by the way, because we can tweak the holy crap out of this code base from the trial and errors of scores of developers using Template 10. And, who benefits? Every single one of us. 
+Though some Microsoft people are contributors to this project, it’s important you realize that this is open source and a product of community contribution. This is awesome, by the way, because we can tweak the holy crap out of this code base based on the input and feedback of scores of developers using Template 10. And, who benefits? Every single one of us. 
 
-> As an aside, we're also warming-up to GitHub. Not bad.
+> As an aside, we're also warming-up to GitHub. Not bad at all.
 
 ### WE LOVE MVVM
 
-Template 10 is not an MVVM framework and it does not require MVVM. That being said, Template 10 loves MVVM and enables developers to use the pattern easily. The most significant way Template 10 makes MVVM easy is the INavigable interface intended for view-models. Once this is implemented, view-models have OnNavigatedTo, OnNavigatedFrom, and OnNavigatingFrom methods, just like a XAML page. 
+Template 10 is not an MVVM framework and it does not require MVVM. That being said, Template 10 loves MVVM and enables developers to use the pattern easily. The most significant way Template 10 makes MVVM easy is the INavigable interface intended for view-models. Once this is implemented, view-models have OnNavigatedTo, OnNavigatedFrom, and OnNavigatingFrom methods, just like an XAML page. 
 
 > If you use an MVVM framework like Light, Caliburn, Cross, or Prism, you will be happy to learn that these can work in peaceful coexistence with Template 10. This was by design. There is no up-front requirement for MVVM in Template 10 and once you start to use the pattern, there is no requirement for a specific framework or set of frameworks.
 
@@ -34,17 +34,17 @@ As a final note, just because there is no requirement for MVVM doesn’t mean we
 
 ### WE DON'T LOVE APP.XAML.CS : Application
 
-The first thing developers will see in Template 10 is that XAML’s Application object is sub-classed.  Template 10 apps inherit from BootStrapper in their App.xaml.cs, not Application. Why? Because the implementation required by Application is boilerplate and brittle. With Template 10, the startup pipeline is simplified from a dozen Launch and Activated overrides to a single, unified OnStartAsync() override. 
+The first thing developers will see in Template 10 is that XAML’s Application object is sub-classed.  Template 10 apps inherit from BootStrapper in their App.xaml.cs, not Application. Why? Because the implementation required by Application is exceedingly complex, and requires too much developer intervention. With Template 10, the startup pipeline is simplified from a dozen Launch and Activated overrides to a single, unified OnStartAsync() override. 
 
-Our OnStartAsync() doesn’t hide anything from you. Every argument and parameter is still available to the developer, just the web of startup vectors is refactored to one. This lets you build applications and focus on the logic that matters instead: yours. This isn’t a commentary on the Application class. Building a platform is complex, and supporting every scenario is very hard.
+OnStartAsync() doesn’t hide anything from you. Every argument and parameter is still available to the developer. We've just made it easier, by reducing the massive range of startup vectors found in the base Application class to one. This lets you build applications and focus on the logic that matters instead: yours. This isn’t a commentary on the Application class. Building a platform is complex, and supporting every scenario is very hard.
 
 ### WE'RE NOT FOR EVERYONE
 
-We believe that Template 10 is ideal for about 80% of the Windows UWP apps out there. The work that we have done is not only good, it’s also common. Most apps would instantly benefit from incorporating the library. That being said, we also recognize that 20 percent of the developers out there probably have their own, custom frameworks and we’re not a fit for them. That’s cool.
+We believe that Template 10 is ideal for about 80% of the Windows apps out there. The work that we have done isn't just good. The code we've written contains much of the boilerplate code commonly used by developers in their applications. To that end, most apps will instantly benefit from incorporating the library. That being said, we also recognize that 20 percent of the developers out there probably have their own, custom frameworks and we’re not a fit for them. That’s fine with us.
 
 ### THE Template 10 MISSION
 
-The reason Template 10 exists is NOT to change your framework if you already have one. It’s to provide one for those developers who don’t have one or are unhappy with the one they are using. We want to be simple. We want to be prescriptive, and we want to be as flexible as we can without violating the patterns we want developers to actually adopt.
+The reason Template 10 exists is NOT to change your framework if you already have one. It’s to provide one for those developers who don’t have one or are unhappy with the one they are using. We want to be simple. We want to be prescriptive, and we want to be as flexible as we can without violating the patterns we want developers to adopt.
 
 Template 10 is a labor of love by the developers writing it. 
 
@@ -52,6 +52,5 @@ Have a great time using Template 10.
 
 ## Known issues
 
-For the time being, there are a few known issues in this release of the library.
+At present, there are no known issues with the Template 10 Nuget library. It's all working, as far as we are aware. We want to hear about any bugs you may find in the library, though, so we can fix them for you ASAP.
 
-1. None
