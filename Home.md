@@ -12,27 +12,103 @@ Template 10 is three things.
 
 > Template 10 is the brainchild of Microsoft Developer Evangelism and was started there. Lots of learnings from Windows 8, including lots from the Pattern's and Practices Prism.StoreApps framework are in the code base.
 
+###Why are you saying T10 is convention-based?
+
+Look. You know the Asp.NET MVP Visual Studio project? It has several empty folders intended to guide developers where to put their views, controllers, etc. Template 10 does this, too. Like MVC, we don't require you use our conventions, but you can. We believe that developers should be given guidance, not just code. Template 10 does that. Our conventions are simple and consistent. But, most importantly, optional. Have your own conventions? No problem. Otherwise, there are ours.
+
+Our conventions are simple. Like this:
+
+1. We out put views (XAML files) in a /Views folder (and ns)
+1. We only have one view-model for one view
+1. We put our view-models in a /ViewModels folder (and ns)
+1. We use OnNavigatedTo in view-models, not pages
+1. We put our models in a /Models folder (and ns)
+1. We often use the façade pattern with our models
+1. We navigate using a NavigationService
+1. We communicate with a Messenger
+1. We like Dependency Injection
+1. We use Template 10 ;-)
+
 ###What's in Template 10?
 
 There is a lot to Template 10, but it's actually very basic.
 
+> Note: many of the (docs) are still being written.
+
 **There are XAML controls in Template 10.**
 
 1. Template10.Controls.PageHeader ([docs](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-PageHeader))
+````XAML
+<controls:PageHeader Text="Main Page" xmlns:controls="Template10.Controls"
+    BackButtonVisibility="Collapsed" Frame="{x:Bind Frame, Mode=OneWay}" />
+````
 2. Template10.Controls.HamburgerMenu ([docs](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-HamburgerMenu))
+````XAML
+<Controls:HamburgerMenu x:Name="MyHamburgerMenu">
+    <Controls:HamburgerMenu.PrimaryButtons>
+        <Controls:HamburgerButtonInfo ClearHistory="True" PageType="views:MainPage">
+            <StackPanel Orientation="Horizontal">
+                <SymbolIcon Width="48" Height="48" Symbol="Home" />
+                <TextBlock Margin="12,0,0,0" VerticalAlignment="Center" Text="Home" />
+            </StackPanel>
+        </Controls:HamburgerButtonInfo>
+    </Controls:HamburgerMenu.PrimaryButtons>
+</Controls:HamburgerMenu>
+````
 3. Template10.Controls.CustomTitleBar (docs)
 
 **There are XAML behaviors and actions in Template 10.**
 
 1. Template10.Behaviors.NavButtonBehavior (docs)
+````XAML
+<AppBarButton Icon="Forward" Label="Forward">
+    <Interactivity:Interaction.Behaviors>
+        <Behaviors:NavButtonBehavior Direction="Forward" Frame="{x:Bind Frame, Mode=OneWay}" />
+    </Interactivity:Interaction.Behaviors>
+</AppBarButton>
+````
 2. Template10.Behaviors.TextBoxEnterBehavior (docs)
+````XAML
+<TextBox>
+    <Interactivity:Interaction.Behaviors>
+        <Behaviors:TextBoxEnterKeyBehavior>
+            <Core:CallMethodAction MethodName="GotoDetailsPage" TargetObject="{Binding}" />
+        </Behaviors:TextBoxEnterKeyBehavior>
+    </Interactivity:Interaction.Behaviors>
+</TextBox>
+````
 3. Template10.Behaviors.TimeoutAction (docs)
+````XAML
+<Button>
+    <Interactivity:Interaction.Behaviors>
+        <Core:EventTriggerBehavior EventName="Click">
+            <Core:CallMethodAction MethodName="ShowBusy" TargetObject="{Binding Mode=OneWay}" />
+            <Behaviors:TimeoutAction Milliseconds="5000">
+                <Core:CallMethodAction MethodName="HideBusy" TargetObject="{Binding Mode=OneWay}" />
+            </Behaviors:TimeoutAction>
+        </Core:EventTriggerBehavior>
+    </Interactivity:Interaction.Behaviors>
+</Button>
+````
 
 **There are XAML services in Template 10.**
 
 1. Template10.Services.NavigationService (docs)
+````csharp
+// from inside the app.xaml.cs
+this.NavigationService.Navigate(typeof(Views.MainPage));
+            
+// from inside a view-model
+this.NavigationService.Navigate(typeof(Views.DetailPage), this.Value);
+
+// from inside the primary window
+var nav = Template10.Common.BootStrapper.Current.NavigationService;
+nav.Navigate(typeof(Views.DetailPage), this.Value);
+````
 2. Template10.Services.KeyboardService (docs)
 3. Template10.Services.SettingsService (docs)
+4. Template10.Common.WindowWrapper (docs)
+5. Template10.Common.DispatcherWrapper (docs)
 
 > We plan to add more services to Template 10.
 
