@@ -1,6 +1,6 @@
 ##Is Template 10 ready to use?
 
-It sure is. No part of Template 10 is in preview.
+Yes. It sure is. _No part of Template 10 is in preview starting September 2015._
 
 ###What is Template 10?
 
@@ -18,48 +18,48 @@ There is a lot to Template 10, but it's actually very basic.
 
 **There are XAML controls in Template 10.**
 
-1. [Template10.Controls.PageHeader](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-PageHeader)
-2. [Template10.Controls.HamburgerMenu](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-HamburgerMenu)
-3. Template10.Controls.CustomTitleBar
+1. Template10.Controls.PageHeader ([docs](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-PageHeader))
+2. Template10.Controls.HamburgerMenu ([docs](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-HamburgerMenu))
+3. Template10.Controls.CustomTitleBar (docs)
 
 **There are XAML behaviors and actions in Template 10.**
 
-1. Template10.Behaviors.NavButtonBehavior
-2. Template10.Behaviors.TextBoxEnterBehavior
-3. Template10.Behaviors.TimeoutAction
+1. Template10.Behaviors.NavButtonBehavior (docs)
+2. Template10.Behaviors.TextBoxEnterBehavior (docs)
+3. Template10.Behaviors.TimeoutAction (docs)
 
 **There are XAML services in Template 10.**
 
-1. Template10.Services.NavigationService
-2. Template10.Services.KeyboardService
-3. Template10.Services.SettingsService
+1. Template10.Services.NavigationService (docs)
+2. Template10.Services.KeyboardService (docs)
+3. Template10.Services.SettingsService (docs)
 
 > We plan to add more services to Template 10.
 
 **There are XAML converters in Template 10.**
 
-1. Template10.Converters.DateTimeFormatConverter
-2. Template10.Converters.ValueWhenConverter
+1. Template10.Converters.DateTimeFormatConverter (docs)
+2. Template10.Converters.ValueWhenConverter (docs)
 
 **There are basic MVVM classes in Template 10.**
 
-1. Template10.Mvvm.BindableBase
-2. Template10.Mvvm.DelegateCommand
-3. Template10.Mvvm.ViewModelBase
+1. Template10.Mvvm.BindableBase (docs)
+2. Template10.Mvvm.DelegateCommand (docs)
+3. Template10.Mvvm.ViewModelBase (docs)
 
 > Template 10 is not intended to be a new MVVM Framework.
 
 **There are developer utilities in Template 10.**
 
-1. Template10.Utils.MonitorUtil
-2. Template10.Utils.ColorUtil
-3. Template10.Utils.TypeUtil
-4. Template10.Utils.XamlUtil
+1. Template10.Utils.MonitorUtil (docs)
+2. Template10.Utils.ColorUtil (docs)
+3. Template10.Utils.TypeUtil (docs)
+4. Template10.Utils.XamlUtil (docs)
 
 **There are Visual Studio project templates in Template 10.**
 
-1. Windows/Universal/Template 10/Template 10 (Blank)
-2. Windows/Universal/Template 10/Template 10 (Minimal)
+1. Windows/Universal/Template 10/Template 10 (Blank) (docs)
+2. Windows/Universal/Template 10/Template 10 (Minimal) (docs)
 
 > Projects are meant for greenfield projects, and learning
 
@@ -71,18 +71,18 @@ There is a lot to Template 10, but it's actually very basic.
 
 **There are samples in Template 10.**
 
-1. Samples/MvvmLight
-2. Samples/Search (and Login)
-3. Samples/Tiles (and Toast)
-4. Samples/TitleBar
+1. Samples/MvvmLight (docs)
+2. Samples/Search (and Login) (docs)
+3. Samples/Tiles (and Toast) (docs)
+4. Samples/TitleBar (docs)
 
 ###Where have I heard about Template 10?
 
 Template 10 shows up a lot of places.
 
-1. On Microsoft Virtual Academy's Developer's Guide to Windows 10
-2. On Microsoft official Windows 10 Hands on Labs
-3. In Microsoft Press Windows 10 exam-prep books
+1. On Microsoft Virtual Academy's Developer's Guide to Windows 10 (link)
+2. On Microsoft official Windows 10 Hands on Labs (link)
+3. In Microsoft Press Windows 10 exam-prep books (link)
 
 ###Who's contributing to Template 10?
 
@@ -90,9 +90,10 @@ Template 10 has a lot of authors.
 
 1. Jerry Nixon, co-author of Developer's Guide to Windows 10.
 2. Daren May, co-author of official Windows 10 hands on labs.
-3. Microsoft (PFE) professional field engineers, worldwide.
-4. Internal product and platform teams who contribute and advise.
-5. Community developers, like you, who submit pull requests.
+3. Robert Evans, lead field engineer and consultant for Windows apps.
+4. Microsoft (PFE) professional field engineers, worldwide.
+5. Internal product and platform teams who contribute and advise.
+6. Community developers, like you, who submit pull requests all the time.
 
 > If you wonder if we accept community pull requests, we do. Without the help of the developer community, many enhancements and tweaks that make Template 10 great would not be present.
 
