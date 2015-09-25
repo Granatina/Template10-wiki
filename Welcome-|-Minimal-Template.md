@@ -5,7 +5,7 @@ The Minimal template is designed to provide a fully working code base for your a
 In addition to the Assets folder contained in the default Universal Windows project template, the Minimal template contains folders named Models, Mvvm, Services, Styles, ViewModels, and Views. 
 ## Models ##
 This is a placeholder for the models that may be required by your project. 
-## Mvvm ##
+## [Mvvm](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-MVVM) ##
 Contains ViewModelBase.cs
 ## Services ##
 ## Styles ##
