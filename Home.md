@@ -14,7 +14,7 @@ Template 10 is three things.
 
 ###Why are you saying T10 is convention-based?
 
-Look. You know the Asp.NET MVP Visual Studio project? It has several empty folders intended to guide developers where to put their views, controllers, etc. Template 10 does this, too. Like MVC, we don't require you use our conventions, but you can. We believe that developers should be given guidance, not just code. Template 10 does that. Our conventions are simple and consistent. But, most importantly, optional. Have your own conventions? No problem. Otherwise, there are ours.
+Look. You know the Asp.NET MVC Visual Studio project? It has several empty folders intended to guide developers where to put their views, controllers, etc. Template 10 does this, too. Like MVC, we don't require you use our conventions, but you can. We believe that developers should be given guidance, not just code. Template 10 does that. Our conventions are simple and consistent. But, most importantly, optional. Have your own conventions? No problem. Otherwise, there are ours.
 
 Our conventions are simple. Like this:
 
