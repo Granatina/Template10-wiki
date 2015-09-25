@@ -18,7 +18,7 @@ Look. You know the Asp.NET MVC Visual Studio project? It has several empty folde
 
 Our conventions are simple. Like this:
 
-1. We out put views (XAML files) in a /Views folder (and ns)
+1. We put views (XAML files) in a /Views folder (and ns)
 1. We only have one view-model for one view
 1. We put our view-models in a /ViewModels folder (and ns)
 1. We use OnNavigatedTo in view-models, not pages
