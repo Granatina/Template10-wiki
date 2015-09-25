@@ -8,6 +8,7 @@ This is a placeholder for the models that may be required by your project.
 ## [Mvvm](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-MVVM) ##
 Contains ViewModelBase.cs
 ## Services ##
+Contains the SettingsServices folder. Inside this folder are SettingsService.cs and the ISettingsService.cs. 
 ## Styles ##
 ## ViewModels ##
 ## Views ##
