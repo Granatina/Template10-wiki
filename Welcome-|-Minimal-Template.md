@@ -12,7 +12,9 @@ Contains the SettingsServices folder. Inside this folder are SettingsService.cs 
 ## Styles ##
 Contains the Custom.xaml file. 
 ## ViewModels ##
+Contains the DetailPageViewModel.cs, MainPageViewModel.cs, and the SettingsPageViewModel.cs.
 ## Views ##
+Contains the DetailPage.xaml, MainPage.xaml, SettingsPage.xaml, Shell.xaml, Splash.xaml, and the applicable code-behind pages. 
 # Getting Started #
 1. Download the Template10 Zip package.
 2. Unblock the Template10-master.zip package
