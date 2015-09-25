@@ -10,6 +10,7 @@ Contains ViewModelBase.cs
 ## [Services](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-SettingsService)##
 Contains the SettingsServices folder. Inside this folder are SettingsService.cs and the ISettingsService.cs. 
 ## Styles ##
+Contains the Custom.xaml file. 
 ## ViewModels ##
 ## Views ##
 # Getting Started #
