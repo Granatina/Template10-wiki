@@ -15,11 +15,7 @@ In addition to the Assets folder contained in the default Universal Windows proj
 5. Open the folder where the Template10-master.zip was extracted
 6. Click into the Template10-master folder
 7. Click into the Templates (Zips)
-8. Extract the T10Minimal.zip file to %USERPROFILE%\Documents\Visual Studio 2015\Templates\ProjectTemplates\Visual C#\Windows
-
-Note: The file named "Manually Add A Template to VS2015.txt" states that unzipping the file is not necessary, but
-some have found it necessary to do so. 
-
+8. Extract the T10Minimal.zip file to %USERPROFILE%\Documents\Visual Studio 2015\Templates\ProjectTemplates\Visual C#\Windows - Note: The file named "Manually Add A Template to VS2015.txt" states that unzipping the file is not necessary, but some have found it necessary to do so. 
 9. Open Visual Studio
 10. Click New Project
 11. Select Windows -> T10Minimal -> Template 10 Minimal
