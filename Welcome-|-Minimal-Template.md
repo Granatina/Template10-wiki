@@ -5,6 +5,10 @@ The Minimal template is designed to provide a fully working code base for your a
 In addition to the Assets folder contained in the default Universal Windows project template. the Minimal template contains folders named Models, Mvvm, Services, Styles, ViewModels, and Views. 
 ## Models ##
 ## Mvvm ##
+## Services ##
+## Styles ##
+## ViewModels ##
+## Views ##
 # Getting Started #
 1. Download the Template10 Zip package.
 2. Unblock the Template10-master.zip package
