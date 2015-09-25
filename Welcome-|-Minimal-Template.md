@@ -6,6 +6,7 @@ In addition to the Assets folder contained in the default Universal Windows proj
 ## Models ##
 This is a placeholder for the models that may be required by your project. 
 ## Mvvm ##
+Contains ViewModelBase.cs
 ## Services ##
 ## Styles ##
 ## ViewModels ##
