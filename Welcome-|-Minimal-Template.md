@@ -7,7 +7,7 @@ In addition to the Assets folder contained in the default Universal Windows proj
 This is a placeholder for the models that may be required by your project. 
 ## [Mvvm](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-MVVM) ##
 Contains ViewModelBase.cs
-## Services ##
+## [Services](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-SettingsService)##
 Contains the SettingsServices folder. Inside this folder are SettingsService.cs and the ISettingsService.cs. 
 ## Styles ##
 ## ViewModels ##
