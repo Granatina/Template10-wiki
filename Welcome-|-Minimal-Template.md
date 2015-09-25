@@ -2,7 +2,7 @@ Welcome! This is the home page for the Template 10 Minimal template. This templa
 # What's so great about this template?
 The Minimal template is designed to provide a fully working code base for your app, complete with placeholder text and functionality. It even comes with it's own UI out of the box! If you like the SplitView, and want a fully functional starting point, then you'll love this template. It uses the Template 10 INavigable interface, combined with MVVM, to provide a great template.
 # What's included?
-In addition to the Assets folder contained in the default Universal Windows project template. the Minimal template contains folders named Models, Mvvm, Services, Styles, ViewModels, and Views. 
+In addition to the Assets folder contained in the default Universal Windows project template, the Minimal template contains folders named Models, Mvvm, Services, Styles, ViewModels, and Views. 
 ## Models ##
 ## Mvvm ##
 ## Services ##
