@@ -114,8 +114,8 @@ nav.Navigate(typeof(Views.DetailPage), this.Value);
 
 **There are XAML converters in Template 10.**
 
-1. Template10.Converters.DateTimeFormatConverter (docs)
-2. Template10.Converters.ValueWhenConverter (docs)
+1. Template10.Converters.DateTimeFormatConverter ([docs](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Converters#datetimeformatconverter))
+2. Template10.Converters.ValueWhenConverter ([docs](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Converters#valuewhenconverter))
 
 **There are basic MVVM classes in Template 10.**
 
