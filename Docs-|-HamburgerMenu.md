@@ -219,7 +219,7 @@ The look & feel of the button is up to the developer, who can use an arbitrary X
 
 ## IMPLEMENTING A SHELL
 
-The HambuergerMenu is a XAML control and, as such, can be placed in any page of the application. However, since it's used to provide a global navigation pattern, it's unlikely that it will be placed in just one page of the application. To provide a seamless experience, you would need to place the same control in every page of your application. However, this approach would have many downsides: redundancy, harder to mantain, etc.
+The HamburgerMenu is a XAML control and, as such, can be placed in any page of the application. However, since it's used to provide a global navigation pattern, it's unlikely that it will be placed in just one page of the application. To provide a seamless experience, you would need to place the same control in every page of your application. However, this approach would have many downsides: redundancy, harder to mantain, etc.
 
 A better approach is to place the HamburgerMenu control into a **shell**, which is a page that will be used as a container in replacement of the standard Frame of the application. The standard behavior in a Universal Windows app is to set, as content of the main Window, an empty frame, which will host all the pages of the application and provide navigation capabilities between them.
 With this new approach, we're going to use a new page, which will contain the HamburgerMenu control, as a content of the main window. All the other pages of the application will be hosted by this new container.
