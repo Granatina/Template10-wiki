@@ -161,7 +161,7 @@ The HamburgerMenu control offers an easy way to define the sections of your appl
 - PrimaryButtons are displayed at the top of the panel and they are used to provide to the user quick access to the most used sections of the application.
 - SecondaryButtons are displayed at the bottom of the panel and, as such, they are used to provide to the user access to the less frequently used sections of the applications (like Settings).
 
-The original SplitView control allows developers to add, into the panel, arbitrary XAML, without any constraint. However, it doesn't provide built-in controls to quickly recrate the buttons you can find, for example, in the MSN News app.
+The original SplitView control allows developers to add, into the panel, arbitrary XAML, without any constraint. However, it doesn't provide built-in controls to quickly recreate the buttons you can find, for example, in the MSN News app.
 
 Template10 provides a specific control for this purpose, called **NavigationButtonInfo**, which derives from the **RadioButton** control. RadioButton is the best choice for this scenario since:
 
