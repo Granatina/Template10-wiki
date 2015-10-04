@@ -23,7 +23,7 @@ Hamburger Menu is one of the many navigation patterns available in Windows 10 an
 The Universal Windows Platform has added a new control called **SplitView** to implement hamburger menu navigation's patterns. The goal of the SplitView control is to leave the maximum freedom to the developer, since it simply takes care of splitting the page in two sections:
 
 - A panel, which can be placed in any margin of the page and that can behave in multiple ways (always visible, manually activated by the user, etc.)
-- The main content of the page: tipically, when the user selects one of the items in the panel, the main section is reloaded to display the selected page.
+- The main content of the page: typically, when the user selects one of the items in the panel, the main section is reloaded to display the selected page.
 
 The downside of this freedom is that, if you want to implement a "standard hamburger menu experience" (like the one offered by the MSN News app), you'll have a lot of work to do.
 
