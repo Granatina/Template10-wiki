@@ -72,7 +72,7 @@ In Universal Windows Platform the CommandBar control can be placed anywhere - no
 
 ## IMPLEMENTATION 
 
-Before you can add the control, you must add the Template10.COntrols namespace:
+Before you can add the control, you must add the Template10.Controls namespace:
 
 ```XAML
 <Page x:Class="Controls.MainPage"
