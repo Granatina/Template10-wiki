@@ -1,28 +1,34 @@
 # Converters
 
 Template10 ships with a collection of useful converters that you can use in your application.
-- [DateTimeFormatConverter](#datetimeformatconverter)
+- [StringFormatConverter](#stringformatconverter)
 - [ValueWhenConverter](#valuewhenconverter)
 
-## <a name="datetimeformatconverter" /> DateTimeFormatConverter
+## <a name="stringformatconverter" /> DateTimeFormatConverter
 
 ### Contents Overview
 
-- [Implementation](#datetimeformatconverter-implementation)
+- [Implementation](#stringformatconverter-implementation)
 
-This converter can take in a DateTime value and format it using a  DateTime format string.  You can find a list of the Standard Date and Time format strings at MSDN: [http://msdn.microsoft.com/en-us/library/az4se3k1.aspx](http://msdn.microsoft.com/en-us/library/az4se3k1.aspx). You can also build you own custom Date and Time format string using the infromation from this MSDN article: [http://msdn.microsoft.com/en-us/library/8kb3ddd4.aspx](http://msdn.microsoft.com/en-us/library/8kb3ddd4.aspx).
+This converter can take in a value and format it using format strings provided as either a parameter or property of the converter.  
 
-### <a name="datetimeformatconverter-implementation" /> Implementation
+* **Formatting Types in .NET**: https://msdn.microsoft.com/en-us/library/26etazsy.aspx
+    * **Standard Date/Time Format Strings**: http://msdn.microsoft.com/en-us/library/az4se3k1.aspx.
+    * **Custom Date/Time Format Strings**: http://msdn.microsoft.com/en-us/library/8kb3ddd4.aspx.
+    * **Standard Numeric Format Strings**: http://msdn.microsoft.com/en-us/library/dwhawy9k.aspx
+    * **Custom Numeric Format Strings**: http://msdn.microsoft.com/en-us/library/0c899ak8.aspx
+
+### <a name="stringformatconverter-implementation" /> Implementation
 
 You can add this control as a Resource to another XAML element:
 
     <Page.Resources>
-        <converters:DateTimeFormatConverter x:Key="DTFormatConverter" />
+        <converters:StringFormatConverter x:Key="StrFormatConverter" />
     </Page.Resources>
 
 With the resource in place, you can use the resource as the **Converter** when binding a value on your page. The **ConverterParameter** binding property specifies the format string:
 
-    <TextBlock Text="{Binding DateTimeValue, Converter={StaticResource DTFormatConverter}, ConverterParameter=D}" />
+    <TextBlock Text="{Binding DateTimeValue, Converter={StaticResource StrFormatConverter}, ConverterParameter=\{0:D\}}" />
 
 ## <a name="valuewhenconverter" /> ValueWhenConverter
 
