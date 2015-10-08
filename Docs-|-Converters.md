@@ -4,7 +4,7 @@ Template10 ships with a collection of useful converters that you can use in your
 - [StringFormatConverter](#stringformatconverter)
 - [ValueWhenConverter](#valuewhenconverter)
 
-## <a name="stringformatconverter" /> DateTimeFormatConverter
+## <a name="stringformatconverter" /> StringFormatConverter
 
 ### Contents Overview
 
@@ -24,11 +24,16 @@ You can add this control as a Resource to another XAML element:
 
     <Page.Resources>
         <converters:StringFormatConverter x:Key="StrFormatConverter" />
+        <converters:StringFormatConverter x:Key="PriceConverter" Format="{}{0:N4}"/>
+        <converters:StringFormatConverter x:Key="ValueConverter" Format="{}{0:N2}"/>
     </Page.Resources>
 
 With the resource in place, you can use the resource as the **Converter** when binding a value on your page. The **ConverterParameter** binding property specifies the format string:
 
     <TextBlock Text="{Binding DateTimeValue, Converter={StaticResource StrFormatConverter}, ConverterParameter=\{0:D\}}" />
+    <TextBlock Text="{Binding PriceProperty, Converter={StaticResource PriceConverter}" />
+    <TextBlock Text="{Binding ValueProperty, Converter={StaticResource ValueConverter}" />
+
 
 ## <a name="valuewhenconverter" /> ValueWhenConverter
 
