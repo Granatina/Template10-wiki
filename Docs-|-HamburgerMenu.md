@@ -69,7 +69,7 @@ The HamburgerMenu control helps you to quickly implement this kind of experience
 
 - **PrimaryButtons** (IEnumerable)
 
-> This property allows developers to add in the panel the main sections of the application, which are displayed at the top. Each section is represented with a NavigationButtonInfo control, which offers some built in features like predefined styles, automaticatic navigation, etc.
+> This property allows developers to add in the panel the main sections of the application, which are displayed at the top. Each section is represented with a HamburgerButtonInfo control, which offers some built in features like predefined styles, automaticatic navigation, etc.
 
 - **SecondaryButtons** (IEnumerable)
 
@@ -83,7 +83,7 @@ The HamburgerMenu control helps you to quickly implement this kind of experience
 
 > This property controls the size of the panel.
 
-- **Selected** (NavigationButtonInfo)
+- **Selected** (HamburgerButtonInfo)
 
 > This property contains a reference to the selected section in the panel.
 
@@ -163,7 +163,7 @@ The HamburgerMenu control offers an easy way to define the sections of your appl
 
 The original SplitView control allows developers to add, into the panel, arbitrary XAML, without any constraint. However, it doesn't provide built-in controls to quickly recreate the buttons you can find, for example, in the MSN News app.
 
-Template10 provides a specific control for this purpose, called **NavigationButtonInfo**, which derives from the **RadioButton** control. RadioButton is the best choice for this scenario since:
+Template10 provides a specific control for this purpose, called **HamburgerButtonInfo**, which derives from the **RadioButton** control. RadioButton is the best choice for this scenario since:
 
 - It already handles the fact that the current selected item should be highlighted.
 - It already supports mutual selection: if one of the buttons in the group is selected, all the other are automatically unselected.
@@ -180,34 +180,34 @@ Here is how a sample HamburgerMenu implementation looks like:
                 NavButtonForeground="White" >
 
     <controls:HamburgerMenu.PrimaryButtons>
-        <controls:NavigationButtonInfo PageType="views:MainPage" ClearHistory="True">
+        <controls:HamburgerButtonInfo PageType="views:MainPage" ClearHistory="True">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                 <SymbolIcon Symbol="Home" Width="48" Height="48" />
                 <TextBlock Text="Home" Margin="12, 0, 0, 0" VerticalAlignment="Center" />
             </StackPanel>
-        </controls:NavigationButtonInfo>
+        </controls:HamburgerButtonInfo>
 
-        <controls:NavigationButtonInfo PageType="views:DetailPage" >
+        <controls:HamburgerButtonInfo PageType="views:DetailPage" >
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                 <SymbolIcon Symbol="Calendar" Width="48" Height="48" />
                 <TextBlock Text="Calendar" Margin="12, 0, 0, 0" VerticalAlignment="Center" />
             </StackPanel>
-        </controls:NavigationButtonInfo>
+        </controls:HamburgerButtonInfo>
     </controls:HamburgerMenu.PrimaryButtons>
 
     <controls:HamburgerMenu.SecondaryButtons>
-        <controls:NavigationButtonInfo PageType="views:DetailPage">
+        <controls:HamburgerButtonInfo PageType="views:DetailPage">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                 <SymbolIcon Symbol="Setting"  Width="48" Height="48"  />
                 <TextBlock Text="Settings" Margin="12, 0, 0, 0" VerticalAlignment="Center"/>
             </StackPanel>
-        </controls:NavigationButtonInfo>
+        </controls:HamburgerButtonInfo>
     </controls:HamburgerMenu.SecondaryButtons>
 
 </controls:HamburgerMenu>
 ```
 
-The NavigationButtonInfo control has the following properties:
+The HamburgerButtonInfo control has the following properties:
 
 - **PageType** is a reference to the page type connected to the section. When the user taps on this button, he will be automatically redirected to that page.
 - **PageParameter** is an optional parameter which can be passed to the destination page and retrieved using the **OnNavigatedTo()** event handler.
@@ -240,28 +240,28 @@ The first step is to add a new XAML page in your project, which will contain jus
     <controls:HamburgerMenu x:Name="Menu">
 
         <controls:HamburgerMenu.PrimaryButtons>
-            <controls:NavigationButtonInfo PageType="views:MainPage" ClearHistory="True">
+            <controls:HamburgerButtonInfo PageType="views:MainPage" ClearHistory="True">
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                     <SymbolIcon Symbol="Home" Width="48" Height="48" />
                     <TextBlock Text="Home" Margin="12, 0, 0, 0" VerticalAlignment="Center" />
                 </StackPanel>
-            </controls:NavigationButtonInfo>
+            </controls:HamburgerButtonInfo>
 
-            <controls:NavigationButtonInfo PageType="views:DetailPage" >
+            <controls:HamburgerButtonInfo PageType="views:DetailPage" >
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                     <SymbolIcon Symbol="Calendar" Width="48" Height="48" />
                     <TextBlock Text="Calendar" Margin="12, 0, 0, 0" VerticalAlignment="Center" />
                 </StackPanel>
-            </controls:NavigationButtonInfo>
+            </controls:HamburgerButtonInfo>
         </controls:HamburgerMenu.PrimaryButtons>
 
         <controls:HamburgerMenu.SecondaryButtons>
-            <controls:NavigationButtonInfo PageType="views:DetailPage">
+            <controls:HamburgerButtonInfo PageType="views:DetailPage">
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                     <SymbolIcon Symbol="Setting"  Width="48" Height="48"  />
                     <TextBlock Text="Settings" Margin="12, 0, 0, 0" VerticalAlignment="Center"/>
                 </StackPanel>
-            </controls:NavigationButtonInfo>
+            </controls:HamburgerButtonInfo>
         </controls:HamburgerMenu.SecondaryButtons>
 
     </controls:HamburgerMenu>
