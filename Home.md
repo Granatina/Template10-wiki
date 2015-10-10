@@ -107,6 +107,20 @@ nav.Navigate(typeof(Views.DetailPage), this.Value);
 ````
 2. Template10.Services.KeyboardService (docs)
 3. Template10.Services.SettingsService (docs)
+
+See the [minimal template](https://github.com/Windows-XAML/Template10/tree/master/Templates%20(Project)/Minimal) for a complete settings example.
+
+````csharp
+// from inside a view-model
+ Services.SettingsServices.SettingsService _settings;
+ ...
+ public bool UseLightThemeButton
+        {
+            get { return _settings.AppTheme.Equals(ApplicationTheme.Light); }
+            set { _settings.AppTheme = value ? ApplicationTheme.Light : ApplicationTheme.Dark; base.RaisePropertyChanged(); }
+        }
+````
+
 4. Template10.Common.WindowWrapper (docs)
 5. Template10.Common.DispatcherWrapper (docs)
 
