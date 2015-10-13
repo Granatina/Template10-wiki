@@ -1,1 +1,0 @@
-https://github.com/Windows-XAML/Template10/wiki
