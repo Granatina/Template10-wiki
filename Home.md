@@ -1,7 +1,3 @@
-##Is Template 10 ready to use?
-
-Yes. It sure is. _No part of Template 10 is in preview starting September 2015._
-
 ###What is Template 10?
 
 Template 10 is three things. 
