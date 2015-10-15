@@ -181,7 +181,7 @@ Template 10 has a lot of authors.
 1. Jerry Nixon, co-author of Developer's Guide to Windows 10.
 2. Daren May, co-author of official Windows 10 hands on labs.
 3. Robert Evans, lead field engineer and consultant for Windows apps.
-4. Microsoft (PFE) professional field engineers, worldwide.
+4. Microsoft (PFE) premier field engineers, worldwide.
 5. Internal product and platform teams who contribute and advise.
 6. Community developers, like you, who submit pull requests all the time.
 
