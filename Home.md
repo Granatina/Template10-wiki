@@ -4,7 +4,7 @@
 
 Template 10 is three things. 
 
-1. The Template 10 Windows app project templates in the Visual Studio gallery.
+1. The Template 10 Windows app project templates in the Visual Studio [gallery](https://visualstudiogallery.msdn.microsoft.com/60bb885a-44e9-4cbf-a380-270803b3f6e5).
 2. The Template 10 Windows app helper library in [NuGet](https://www.nuget.org/packages/Template10/).
 3. The Template 10 Windows app technique samples in [GitHub](https://github.com/Windows-XAML/Template10).
 
