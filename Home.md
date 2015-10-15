@@ -1,5 +1,7 @@
 ###What is Template 10?
 
+![T10](https://raw.githubusercontent.com/Windows-XAML/Template10/master/Assets/T10%2056x56.png)
+
 Template 10 is three things. 
 
 1. The Template 10 Windows app project templates in the Visual Studio gallery.
