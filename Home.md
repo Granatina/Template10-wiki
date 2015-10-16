@@ -9,6 +9,8 @@ Because the Template 10 templates (both Blank and Minimal) use NuGet 3, and beca
 
 Congratulations, you can now use your project without "missing assemblies" errors. If you want to return the Package Manager Settings back to their original values, that is fine at this time. 
 
+![](https://raw.githubusercontent.com/Windows-XAML/Template10/master/Assets/GetStarted.gif)
+
 ###What is Template 10?
 
 ![T10](https://raw.githubusercontent.com/Windows-XAML/Template10/master/Assets/T10%2056x56.png)
