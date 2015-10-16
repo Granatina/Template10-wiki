@@ -120,6 +120,9 @@ nav.Navigate(typeof(Views.DetailPage), this.Value);
 var nav = WindowWrapper.Current(MyFrame).NavigationService;
 nav.Navigate(typeof(Views.DetailPage), this.Value);
 ````
+
+Using the Template 10 NavigationService ensures your app stays in sync with the BootStrapper and if you use view-models, implement INavigable, and set it as the valueof your Page.DataContext, its OnNavigatedTo override will be called and passed any parameter used with Navigate(). 
+
 2. Template10.Services.KeyboardService (docs)
 3. Template10.Services.SettingsService (docs)
 
