@@ -115,6 +115,10 @@ this.NavigationService.Navigate(typeof(Views.DetailPage), this.Value);
 // from inside the primary window
 var nav = Template10.Common.BootStrapper.Current.NavigationService;
 nav.Navigate(typeof(Views.DetailPage), this.Value);
+
+// from/with a reference to a Frame
+var nav = WindowWrapper.Current(MyFrame).NavigationService;
+nav.Navigate(typeof(Views.DetailPage), this.Value);
 ````
 2. Template10.Services.KeyboardService (docs)
 3. Template10.Services.SettingsService (docs)
