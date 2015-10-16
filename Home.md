@@ -1,3 +1,14 @@
+###First things first, getting the T10 templates to build.
+
+Because the Template 10 templates (both Blank and Minimal) use NuGet 3, and because the Visual Studio tooling for NuGet 3 in UWP apps is quite new, you must restore the packages from NuGet before they will build. There are three steps to get it to work, and this is a one-time process.
+
+1. Press Ctrl+Q, type "pac man" and ensure "Allow NuGet to download missing packages" and "Automatically check for missing packages during build in Visual Studio" are both checked (true) in the Options dialog. 
+2. Right-click your Solution, and select Clean.
+3. Right-click your Solution, and select Rebuild.
+4. Select your project, and click the "Refresh" button at the top of Solution Explorer.
+
+Congratulations, you can now use your project without "missing assemblies" errors. If you want to return the Package Manager Settings back to their original values, that is fine at this time. 
+
 ###What is Template 10?
 
 ![T10](https://raw.githubusercontent.com/Windows-XAML/Template10/master/Assets/T10%2056x56.png)
