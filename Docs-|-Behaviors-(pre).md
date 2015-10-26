@@ -73,3 +73,25 @@ in the example above, a XAML behavior monitoring the click event of a button wil
 ###TextBoxEnterKeyBehavior
 ###TimeoutAction
 
+
+###OpenFlyoutAction
+This action allows you to use the FlyoutBase XAML element when its parent XAML behavior is triggered.
+
+Here is a small example when you tap a on an AppBarButton:
+
+```XAML
+         <AppBarButton Icon="Find" Label="Search">
+             <FlyoutBase.AttachedFlyout>
+                  <Flyout>
+                      <StackPanel>
+                          <TextBlock Text="Awesome Flyout!" />
+                      </StackPanel>
+                  </Flyout>
+              </FlyoutBase.AttachedFlyout>
+              <interactivity:Interaction.Behaviors>
+                  <core:EventTriggerBehavior EventName="Tapped">
+                      <behaviors:OpenFlyoutAction />
+                  </core:EventTriggerBehavior>
+              </interactivity:Interaction.Behaviors>
+          </AppBarButton>
+```
