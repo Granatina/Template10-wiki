@@ -102,6 +102,24 @@ There is a lot to Template 10, but it's actually very basic.
 </Button>
 ````
 
+4. Template10.Behaviors.OpenFlyoutAction(docs)
+````XAML
+<AppBarButton Icon="Find" Label="Search">
+             <FlyoutBase.AttachedFlyout>
+                  <Flyout>
+                      <StackPanel>
+                          <TextBlock Text="Awesome Flyout!" />
+                      </StackPanel>
+                  </Flyout>
+              </FlyoutBase.AttachedFlyout>
+              <interactivity:Interaction.Behaviors>
+                  <core:EventTriggerBehavior EventName="Tapped">
+                      <behaviors:OpenFlyoutAction />
+                  </core:EventTriggerBehavior>
+              </interactivity:Interaction.Behaviors>
+          </AppBarButton>
+````
+
 **There are XAML services in Template 10.**
 
 1. Template10.Services.NavigationService (docs)
