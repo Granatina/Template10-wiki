@@ -42,11 +42,11 @@ In Universal Windows Platform the CommandBar control can be placed anywhere - no
 
 > This property sets the context for the on-canvas back button. This property not only enables the back button but allows it to operate against any off-canvas frame, if desired.
 
-- **HeaderForegroundBrush** (Brush)
+- **HeaderBackgroundBrush** (Brush)
 
 > This property overrides the default background of the PageHeader. This property can be applied through a style to allow developers the ability to theme their application.
 
-- **HeaderBackgroundBrush** (Brush)
+- **HeaderForegroundBrush** (Brush)
 
 > This property overrides the default foreground (text) of the PageHeader. This property can be applied through a style to allow developers the ability to theme their application.
 
