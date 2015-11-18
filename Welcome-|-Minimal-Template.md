@@ -16,18 +16,10 @@ Contains the DetailPageViewModel.cs, MainPageViewModel.cs, and the SettingsPageV
 ## Views ##
 Contains the DetailPage.xaml, MainPage.xaml, SettingsPage.xaml, Shell.xaml, Splash.xaml, and the applicable code-behind pages. 
 # Getting Started #
-1. Download the Template10 Zip package.
-2. Unblock the Template10-master.zip package
-    a. Right click the zip and select properties. 
-    b. Check the Unblock box
-    c. Click Apply
-4. Extract the Template10-master.zip package
-5. Open the folder where the Template10-master.zip was extracted
-6. Click into the Template10-master folder
-7. Click into the Templates (Zips)
-8. Extract the T10Minimal.zip file to %USERPROFILE%\Documents\Visual Studio 2015\Templates\ProjectTemplates\Visual C#\Windows - Note: The file named "Manually Add A Template to VS2015.txt" states that unzipping the file is not necessary, but some have found it necessary to do so. 
-9. Open Visual Studio
-10. Click New Project
-11. Select Windows -> T10Minimal -> Template 10 Minimal
-12. Name the Solution, the Project and click OK. 
-13. Press F5 and enjoy the starting project. 
+1. Open Visual Studio.
+2. Go to Tools-> Extensions and Updates
+4. Search for Template10 and click Install. 
+5. Click New Project
+6. Select Templates -> C# -> Windows -> Universal -> Template 10 (Blank or Minimal)
+7. Name the Solution, the Project and click OK. 
+8. Press F5 and enjoy the starting project. 
