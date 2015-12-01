@@ -1,13 +1,24 @@
-###First things first, getting the T10 templates to build.
+###What is Template 10?
 
-Because the Template 10 templates (both Blank and Minimal) use NuGet 3, and because the Visual Studio tooling for NuGet 3 in UWP apps is quite new, you must restore the packages from NuGet before they will build. There are three steps to get it to work, and this is a one-time process.
+![T10](https://raw.githubusercontent.com/Windows-XAML/Template10/master/Assets/T10%2056x56.png)
+Template 10 is a set of Visual Studio project templates. They sling-shot developer productivity by getting ~80% of the boilerplate stuff delivered in the template - things like navigation, suspension, and even a Hamburger control. 
 
-1. Press Ctrl+Q, type "pac man" and ensure "Allow NuGet to download missing packages" and "Automatically check for missing packages during build in Visual Studio" are both checked (true) in the Options dialog. 
-2. Right-click your Solution, and select Clean.
-3. Right-click your Solution, and select Rebuild.
-4. Select your project, and click the "Refresh" button at the top of Solution Explorer.
+Template 10 is intended for Window XAML apps written in C#. You can install Template 10 by searching for "Template 10" in the Visual Studio 2015 Extension Manager. Once installed, Template 10 templates will show up in the New Project dialog.
 
-Congratulations, you can now use your project without "missing assemblies" errors. If you want to return the Package Manager Settings back to their original values, that is fine at this time. 
+Template 10 templates share the Template 10 library in NuGet. This hosts the serviceable code and keeps the templates simple. It's a library that our templates or existing projects can include in their apps. 
+
+##Are you having trouble building your new Template 10 project?
+
+Template 10 templates (both Blank and Minimal) use NuGet 3. Visual Studio tooling for NuGet 3 is quite new; you must restore your packages from NuGet before they will build. Here are the one-time steps to do so. 
+
+1. Press Ctrl+Q, type `pac man` 
+1. Ensure `Allow NuGet to download missing packages` is checked.
+1. Ensure `Automatically check for missing packages during build in Visual Studio` is checked.  
+1. Right-click your Solution, and select `Clean`.
+1. Right-click your Solution, and select `Rebuild`.
+1. Select your project, and click the `Refresh` button at the top of Solution Explorer.
+
+Congratulations, you can now use your project without "missing assemblies" errors. If you want, return the Package Manager Settings back to their original values. This will make your builds significantly faster.
 
 ![](https://raw.githubusercontent.com/Windows-XAML/Template10/master/Assets/GetStarted.gif)
 
