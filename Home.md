@@ -1,11 +1,17 @@
 ###What is Template 10?
 
-![T10](https://raw.githubusercontent.com/Windows-XAML/Template10/master/Assets/T10%2056x56.png)
+![T10](https://raw.githubusercontent.com/Windows-XAML/Template10/master/Assets/T10%2056x56.png) 
+
 Template 10 is a set of Visual Studio project templates. They sling-shot developer productivity by getting ~80% of the boilerplate stuff delivered in the template - things like navigation, suspension, and even a Hamburger control. 
+
+1. `Template 10 (Blank)` project template ([link](https://visualstudiogallery.msdn.microsoft.com/60bb885a-44e9-4cbf-a380-270803b3f6e5))
+1. `Template 10 (Minimal)` project template ([link](https://visualstudiogallery.msdn.microsoft.com/60bb885a-44e9-4cbf-a380-270803b3f6e5))
 
 Template 10 is intended for Window XAML apps written in C#. You can install Template 10 by searching for "Template 10" in the Visual Studio 2015 Extension Manager. Once installed, Template 10 templates will show up in the New Project dialog.
 
 Template 10 templates share the Template 10 library in NuGet. This hosts the serviceable code and keeps the templates simple. It's a library that our templates or existing projects can include in their apps. 
+
+1. `Template 10 (library)` in NuGet ([link](http://www.nuget.org/packages/Template10/))
 
 ##Are you having trouble building your new Template 10 project?
 
@@ -22,23 +28,15 @@ Congratulations, you can now use your project without "missing assemblies" error
 
 ![](https://raw.githubusercontent.com/Windows-XAML/Template10/master/Assets/GetStarted.gif)
 
-###What is Template 10?
+###Credit
 
-![T10](https://raw.githubusercontent.com/Windows-XAML/Template10/master/Assets/T10%2056x56.png)
-
-Template 10 is three things. 
-
-1. The Template 10 Windows app project templates in the Visual Studio [gallery](https://visualstudiogallery.msdn.microsoft.com/60bb885a-44e9-4cbf-a380-270803b3f6e5).
-2. The Template 10 Windows app helper library in [NuGet](https://www.nuget.org/packages/Template10/).
-3. The Template 10 Windows app technique samples in [GitHub](https://github.com/Windows-XAML/Template10).
-
-> Template 10 is the brainchild of Microsoft Developer Evangelism and was started there. Lots of learnings from Windows 8, including lots from the Pattern's and Practices Prism.StoreApps framework are in the code base.
+Template 10 is the brainchild of Microsoft Developer Evangelism and was started there. Lots of learnings from Windows 8, including lots from the Pattern's and Practices Prism.StoreApps framework are in the code base.
 
 ###Why are you saying T10 is convention-based?
 
-Look. You know the Asp.NET MVC Visual Studio project? It has several empty folders intended to guide developers where to put their views, controllers, etc. Template 10 does this, too. Like MVC, we don't require you use our conventions, but you can. We believe that developers should be given guidance, not just code. Template 10 does that. Our conventions are simple and consistent. But, most importantly, optional. Have your own conventions? No problem. Otherwise, there are ours.
+The philosophy is this: we want you do it our way unless you want to do it your way. You are the developer and only you know your app well enough to make big decisions. But, without a good reason to do it another way, do it our way. It's not about telling you to do it our way, it's about telling you to do it our way unless you don't want to. It's about guidance. It's about conventions. And, it's about flexibility.
 
-Our conventions are simple. Like this:
+**Here are some of our conventions:**
 
 1. We put views (XAML files) in a /Views folder (and ns)
 1. We only have one view-model for one view
