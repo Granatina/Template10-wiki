@@ -1,7 +1,17 @@
-####What is a XAML behavior?
+####Behaviors
 XAML behaviors are a mechanism to encapsulate code with logic and configuration parameters such that it can then be declared in XAML without requiring code-behind. Most XAML Behaviors have design-time support. They can easily be written in C# and have simple interfaces (IBehavior).
+##Table of Contents
 
-> For now, XAML behaviors require the XAML behaviors extension SDK that ships natively with Visual Studio. To add behavior support in your application, developers must manually reference this extension.
+1. What is a XAML Behavior?
+1. `EllipseBehavior`
+1. `TextBoxEnterKeyBehavior`
+1. What is a XAML Action?
+1. `CloseFlyoutAction`
+1. `ConditionalAction`
+1. `FocusAction`
+1. `NavButtonAction`
+1. `OpenFlyoutAction`
+1. `TimeoutAction`
 
 **XAML Behavior**
 
