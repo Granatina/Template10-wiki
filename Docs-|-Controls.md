@@ -296,14 +296,6 @@ The control to create a hamburger menu based navigation pattern in your applicat
 
 ![](http://i.imgur.com/YXAtzYy.png)
 
-##Contents overview
-- [Properties](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-HamburgerMenu#properties)
-- [Implementation](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-HamburgerMenu#implementation)
-- [Customization](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-HamburgerMenu#customization)
-- [Buttons](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-HamburgerMenu#buttons)
-- [Implementing a shell](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-HamburgerMenu#implementing-a-shell)
-- [VisualStates for the HamburgerMenu](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-HamburgerMenu#visual-states-for-the-hamburgermenu)
-
 ##Inspiration
 
 The Hamburger Menu approach is one of the most widely used navigation pattern nowadays in mobile applications and websites. It's made by panel, which is usually hidden, that contains the links to browse through the different sections of the applications. By tapping a button, the user is able to show or hide the panel, so that he can quickly jump from one section to another. The name of this navigation pattern comes from the icon that is used to show / hide the panel: three lines, one on top of the other, which resemble a hamburger placed in the middle of two pieces of bread.
