@@ -1,4 +1,8 @@
-Welcome! This is the home page for the Template 10 Minimal template. This template, alongside the Blank template, make up the Template 10 project template collection. They provide a production-ready example of the Template10Library Nuget API. 
+#Welcome! 
+
+![T10](https://raw.githubusercontent.com/Windows-XAML/Template10/master/Assets/T10%2056x56.png) 
+
+This is the home page for the Template 10 Minimal template. This template, alongside the Blank template, make up the Template 10 project template collection. They provide a production-ready example of the Template10Library Nuget API. 
 
 ##First, are you having trouble building your new Template 10 project? We can fix that.
 
