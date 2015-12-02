@@ -1,12 +1,12 @@
 ##Services
 
-Lorem ipsum
+A service is a functionality wrapper, sometimes called a View Service.
 
 ###Table of contents
 
-1. NavigationService
-1. KeyboardService
-1. SettingsService
+1. [NavigationService](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Services#navigationservice)
+1. [KeyboardService](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Services#keyboardservice)
+1. [SettingsService](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Services#settingsservice)
 
 ###NavigationService
 The intent of the `NavigationService` is to centralize `Frame` interaction and to ensure basic behaviors occur, such as calling `OnNavigatedTo` in your page's view-model before navigating to the page. The `NavigationService` is testable, because it is interface-based, and it corrects a few nuisance flaws in the native XAML `Frame`.
