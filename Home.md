@@ -59,8 +59,8 @@ The philosophy is this: we want you do it our way unless you want to do it your 
 2. Daren May, co-author of official Windows 10 hands on labs.
 3. Robert Evans, lead field engineer and consultant for Windows apps.
 4. Microsoft (PFE) premier field engineers, worldwide.
-5. Internal product teams who contribute and advise.
-5. Internal platform teams who contribute and advise.
+5. Internal Microsoft product teams who contribute and advise.
+5. Internal Microsoft platform teams who contribute and advise.
 6. Community developers, like you, who submit pull requests all the time.
 
 ###Does Template 10 require MVVM?
