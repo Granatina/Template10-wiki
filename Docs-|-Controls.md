@@ -16,14 +16,6 @@ The control to create a common page element including header text, primary butto
 
 ![](http://i.imgur.com/BFG3pSB.png)
 
-#### Contents overview
-
-- [Properties](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-PageHeader#properties)
-- [Implementation](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-PageHeader#implementation)
-- [Navigation](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-PageHeader#navigation)
-- [Commands](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-PageHeader#commands)
-- [Hamburger menu](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-PageHeader#pageheader-and-the-hamburgermenu)
-
 #### Inspiration
 
 Every page needs some kind of header/title. It's the boilerplate code developers write over and over. The Template 10 PageHeader does this. It is inspired by the design of Microsoft's MSN News app. The Template 10 PageHeader control is 90% representative of the that implementation, but not identical. You'll like it.
