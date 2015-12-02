@@ -36,89 +36,24 @@ The philosophy is this: we want you do it our way unless you want to do it your 
 
 ###What's in Template 10?
 
-There is a lot to Template 10, but it's actually very basic.
-
-> Note: many of the (docs) are still being written.
-
-**There are XAML controls in Template 10.**
-
-See [documentation](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls)
-
-**There are XAML behaviors and actions in Template 10.**
-
-See [documentation](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Behaviors).
-
-**There are XAML services in Template 10.**
-
-See [documentation](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Services)
-
-````csharp
-// from inside a view-model
- Services.SettingsServices.SettingsService _settings;
- ...
- public bool UseLightThemeButton
-        {
-            get { return _settings.AppTheme.Equals(ApplicationTheme.Light); }
-            set { _settings.AppTheme = value ? ApplicationTheme.Light : ApplicationTheme.Dark; base.RaisePropertyChanged(); }
-        }
-````
-
-4. Template10.Common.WindowWrapper (docs)
-5. Template10.Common.DispatcherWrapper (docs)
-
-> We plan to add more services to Template 10.
-
-**There are XAML converters in Template 10.**
-
-1. Template10.Converters.DateTimeFormatConverter ([docs](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Converters#datetimeformatconverter))
-2. Template10.Converters.ValueWhenConverter ([docs](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Converters#valuewhenconverter))
-
-**There are basic MVVM classes in Template 10.**
-
-1. Template10.Mvvm.BindableBase (docs)
-2. Template10.Mvvm.DelegateCommand (docs)
-3. Template10.Mvvm.ViewModelBase (docs)
-
-> Template 10 is not intended to be a new MVVM Framework.
-
-**There are developer utilities in Template 10.**
-
-1. Template10.Utils.MonitorUtil (docs)
-2. Template10.Utils.ColorUtil (docs)
-3. Template10.Utils.TypeUtil (docs)
-4. Template10.Utils.XamlUtil (docs)
-
-**There are Visual Studio project templates in Template 10.**
-
-1. Windows/Universal/Template 10/Template 10 (Blank) (docs)
-2. Windows/Universal/Template 10/Template 10 (Minimal) (docs)
-
-> Projects are meant for greenfield projects, and learning
-
-**There is a library in NuGet with Template 10.**
-
-1. http://nuget.org/packages/template10
-
-> The library can be added to existing Windows apps
-
-**There are samples in Template 10.**
-
-1. Samples/MvvmLight (docs)
-2. Samples/Search (and Login) (docs)
-3. Samples/Tiles (and Toast) (docs)
-4. Samples/TitleBar (docs)
+1. There are [controls](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls)
+1. There are [behaviors](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Behaviors).
+1. There are [services](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Services)
+1. There are [converters](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Converters)
+1. There are MVVM classes (BindableBase, DelegateCommand, and ViewModelBase)
+1. There are utility classes (Template.Utils)
+1. There are project templates (Blank, Minimal)
+1. There is a NuGet (library)[http://nuget.org/packages/template10]
+1. There are samples, many samples!
 
 ###Where have I heard about Template 10?
 
-Template 10 shows up a lot of places.
-
-1. On Microsoft Virtual Academy's Developer's Guide to Windows 10 (link)
-2. On Microsoft official Windows 10 Hands on Labs (link)
-3. In Microsoft Press Windows 10 exam-prep books (link)
+1. On Microsoft Virtual Academy's Developer's Guide to Windows 10 
+1. On Microsoft official Windows 10 Hands-on-Labs 
+1. At the Microsoft Windows 10 Tour events
+1. In Microsoft Press Windows 10 exam-prep books 
 
 ###Who's contributing to Template 10?
-
-Template 10 has a lot of authors.
 
 1. Jerry Nixon, co-author of Developer's Guide to Windows 10.
 2. Daren May, co-author of official Windows 10 hands on labs.
@@ -127,14 +62,12 @@ Template 10 has a lot of authors.
 5. Internal product and platform teams who contribute and advise.
 6. Community developers, like you, who submit pull requests all the time.
 
-> If you wonder if we accept community pull requests, we do. Without the help of the developer community, many enhancements and tweaks that make Template 10 great would not be present.
-
 ###Does Template 10 require MVVM?
 
-No. Though it's difficult to imagine any XAML app not using model-view-view-model, there is nothing in Template 10 that requires you to use it. Template 10 is compatible with any MVVM framework, and ships with a mini framework that's probably enough for many of the apps out there.
+No. Though it's difficult to imagine any XAML app not using model-view-view-model, there is nothing in Template 10 that requires you to use it. Template 10 is compatible with any MVVM framework.
 
 > To leverage other MVVM frameworks, simply inherit from Template10.Mvvm.ViewModelBase or implement Template10.Services.NavigationService.INavagable. This enables OnNavigatedTo/From in your view-models.
 
 ##Is Template 10 right for me?
 
-Probably. Template 10 is intended to remove the boilerplate garbage we all have to write over and over; it packs in as many time-saving lessons-learned as possible for app developers. It's perfect for brand new apps, or apps just wanting to leverage the library. That being said, Template 10 is not for everyone (probably around 90% of apps). 
+Probably. Template 10 packs in as many time-saving lessons-learned as possible. It's perfect for new apps, or apps wanting to leverage the library. That being said, it's not for everyone (probably 90% of Windows XAML apps). 
