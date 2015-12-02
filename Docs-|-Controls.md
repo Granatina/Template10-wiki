@@ -110,7 +110,7 @@ Your initial UI will look like this:
 
 ![](http://i.imgur.com/BFG3pSB.png)
 
-####CUSTOMIZATION
+####Customization
 
 The easiest customization properties of the PageHeader control are:
 
@@ -135,7 +135,7 @@ Your custom UI will look like this:
 
 ![](http://i.imgur.com/xvwCFXf.png)
 
-####NAVIGATION
+####Navigation
 
 Built-in navigation is a handy PageHeader behavior. The BackButtonVisibility property lets the developer turn this functionality on. Then, the back button has its own logic to hide itself (discussed below). 
 
