@@ -58,76 +58,15 @@ There is a lot to Template 10, but it's actually very basic.
 **There are XAML controls in Template 10.**
 
 1. Template10.Controls.PageHeader ([docs](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-PageHeader))
-````XAML
-<controls:PageHeader Text="Main Page" xmlns:controls="Template10.Controls"
-    BackButtonVisibility="Collapsed" Frame="{x:Bind Frame, Mode=OneWay}" />
-````
-2. Template10.Controls.HamburgerMenu ([docs](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-HamburgerMenu))
-````XAML
-<Controls:HamburgerMenu x:Name="MyHamburgerMenu">
-    <Controls:HamburgerMenu.PrimaryButtons>
-        <Controls:HamburgerButtonInfo ClearHistory="True" PageType="views:MainPage">
-            <StackPanel Orientation="Horizontal">
-                <SymbolIcon Width="48" Height="48" Symbol="Home" />
-                <TextBlock Margin="12,0,0,0" VerticalAlignment="Center" Text="Home" />
-            </StackPanel>
-        </Controls:HamburgerButtonInfo>
-    </Controls:HamburgerMenu.PrimaryButtons>
-</Controls:HamburgerMenu>
-````
-3. Template10.Controls.CustomTitleBar (docs)
+1. Template10.Controls.HamburgerMenu ([docs](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-HamburgerMenu))
+1. Template10.Controls.CustomTitleBar (docs-needed)
+1. Template10.Controls.ModalDialog (docs-needed)
+1. Template10.Controls.Resizer (docs-needed)
+1. Template10.Controls.PiePiece (docs-needed)
 
 **There are XAML behaviors and actions in Template 10.**
 
-1. Template10.Behaviors.NavButtonBehavior (docs)
-````XAML
-<AppBarButton Icon="Forward" Label="Forward">
-    <Interactivity:Interaction.Behaviors>
-        <Behaviors:NavButtonBehavior Direction="Forward" Frame="{x:Bind Frame, Mode=OneWay}" />
-    </Interactivity:Interaction.Behaviors>
-</AppBarButton>
-````
-2. Template10.Behaviors.TextBoxEnterBehavior (docs)
-````XAML
-<TextBox>
-    <Interactivity:Interaction.Behaviors>
-        <Behaviors:TextBoxEnterKeyBehavior>
-            <Core:CallMethodAction MethodName="GotoDetailsPage" TargetObject="{Binding}" />
-        </Behaviors:TextBoxEnterKeyBehavior>
-    </Interactivity:Interaction.Behaviors>
-</TextBox>
-````
-3. Template10.Behaviors.TimeoutAction (docs)
-````XAML
-<Button>
-    <Interactivity:Interaction.Behaviors>
-        <Core:EventTriggerBehavior EventName="Click">
-            <Core:CallMethodAction MethodName="ShowBusy" TargetObject="{Binding Mode=OneWay}" />
-            <Behaviors:TimeoutAction Milliseconds="5000">
-                <Core:CallMethodAction MethodName="HideBusy" TargetObject="{Binding Mode=OneWay}" />
-            </Behaviors:TimeoutAction>
-        </Core:EventTriggerBehavior>
-    </Interactivity:Interaction.Behaviors>
-</Button>
-````
-
-4. Template10.Behaviors.OpenFlyoutAction(docs)
-````XAML
-<AppBarButton Icon="Find" Label="Search">
-  <FlyoutBase.AttachedFlyout>
-	  <Flyout>
-		  <StackPanel>
-			  <TextBlock Text="Awesome Flyout!" />
-		  </StackPanel>
-	  </Flyout>
-  </FlyoutBase.AttachedFlyout>
-  <interactivity:Interaction.Behaviors>
-	  <core:EventTriggerBehavior EventName="Tapped">
-		  <behaviors:OpenFlyoutAction />
-	  </core:EventTriggerBehavior>
-  </interactivity:Interaction.Behaviors>
-</AppBarButton>
-````
+See [documentation](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Behaviors).
 
 **There are XAML services in Template 10.**
 
@@ -148,7 +87,7 @@ var nav = WindowWrapper.Current(MyFrame).NavigationService;
 nav.Navigate(typeof(Views.DetailPage), this.Value);
 ````
 
-Using the Template 10 NavigationService ensures your app stays in sync with the BootStrapper and if you use view-models, implement INavigable, and set it as the valueof your Page.DataContext, its OnNavigatedTo override will be called and passed any parameter used with Navigate(). 
+> Using the Template 10 NavigationService ensures your app stays in sync with the BootStrapper and if you use view-models, implement INavigable, and set it as the value of your Page.DataContext, its OnNavigatedTo override will be called and passed any parameter used with Navigate(). 
 
 2. Template10.Services.KeyboardService (docs)
 3. Template10.Services.SettingsService (docs)
