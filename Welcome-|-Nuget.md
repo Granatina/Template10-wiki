@@ -1,3 +1,9 @@
 ## WELCOME
 
-This is the Template 10 library. You can find the source (here)[https://github.com/Windows-XAML/Template10], and submit any issues (here)[https://github.com/Windows-XAML/Template10/issues]. Have fun with this great resource for Windows apps. 
+![T10](https://raw.githubusercontent.com/Windows-XAML/Template10/master/Assets/T10%2056x56.png) 
+
+This is the Template 10 library. 
+
+You can find the `source code` [here](https://github.com/Windows-XAML/Template10), submit `issues` [here](https://github.com/Windows-XAML/Template10/issues), and read our `documentation` [here](https://github.com/Windows-XAML/Template10/wiki). 
+
+Have fun with this great resource for Windows apps. 
