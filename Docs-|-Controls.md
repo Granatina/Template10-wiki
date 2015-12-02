@@ -22,7 +22,7 @@ The control to create a common page element including header text, primary butto
 1. [Properties](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#properties)
 1. [Syntax](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#syntax)
 1. [Customization](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#customization)
-1. [Navigation][(https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#navigation)
+1. [Navigation](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#navigation)
 1. [Built-in behavior](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#built-in-behavior)
 1. [Overriding built-in behavior](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#overriding-built-in-behavior)
 1. [Commands](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#commands)
