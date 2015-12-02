@@ -13,22 +13,7 @@ Template 10 templates share the Template 10 library in NuGet. This hosts the ser
 
 1. `Template 10 (library)` in NuGet ([link](http://www.nuget.org/packages/Template10/))
 
-##First, are you having trouble building your new Template 10 project? We can fix that.
-
-Template 10 templates (both Blank and Minimal) use NuGet 3. Visual Studio tooling for NuGet 3 is quite new; you must restore your packages from NuGet before they will build. Here are the one-time steps to do so. 
-
-1. Press Ctrl+Q, type `pac man` 
-1. Ensure `Allow NuGet to download missing packages` is checked.
-1. Ensure `Automatically check for missing packages during build in Visual Studio` is checked.  
-1. Right-click your Solution, and select `Clean`.
-1. Right-click your Solution, and select `Rebuild`.
-1. Select your project, and click the `Refresh` button at the top of Solution Explorer.
-
-Congratulations, you can now use your project without "missing assemblies" errors. If you want, return the Package Manager Settings back to their original values. This will make your builds significantly faster.
-
-![](https://raw.githubusercontent.com/Windows-XAML/Template10/master/Assets/GetStarted.gif)
-
-###Credit
+###Credit where credit is due
 
 Template 10 is the brainchild of Microsoft Developer Evangelism and was started there. Lots of learnings from Windows 8, including lots from the Pattern's and Practices Prism.StoreApps framework are in the code base.
 
