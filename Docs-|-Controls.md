@@ -110,7 +110,7 @@ Your initial UI will look like this:
 
 ![](http://i.imgur.com/BFG3pSB.png)
 
-## CUSTOMIZATION ##
+####CUSTOMIZATION
 
 The easiest customization properties of the PageHeader control are:
 
@@ -135,7 +135,7 @@ Your custom UI will look like this:
 
 ![](http://i.imgur.com/xvwCFXf.png)
 
-## NAVIGATION ##
+####NAVIGATION
 
 Built-in navigation is a handy PageHeader behavior. The BackButtonVisibility property lets the developer turn this functionality on. Then, the back button has its own logic to hide itself (discussed below). 
 
@@ -153,7 +153,7 @@ Specifically:
 
 Note: When (DevideFamily=Desktop + Mode=Touch) or (DeviceFamily=Mobile) setting the PageHeader BackButtonVisibility property has no effect. The shell-drawn back button is always visible.
 
-## Built-in behavior
+####Built-in behavior
 
 Clicking the on-canvas or the shell-drawn back button is automatically handled by Template 10. It will Frame.GoBack automatically. If there is no where to go back, the on-canvas button will no longer be visible. In this state, the shell-drawn back button will be visible; it does not auto-hide. Clicking the shell-drawn back button in this state will have variable behavior.
 
@@ -161,7 +161,7 @@ Clicking the on-canvas or the shell-drawn back button is automatically handled b
 - When DeviceFamily=Desktop + Mode=Touch, clicking the back button will show the start menu.
 - When DeviceFamily=Mobile, clicking the back button will show the next open app.
 
-## Overriding built-in behavior
+####Overriding built-in behavior
 
 The developer might want to handle BackRequested behavior manually. To do override the native behavior, handle the Bootstrapper.BackRequested event and (optionally) set args.Handled to true. 
 
@@ -180,7 +180,7 @@ The on-canvas back button would look like this:
 
 ![](http://i.imgur.com/rKLWSCm.png)
 
-## COMMANDS 
+####Commands
 
 The PageHeader control extends the standard XAML CommandBar control.
 
@@ -214,7 +214,7 @@ The resulting PageHeader with buttons looks like this:
 
 ![](http://i.imgur.com/NYQTfCg.png)
 
-## PHONE VS DESKTOP 
+####Phone versus Desktop
 
 From a UI point of view, the size of the PageHeader control can be very different when DeviceFamily=Desktop versus DeviceFamily=Mobile. As such, on mobile you should privilege the secondary commands and add as primary commands no more than four buttons; otherwise, when space is limited, primary buttons are not visible in your UI. In addition, when you are designing your UI, you must remember the space taken by the text/title of your page. In such cases it might make sense to have even fewer primary buttons. 
 
@@ -224,13 +224,13 @@ Here's a comparison to consider:
 
 ![](http://i.imgur.com/3KUiKFs.png)
 
-## PAGEHEADER AND THE HAMBURGERMENU 
+####PageHeader and the HamburgerMenu
 
 The PageHeader control is the perfect companion for the HamburgerMenu control (also part of Template 10). 
 
 > In this case, a developer would typically choose to set the PageHeader.HeaderBackground property to match the HamburgerMenu.HamburgerBackground property. 
 
-## Visual States for the Hamburger Button
+####Visual States for the Hamburger Button
 
 The PageHeader control has two built-in visual states - VisualStateNarrow and VisualStateNormal. These have been specifically created to support the HamburgerMenu control which has the identical visual states. 
 
@@ -238,7 +238,7 @@ The PageHeader control has two built-in visual states - VisualStateNarrow and Vi
 
 2. The PageHeader's VisualStateNormal effects the UI in no way, other than removing the effects applied by the PageHeader's VisualStateNarrow - effectively shifting the Text left 48 pixels. 
 
-## Controlling the Visual States
+####Controlling the Visual States
 
 You can control the PageHeader's visual states by defining the minimum widths that triggers them. The **VisualStateNarrowMinWidth** and **VisualStateNormalMinWidth** properties accomplish this.
 
