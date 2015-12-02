@@ -31,8 +31,19 @@ nav.Navigate(typeof(Views.DetailPage), this.Value);
 
 ###KeyboardService
 
-Lorem ipsum
+`documentation needed`
 
 ###SettingsService
+The intent of the `SettingService` is to provide an abstracted way to interacting with service that properly supports serialization and an interface implementation for unit testing purposes.
 
-Lorem ipsum
+````csharp
+// from inside a view-model
+ Services.SettingsServices.SettingsService _settings;
+ ...
+ public bool UseLightThemeButton
+        {
+            get { return _settings.AppTheme.Equals(ApplicationTheme.Light); }
+            set { _settings.AppTheme = value ? ApplicationTheme.Light : ApplicationTheme.Dark; base.RaisePropertyChanged(); }
+        }
+````
+
