@@ -30,7 +30,7 @@ nav.Navigate(typeof(Views.DetailPage), this.Value);
 > Using the Template 10 NavigationService ensures your app stays in sync with the BootStrapper and if you use view-models, implement INavigable, and set it as the value of your Page.DataContext, its OnNavigatedTo override will be called and passed any parameter used with Navigate(). 
 
 ###KeyboardService
-The intent of the `KeyboardService` is to provide an abstracted way of reliably handling keyboard input. 
+The intent of the `KeyboardService` is to provide an abstracted way of reliably handling keyboard input. It was initially created to handle the back and forward gestures in the `NavigationService` but has been abstracted in this service for general use.
 
 `documentation needed`
 
