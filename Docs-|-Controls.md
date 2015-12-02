@@ -16,6 +16,24 @@ The control to create a common page element including header text, primary butto
 
 ![](http://i.imgur.com/BFG3pSB.png)
 
+1. [Inspiration](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#inspiration)
+1. [CommandBar](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#commandbar)
+1. [Key Features](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#key-features)
+1. [Properties](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#properties)
+1. [Syntax](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#syntax)
+1. [Customization](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#customization)
+1. [Navigation][(https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#navigation)
+1. [Built-in behavior](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#built-in-behavior)
+1. [Overriding built-in behavior](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#overriding-built-in-behavior)
+1. [Commands](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#commands)
+1. [Phone versus Desktop](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#phone-versus-desktop)
+1. [PageHeader and the HamburgerMenu](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#pageheader-and-the-hamburgermenu)
+1. [Visual States for the Hamburger Button](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#visual-states-for-the-hamburger-button)
+1. [Controlling the Visual States](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#controlling-the-visual-states)
+1. [Disable the Visual States](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#disable-the-visual-states)
+
+
+
 #### Inspiration
 
 Every page needs some kind of header/title. It's the boilerplate code developers write over and over. The Template 10 PageHeader does this. It is inspired by the design of Microsoft's MSN News app. The Template 10 PageHeader control is 90% representative of the that implementation, but not identical. You'll like it.
