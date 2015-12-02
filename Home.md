@@ -13,7 +13,7 @@ Template 10 templates share the Template 10 library in NuGet. This hosts the ser
 
 1. `Template 10 (library)` in NuGet ([link](http://www.nuget.org/packages/Template10/))
 
-##Are you having trouble building your new Template 10 project?
+##First, are you having trouble building your new Template 10 project? We can fix that.
 
 Template 10 templates (both Blank and Minimal) use NuGet 3. Visual Studio tooling for NuGet 3 is quite new; you must restore your packages from NuGet before they will build. Here are the one-time steps to do so. 
 
