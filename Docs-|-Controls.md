@@ -11,7 +11,7 @@ Lorem Ipsum
 1. [Resizer](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#resizer)
 1. [PiePiece](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#piepiece)
 
-###PageHeader
+#PageHeader
 The control to create a common page element including header text, primary buttons, and secondary buttons. 
 
 ![](http://i.imgur.com/BFG3pSB.png)
@@ -34,15 +34,15 @@ The control to create a common page element including header text, primary butto
 
 
 
-#### Inspiration
+## Inspiration
 
 Every page needs some kind of header/title. It's the boilerplate code developers write over and over. The Template 10 PageHeader does this. It is inspired by the design of Microsoft's MSN News app. The Template 10 PageHeader control is 90% representative of the that implementation, but not identical. You'll like it.
 
-#### CommandBar
+## CommandBar
 
 In Universal Windows Platform the CommandBar control can be placed anywhere - not just top and bottom, like in Windows 8.x. PageHeader is a UI control that extends the CommandBar. The PageHeader allows developers to create a uniform page UI with primary and secondary buttons presented in a consistent, easy way.
 
-#### Key features
+## Key features
 
 - Support for Primary buttons/commands (always visible)
 - Support for Secondary buttons/commands (hidden until the ellipse is tapped)
@@ -50,7 +50,7 @@ In Universal Windows Platform the CommandBar control can be placed anywhere - no
 - Standard on-canvas forward button, wired to navigate
 - Easy look & feel style customization
 
-#### Properties
+## Properties
 
 - **BackButtonVisiblity** (Visible|Collapsed) default=Collapsed
 
@@ -92,7 +92,7 @@ In Universal Windows Platform the CommandBar control can be placed anywhere - no
 
 > This property indicates the width when the Normal Visual State will be applied. This Visual State has no visual impact on the PageHeader other than removing the effects of the VisualStateNarrowMinWidth property. 
 
-#### Syntax
+## Syntax
 
 Before you can add the control, you must add the Template10.Controls namespace:
 
@@ -120,7 +120,7 @@ Your initial UI will look like this:
 
 ![](http://i.imgur.com/BFG3pSB.png)
 
-####Customization
+##Customization
 
 The easiest customization properties of the PageHeader control are:
 
@@ -145,7 +145,7 @@ Your custom UI will look like this:
 
 ![](http://i.imgur.com/xvwCFXf.png)
 
-####Navigation
+##Navigation
 
 Built-in navigation is a handy PageHeader behavior. The BackButtonVisibility property lets the developer turn this functionality on. Then, the back button has its own logic to hide itself (discussed below). 
 
@@ -163,7 +163,7 @@ Specifically:
 
 Note: When (DevideFamily=Desktop + Mode=Touch) or (DeviceFamily=Mobile) setting the PageHeader BackButtonVisibility property has no effect. The shell-drawn back button is always visible.
 
-####Built-in behavior
+##Built-in behavior
 
 Clicking the on-canvas or the shell-drawn back button is automatically handled by Template 10. It will Frame.GoBack automatically. If there is no where to go back, the on-canvas button will no longer be visible. In this state, the shell-drawn back button will be visible; it does not auto-hide. Clicking the shell-drawn back button in this state will have variable behavior.
 
@@ -171,7 +171,7 @@ Clicking the on-canvas or the shell-drawn back button is automatically handled b
 - When DeviceFamily=Desktop + Mode=Touch, clicking the back button will show the start menu.
 - When DeviceFamily=Mobile, clicking the back button will show the next open app.
 
-####Overriding built-in behavior
+##Overriding built-in behavior
 
 The developer might want to handle BackRequested behavior manually. To do override the native behavior, handle the Bootstrapper.BackRequested event and (optionally) set args.Handled to true. 
 
@@ -190,7 +190,7 @@ The on-canvas back button would look like this:
 
 ![](http://i.imgur.com/rKLWSCm.png)
 
-####Commands
+##Commands
 
 The PageHeader control extends the standard XAML CommandBar control.
 
@@ -224,7 +224,7 @@ The resulting PageHeader with buttons looks like this:
 
 ![](http://i.imgur.com/NYQTfCg.png)
 
-####Phone versus Desktop
+##Phone versus Desktop
 
 From a UI point of view, the size of the PageHeader control can be very different when DeviceFamily=Desktop versus DeviceFamily=Mobile. As such, on mobile you should privilege the secondary commands and add as primary commands no more than four buttons; otherwise, when space is limited, primary buttons are not visible in your UI. In addition, when you are designing your UI, you must remember the space taken by the text/title of your page. In such cases it might make sense to have even fewer primary buttons. 
 
@@ -234,13 +234,13 @@ Here's a comparison to consider:
 
 ![](http://i.imgur.com/3KUiKFs.png)
 
-####PageHeader and the HamburgerMenu
+##PageHeader and the HamburgerMenu
 
 The PageHeader control is the perfect companion for the HamburgerMenu control (also part of Template 10). 
 
 > In this case, a developer would typically choose to set the PageHeader.HeaderBackground property to match the HamburgerMenu.HamburgerBackground property. 
 
-####Visual States for the Hamburger Button
+##Visual States for the Hamburger Button
 
 The PageHeader control has two built-in visual states - VisualStateNarrow and VisualStateNormal. These have been specifically created to support the HamburgerMenu control which has the identical visual states. 
 
@@ -248,7 +248,7 @@ The PageHeader control has two built-in visual states - VisualStateNarrow and Vi
 
 2. The PageHeader's VisualStateNormal effects the UI in no way, other than removing the effects applied by the PageHeader's VisualStateNarrow - effectively shifting the Text left 48 pixels. 
 
-####Controlling the Visual States
+##Controlling the Visual States
 
 You can control the PageHeader's visual states by defining the minimum widths that triggers them. The **VisualStateNarrowMinWidth** and **VisualStateNormalMinWidth** properties accomplish this.
 
@@ -274,7 +274,7 @@ Here's how your UI will behave:
 
 ![](http://i.imgur.com/07deVoH.gif)
 
-## Disable the Visual States
+##Disable the Visual States
 
 Some developers may not want the Narrow View State to be applied to the PageHeader. This will certainly be true if the developer is not implementing the hamburger button. In this case, setting the ViewStateNarrowMinWidth to the value of -1 will cause it to never qualify and never be applied.
 
@@ -290,13 +290,13 @@ You would handle this scenario like this:
 
 </Page>
 ```
-###HamburgerMenu 
+#HamburgerMenu 
 
 The control to create a hamburger menu based navigation pattern in your application.
 
 ![](http://i.imgur.com/YXAtzYy.png)
 
-####Contents overview
+##Contents overview
 - [Properties](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-HamburgerMenu#properties)
 - [Implementation](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-HamburgerMenu#implementation)
 - [Customization](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-HamburgerMenu#customization)
@@ -304,13 +304,13 @@ The control to create a hamburger menu based navigation pattern in your applicat
 - [Implementing a shell](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-HamburgerMenu#implementing-a-shell)
 - [VisualStates for the HamburgerMenu](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-HamburgerMenu#visual-states-for-the-hamburgermenu)
 
-####Inspiration
+##Inspiration
 
 The Hamburger Menu approach is one of the most widely used navigation pattern nowadays in mobile applications and websites. It's made by panel, which is usually hidden, that contains the links to browse through the different sections of the applications. By tapping a button, the user is able to show or hide the panel, so that he can quickly jump from one section to another. The name of this navigation pattern comes from the icon that is used to show / hide the panel: three lines, one on top of the other, which resemble a hamburger placed in the middle of two pieces of bread.
 
 Hamburger Menu is one of the many navigation patterns available in Windows 10 and it's effective when your application has multiple and separate sections.
 
-####SplitView
+##SplitView
 
 The Universal Windows Platform has added a new control called **SplitView** to implement hamburger menu navigation's patterns. The goal of the SplitView control is to leave the maximum freedom to the developer, since it simply takes care of splitting the page in two sections:
 
@@ -321,7 +321,7 @@ The downside of this freedom is that, if you want to implement a "standard hambu
 
 The HamburgerMenu control helps you to quickly implement this kind of experience.
 
-####Key features
+##Key features
 
 - Support for Primary buttons / commands (displayed at the top of the panel; they provide access to the most frequently used sections of the application)
 - Support for Secondary buttons / commands (displayed at the bottom of the panel with, optionally, a separator; they provide access to the least frequently used sections of th application).
@@ -329,7 +329,7 @@ The HamburgerMenu control helps you to quickly implement this kind of experience
 - Easy look & feel style customization
 - Works best with the PageHeader control
 
-####Properties
+##Properties
 
 - **HamburgerBackground** (SolidColorBrush)
 
@@ -387,7 +387,7 @@ The HamburgerMenu control helps you to quickly implement this kind of experience
 
 > This property indicates the width when the Normal Visual State will be applied. In this state, the SplitView control is displayed in Minimal mode.
 
-####IMPLEMENTATION 
+##IMPLEMENTATION 
 
 Before you can add the control, you must add the Template10.Controls namespace:
 
@@ -419,7 +419,7 @@ public sealed partial class Shell : Page
 
 You'll understand better how to pass a reference to the NavigationService object to a page in the next sections, when we'll discuss how to embed the HamburgerMenu into a shell.
 
-####Customization
+##Customization
 
 The easiest customization properties of the HamburgerMenu control are:
 
@@ -446,7 +446,7 @@ will create the following result:
 
 ![](http://i.imgur.com/tFrrdA7.png)
 
-####Buttons
+##Buttons
 
 The HamburgerMenu control offers an easy way to define the sections of your applications, by providing two categories of buttons:
 
@@ -509,7 +509,7 @@ The look & feel of the button is up to the developer, who can use an arbitrary X
  
 ![](http://i.imgur.com/xYkujJ3.png)
 
-####Implementing a shell
+##Implementing a shell
 
 The HamburgerMenu is a XAML control and, as such, can be placed in any page of the application. However, since it's used to provide a global navigation pattern, it's unlikely that it will be placed in just one page of the application. To provide a seamless experience, you would need to place the same control in every page of your application. However, this approach would have many downsides: redundancy, harder to mantain, etc.
 
@@ -618,7 +618,7 @@ The HamburgerMenu control has two built-in visual states - VisualStateNormal and
 1. In VisualStateNormal, the HamburgerMenu applies the Minimal layout to the SplitView control. It means that the full panel is closed, but it's always visible in minimal mode, which means that only the icons of the buttons are visible.
 2. In VisualStateNarrow, the HamburgerMenu is completely hidden, except for the Hamburger button that shows / hides the panel.
 
-####Controlling visual states
+##Controlling visual states
 
 You can control the HamburgerMenu's visual states by defining the minimum widths that triggers them. The VisualStateNarrowMinWidth and VisualStateNormalMinWidth properties accomplish this.
 
@@ -640,7 +640,11 @@ In the case above, when the width of the window is greater than 0 effective pixe
 
 ![](http://i.imgur.com/uRfQur0.gif)
 
-##CustomTitleBar
-##ModalDialog 
-##Resizer 
-##PiePiece 
+#CustomTitleBar
+`documentation needed`
+#ModalDialog 
+`documentation needed`
+#Resizer 
+`documentation needed`
+#PiePiece 
+`documentation needed`
