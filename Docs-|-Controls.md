@@ -608,10 +608,10 @@ To get a reference to the NavigationService we need for the HamburgerMenu contro
 
 After these changes, we'll notice that the application, at startup, will be indeed redirected to the main page (as per the navigation triggered in the **OnStartAsync()** method), but the HamburgerMenu control defined in the shell page will be visible too.
 
-####PageHeader and the HamburgerMenu
+##PageHeader and the HamburgerMenu
 The HamburgerMenu control is a great companion of the PageHeader one, also provided by Template10. You can learn more about how to use them together in the [PageHeader documentation](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-PageHeader#pageheader-and-the-hamburgermenu)
 
-####Visual States for the HamburgerMenu
+##Visual States for the HamburgerMenu
 
 The HamburgerMenu control has two built-in visual states - VisualStateNormal and VisualStateNarrow. 
 
