@@ -57,12 +57,7 @@ There is a lot to Template 10, but it's actually very basic.
 
 **There are XAML controls in Template 10.**
 
-1. Template10.Controls.PageHeader ([docs](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-PageHeader))
-1. Template10.Controls.HamburgerMenu ([docs](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-HamburgerMenu))
-1. Template10.Controls.CustomTitleBar (docs-needed)
-1. Template10.Controls.ModalDialog (docs-needed)
-1. Template10.Controls.Resizer (docs-needed)
-1. Template10.Controls.PiePiece (docs-needed)
+See [documentation](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls)
 
 **There are XAML behaviors and actions in Template 10.**
 
