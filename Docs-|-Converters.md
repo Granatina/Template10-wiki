@@ -14,7 +14,7 @@ This converter can take in a value and format it using format strings provided a
 1. Standard Numeric Format Strings: [here](http://msdn.microsoft.com/en-us/library/dwhawy9k.aspx)
 1. Custom Numeric Format Strings: [here](http://msdn.microsoft.com/en-us/library/0c899ak8.aspx)
 
-## <a name="stringformatconverter_implementation" /> Implementation
+### <a name="stringformatconverter_implementation" /> Implementation
 
 You can add this control as a Resource to another XAML element:
 
@@ -33,14 +33,9 @@ With the resource in place, you can use the resource as the **Converter** when b
 
 ## <a name="valuewhenconverter" /> ValueWhenConverter
 
-### Contents Overview
-
-- [Properties](#valuewhenconverter-properties)
-- [Implementation](#valuewhenconverter-implementation)
-
 This converter can display data from one of two binary choices.  If the data being bound is equivalent to the **When** property of the converter, then the result of the binding will be the **Value** property of the converter.  If they are not equivalent, the result of the binding will be the **Otherwise** converter.
 
-### <a name="valuewhenconverter-properties" />
+### Properties
 
 - **When** (object)
 > This is the object evaluated for equivalence with the bound value.  The bound value is technically an input parameter to this converter.
@@ -51,7 +46,7 @@ This converter can display data from one of two binary choices.  If the data bei
 - **Otherwise** (object)
 > This object is the result of the binding conversion if the originally bound value is **NOT** equivalent to the value of the **When** property.
 
-### <a name="valuewhenconverter-implementation" /> Implementation
+### Implementation
 
 You can add this binding as a Resource to another XAML element.
 
