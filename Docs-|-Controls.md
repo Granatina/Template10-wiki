@@ -4,12 +4,12 @@ Lorem Ipsum
 
 ### Table of contents
 
-1. PageHeader 
-1. HamburgerMenu 
-1. CustomTitleBar
-1. ModalDialog 
-1. Resizer 
-1. PiePiece 
+1. [PageHeader](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#pageheader)
+1. [HamburgerMenu](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#hamburgermenu)
+1. [CustomTitleBar](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#customtitlebar)
+1. [ModalDialog](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#modaldialog)
+1. [Resizer](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#resizer)
+1. [PiePiece](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#piepiece)
 
 ###PageHeader
 The control to create a common page element including header text, primary buttons, and secondary buttons. 
