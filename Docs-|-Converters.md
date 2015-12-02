@@ -6,19 +6,15 @@ Template10 ships with a collection of useful converters that you can use in your
 
 ## <a name="stringformatconverter" /> StringFormatConverter
 
-### Contents Overview
-
-- [Implementation](#stringformatconverter-implementation)
-
 This converter can take in a value and format it using format strings provided as either a parameter or property of the converter.  
 
-* **Formatting Types in .NET**: https://msdn.microsoft.com/en-us/library/26etazsy.aspx
-    * **Standard Date/Time Format Strings**: http://msdn.microsoft.com/en-us/library/az4se3k1.aspx.
-    * **Custom Date/Time Format Strings**: http://msdn.microsoft.com/en-us/library/8kb3ddd4.aspx.
-    * **Standard Numeric Format Strings**: http://msdn.microsoft.com/en-us/library/dwhawy9k.aspx
-    * **Custom Numeric Format Strings**: http://msdn.microsoft.com/en-us/library/0c899ak8.aspx
+1. Formatting Types in .NET: [here](https://msdn.microsoft.com/en-us/library/26etazsy.aspx)
+1. Standard Date/Time Format Strings: [here](http://msdn.microsoft.com/en-us/library/az4se3k1.aspx)
+1. Custom Date/Time Format Strings: [here](http://msdn.microsoft.com/en-us/library/8kb3ddd4.aspx)
+1. Standard Numeric Format Strings: [here](http://msdn.microsoft.com/en-us/library/dwhawy9k.aspx)
+1. Custom Numeric Format Strings: [here](http://msdn.microsoft.com/en-us/library/0c899ak8.aspx)
 
-### <a name="stringformatconverter-implementation" /> Implementation
+## <a name="stringformatconverter_implementation" /> Implementation
 
 You can add this control as a Resource to another XAML element:
 
