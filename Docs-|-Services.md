@@ -18,8 +18,8 @@ this.NavigationService.Navigate(typeof(Views.MainPage));
 // from inside a view-model
 this.NavigationService.Navigate(typeof(Views.DetailPage), this.Value);
 
-// from inside the primary window
-var nav = Template10.Common.BootStrapper.Current.NavigationService;
+// from inside any window
+var nav = WindowWrapper.Current().NavigationService;
 nav.Navigate(typeof(Views.DetailPage), this.Value);
 
 // from/with a reference to a Frame
