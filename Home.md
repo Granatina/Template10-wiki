@@ -72,3 +72,6 @@ No. Though it's difficult to imagine any XAML app not using model-view-view-mode
 ##Is Template 10 right for me?
 
 Probably. Template 10 packs in as many time-saving lessons-learned as possible. It's perfect for new apps, or apps wanting to leverage the library. That being said, it's not for everyone (probably 90% of Windows XAML apps). 
+
+##Known Issues with Template10
+1. Template10 is not currently compatible with UWP1.1 (SDK version 10586). It is necessary to target the older SDK version to build production apps using Template 10, at least for the moment.
