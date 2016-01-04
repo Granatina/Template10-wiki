@@ -363,6 +363,10 @@ The HamburgerMenu control helps you to quickly implement this kind of experience
 
 > This property controls the visibility of the panel.
 
+- **IsFullScreen** (boolean)
+
+> This property controls the visibility of the entire splitview pane
+
 - **PaneWidth** (double)
 
 > This property controls the size of the panel.
