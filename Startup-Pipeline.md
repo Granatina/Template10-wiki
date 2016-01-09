@@ -20,7 +20,7 @@ This page shows the order of operation for standard T10 launch.
 
 ##Resume (after suspend)
 1. BootStrapper.Resuming 
-1. BootStrapper.OnResuming Virtual
+1. BootStrapper.OnResuming Virtual, PreviousExecutionState:Suspended
 
 ##Suspend + Terminate
 1. BootStrapper.Suspending 
@@ -36,6 +36,7 @@ This page shows the order of operation for standard T10 launch.
 1. BootStrapper.NavigationServiceFactory BackButton:Attach ExistingContent:Include
 1. BootStrapper.NavigationServiceFactory BackButton:Attach ExistingContent:Include Frame:Windows.UI.Xaml.Controls.Frame
 1. BootStrapper.CreateNavigationService Frame:Windows.UI.Xaml.Controls.Frame
+1. BootStrapper.OnResuming Virtual, PreviousExecutionState:Terminated
 1. BootStrapper.DetermineStartCause IActivatedEventArgs:Windows.ApplicationModel.Activation.LaunchActivatedEventArgs
 1. BootStrapper.Nav.Restored Restored:True
 1. BootStrapper.SubscribeBackButton
