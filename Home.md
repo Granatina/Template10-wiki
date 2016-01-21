@@ -74,4 +74,4 @@ No. Though it's difficult to imagine any XAML app not using model-view-view-mode
 Probably. Template 10 packs in as many time-saving lessons-learned as possible. It's perfect for new apps, or apps wanting to leverage the library. That being said, it's not for everyone (probably 90% of Windows XAML apps). 
 
 ##Known Issues with Template10
-1. The Template 10 Nuget library is not compatible with the November Update SDK (as of version 1.0.8). You can work around this issue by using the latest Github sources, which are compatible with the new SDK.
+There are no known issues with version 1.1.0 of the Template 10 library.
