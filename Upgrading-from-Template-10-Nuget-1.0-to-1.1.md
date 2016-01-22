@@ -10,6 +10,12 @@ Congratulations, you are about to upgrade to the best build of Template 10. 1.1.
 
 Congratulations, you have upgraded to the best build of Template 10! 
 
+> Please note that if you use behaviors, you need to add the behaviors SDK reference to your Project.JSON file. Yes, Blend does this for you, but you should do it manually if you aren't using Blend. 
+
+````
+"Microsoft.Xaml.Behaviors.Uwp.Managed": "1.0.3",
+````
+
 ##Read me
 [What's new in version 1.1.0?](https://github.com/Windows-XAML/Template10/issues?q=milestone%3A%22NuGet+Library+v1.0.9%22+is%3Aclosed)
 
