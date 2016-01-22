@@ -20,7 +20,7 @@ It's worth pointing out that because of breaking changes, we skipped version 1.0
 1. NavigatioNService to INavigationService
 ``` csharp
 // Example
-public Shell(INavigationService navigationService)`
+public Shell(INavigationService navigationService)
 ```
 
 // please add other breaking changes if you find them. This is a wiki.
