@@ -8,3 +8,12 @@ Congratulations, you are about to upgrade to the best build of Template 10. 1.1.
 
 Congratulations, you have upgraded to the best build of Template 10! 
 
+Read me: [What's new in version 1.1.0?](https://github.com/Windows-XAML/Template10/issues?q=milestone%3A%22NuGet+Library+v1.0.9%22+is%3Aclosed)
+
+##History
+It's worth pointing out that because of breaking changes, we skipped version 1.0.9. This makes existing templates that reference 1.0.* in their Project.JSON not experience negative side-effects, unless they manually upgrade by following the instructions in this document.
+
+##Breaking changes
+1. NavigatioNService to INavigationService
+
+// please add other breaking changes if you find them. This is a wiki.
