@@ -26,6 +26,7 @@ It's worth pointing out that because of breaking changes, we skipped version 1.0
 
 ##Breaking changes
 Read about [breaking changes](https://github.com/Windows-XAML/Template10/issues/560)
+
 1. In Shell.xaml.cs `public Shell(NavigationService navigationService)` -> `public Shell(INavigationService navigationService)`
 1. In any view-model `void OnNavigatedTo` -> `Task OnNavigatedToAsync` (you might need `return Task.CompletedTask;`)
 1. In any view-model `void OnNavigatingFrom` -> `Task OnNavigatingFromAsync` (you might need `return Task.CompletedTask;`)
