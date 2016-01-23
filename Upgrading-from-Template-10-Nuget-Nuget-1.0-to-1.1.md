@@ -7,8 +7,8 @@ Congratulations, you are about to upgrade to the best build of Template 10. 1.1.
 1. Use NuGet to upgrade Template 10 v1.0.* to v1.1.* in your project(s).
 1. In Project/Resources delete your "Behaviors SDK (XAML)" reference.
 1. Add `Microsoft.Xaml.Behaviors.Uwp.Managed` through Nuget, if you use behaviors.
-1. (custom) Look at the breaking changes below. You may need to update your view-models.
 1. Select your project, and click the Refresh button in the Solution Explorer (this helps).
+1. (custom) Look at the breaking changes below. You may need to update your view-models.
 1. Clean and rebuild.
 
 Congratulations, you have upgraded to the best build of Template 10! 
