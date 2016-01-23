@@ -33,7 +33,5 @@ Read about [breaking changes in version 1.1.1](https://github.com/Windows-XAML/T
 1. In any view-model `void OnNavigatedTo` -> `Task OnNavigatedToAsync` (you might need `return Task.CompletedTask;`)
 1. In any view-model `void OnNavigatingFrom` -> `Task OnNavigatingFromAsync` (you might need `return Task.CompletedTask;`)
 1. If you use it, the `INavigable` implementation for a custom ViewModelBase reflects the changes above. 
-1. If you use it, rename `Bootstrapper.OnPrelaunch` to `Bootstapper.OnPrelaunchAsync`
-1. If you use it, the `Bootstapper.OnResuming()` override has a changed method signature.
 
 // please add other breaking changes if you find them. This is a wiki.
