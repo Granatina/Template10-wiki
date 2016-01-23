@@ -23,10 +23,11 @@ Congratulations, you have upgraded to the best build of Template 10!
 It's worth pointing out that because of breaking changes, we skipped version 1.0.9. This makes existing templates that reference 1.0.* in their Project.JSON not experience negative side-effects, unless they manually upgrade by following the instructions in this document.
 
 ##Breaking changes
-1. NavigatioNService to INavigationService
-``` csharp
-// Example
-public Shell(INavigationService navigationService)
-```
+1. In Shell.xaml.cs `public Shell(NavigationService navigationService)` -> `public Shell(INavigationService navigationService)`
+1. In any view-model `void OnNavigatedTo` -> `Task OnNavigatedToAsync` (you might need `return Task.CompletedTask;`)
+1. In any view-model `void OnNavigatingFrom` -> `Task OnNavigatingFromAsync` (you might need `return Task.CompletedTask;`)
+1. If you use it, the `INavigable` implementation for a custom ViewModelBase reflects the changes above. 
+1. If you use it, rename `Bootstrapper.OnPrelaunch` to `Bootstapper.OnPrelaunchAsync`
+1. If you use it, the `Bootstapper.OnResuming()` override has a changed method signature.
 
 // please add other breaking changes if you find them. This is a wiki.
