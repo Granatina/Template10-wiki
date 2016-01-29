@@ -47,4 +47,6 @@ The intent of the `SettingService` is to provide an abstracted way to interactin
             set { _settings.AppTheme = value ? ApplicationTheme.Light : ApplicationTheme.Dark; base.RaisePropertyChanged(); }
         }
 ````
+###SerializationService
 
+> Content needed
