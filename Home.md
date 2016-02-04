@@ -45,7 +45,7 @@ The philosophy is this: we want you do it our way unless you want to do it your 
 1. There are MVVM classes (BindableBase, DelegateCommand, and ViewModelBase)
 1. There are utility classes (Template.Utils)
 1. There are project templates (Blank, Minimal)
-1. There is a NuGet (library)[http://nuget.org/packages/template10]
+1. There is a [NuGet package](http://nuget.org/packages/template10)
 1. There are samples, many samples!
 
 ###Where have I heard about Template 10?
