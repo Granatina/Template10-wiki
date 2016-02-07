@@ -69,7 +69,7 @@ The philosophy is this: we want you do it our way unless you want to do it your 
 
 No. Though it's difficult to imagine any XAML app not using model-view-view-model, there is nothing in Template 10 that requires you to use it. Template 10 is compatible with any MVVM framework.
 
-> To leverage other MVVM frameworks, simply inherit from Template10.Mvvm.ViewModelBase or implement Template10.Services.NavigationService.INavagable. This enables OnNavigatedTo/From in your view-models.
+> To leverage other MVVM frameworks, simply inherit from Template10.Mvvm.ViewModelBase or implement Template10.Services.NavigationService.INavigable. This enables OnNavigatedTo/From in your view-models.
 
 ##Is Template 10 right for me?
 
