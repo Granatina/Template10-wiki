@@ -8,7 +8,7 @@ This page is about the Blank template, which provides a starting point for any a
 
 Template 10 templates (both Blank and Minimal) use NuGet 3. Visual Studio tooling for NuGet 3 is quite new; you must restore your packages from NuGet before they will build. Here are the one-time steps to do so. 
 
-1. Press Ctrl+Q, type `pac man` 
+1. Press Ctrl+Q, type `pac man gen` 
 1. Ensure `Allow NuGet to download missing packages` is checked.
 1. Ensure `Automatically check for missing packages during build in Visual Studio` is checked.  
 1. Right-click your Solution, and select `Clean`.
