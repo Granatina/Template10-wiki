@@ -82,7 +82,7 @@ The intent of the `NavButtonBehavior` is to add behavior to any native XAML `But
 This is now obsolete - use `KeyBehavior` instead.
 
 ###KeyBehavior
-The intent of the `KeyBehavior` is to add behavior to any `UIElement` that supports key events. 
+The intent of the `KeyBehavior` is to add behavior to any `UIElement` that supports key events. The behavior has properties that allow the developer to specifiy whether the action is performed on key up or key down, and whether modifier keys can also be used.
 > This is valuable when you wish to perform an action based upon a key press.
 
 ####Properties
