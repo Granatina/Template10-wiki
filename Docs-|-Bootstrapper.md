@@ -167,6 +167,17 @@ With UWP, an app may be suspended into memory at any time. Suspended apps may be
 
 Automatically, the Bootstrapper calls `OnNavigatedFrom` on every active view-model. In most apps, there will be only one active view-model; but, should there be more, Bootstrapper will call them all. Each call will be wrapped in a single Differal, and enable await in the calls. Template 10 cannot extend the 10 second limitation imposed by the platform, so the developer remains responsible to limit the suspend-time operation.
 
+````csharp
+public override Task OnNavigatedFromAsync(IDictionary<string, object> suspensionState, bool suspending)
+{
+    if (suspending)
+    {
+        suspensionState[nameof(Value)] = Value;
+    }
+    return Task.CompletedTask;
+}
+````
+
 Automatically, the Bootstrapper will save and restore the navigation state of every active navigation service. This means, when the app is restored from termimation, the navigation stack (including the back and forward stacks) will be restored. The current page will be re-created, the `OnNavigatedTo` overrides will be called on the page and the view-model, and the suspensionState passed to those methods will be populated.
 
 In addition to those automatic operations, a developer may also use:
