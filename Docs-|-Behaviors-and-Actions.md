@@ -16,6 +16,8 @@ XAML behaviors are a mechanism to encapsulate code with logic and configuration 
 1. `FocusAction`
 1. `OpenFlyoutAction`
 1. `TimeoutAction`
+1. `MessageDialogAction`
+1. `NavToPageAction`
 
 ##XAML Behavior
 
@@ -194,7 +196,19 @@ The intent of the `CloseFlyoutAction` is to close the first `FlyOut` parent in t
 > This is valuable for small forms inside a `FlyOut` and is commonly used on Submit buttons in those forms.
 
 ####Syntax
-`syntax`
+````XAML
+<Flyout x:Key="FormFlyout">
+    <StackPanel>
+        <TextBox Header="Name" Text="{x:Bind VM.Name, Mode=TwoWay}"/>
+        <Button>
+            <Interactivity:Interaction.Behaviors>
+                <Core:EventTriggerBehavior EventName="Click">
+                    <Behaviors:CloseFlyoutAction/>
+                </Core:EventTriggerBehavior>
+            </Interactivity:Interaction.Behaviors> Submit</Button>
+    </StackPanel>
+</Flyout>
+````
 
 ###ConditionalAction
 The intent of the `ConditionalAction` is to prevent subsequent actions unless a condition is met. When invoked by a behavior, it will evaluate the condition and invoke child actions if the condition is met.
@@ -272,4 +286,44 @@ The intent of the `TimeoutAction` is to invoke child actions only after a specif
         </Core:EventTriggerBehavior>
     </Interactivity:Interaction.Behaviors>
 </Button>
+````
+
+###MessageDialogAction
+The intent of the `MessageDialogAction` is to display a `ContentDialog` with the specified `Title`, `Content` and option `OkText` values. 
+> This is valuable when you want a simple way to show a notification dialog.
+
+####Properties
+````CSHARP
+// The title of the dialog
+public string Title { get; set }
+// The content of the dialog
+public string Content { get; set }
+// The Ok Text of the dialog
+public string OkText { get; set } = "Ok";
+````
+
+####Syntax
+````XAML
+<Button Content="Delete">
+    <Interactivity:Interaction.Behaviors>
+        <Core:EventTriggerBehavior EventName="Click">
+            <Behaviors:MessageDialogAction Content="This is the Content" 
+                                           Title="A Title"
+                                           OkText="Agreed!"/>
+        </Core:EventTriggerBehavior>
+    </Interactivity:Interaction.Behaviors>
+</Button>
+````
+
+###NavToPageAction
+The intent of the `NavToPageAction` is to navigate to the specified page using the supplied parameters. **Note:** Incomplete.
+> This is valuable when you want to simply navigate to page.
+
+####Properties
+````CSHARP
+insert
+````
+####Syntax
+````XAML
+syntax
 ````
