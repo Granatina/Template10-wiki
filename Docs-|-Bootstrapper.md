@@ -92,6 +92,15 @@ The navigation service is documented in the services wiki, however, the importan
 
 1. Override `CreateRootFrame` - the return type of this override is a XAML Frame. If default content, properties, or registration in your app is custom, you can implement it here.
 1. Override `CreateNavigationService` - the return type of this override is a Template 10 INavigationService. If it is necessary for your to create the service in s a special way, including mocking, do it here.
+
+````csharp
+// runs only when not restored from state
+public override Task OnStartAsync(StartKind startKind, IActivatedEventArgs args)
+{
+    NavigationService.Navigate(typeof(Views.MainPage));
+    return Task.CompletedTask;
+}
+````
  
 > Note: the root frame and the subsequent navivgation service are created after the OnInitializeAsync override is called by the Bootstrapper. See below.
 
@@ -106,7 +115,51 @@ The Bootstrapper seals away many of the overrides that ship with the out-of-the-
 1. `OnPrelaunchAsync` optionally executes before `OnStartAsync` and only during prelaunch. Prelaunch is a feature of the platform that launches an app for 16 seconds without UI, then suspends it. Prelaunch is not guaranteed, as it is influenced by available resources. A developer would handle Prelaunch if they need to prevent UI (for example: marking a user as 'available') that might occur on start. When handled, the developer can prevent `OnStartAsync` from continuing - if prevented, Template 10 will automatically call `OnStartAsync` when the app resumes from the prelaunch suspend. 
 1. `OnStartAsync` if is the one and only entry point to an application that is not resuming from suspension. `OnStartAsync` combines every launch and activation scenario into a single, simple override. A developer can test the launch arguments of the method to determine the startup kind. A developer can also use the custom StartKind argument to the method to determine if the original startup method was intended to be launch or activate (if that is important to the startup logic). 
 
-> Note: The helper method `DetermineStartCause` in Bootstrapper can help a developer determine the subtle startup causes that are otherwise unclear. For example, determining if the primary or secondary tile, or toast caused of the startup. 
+````csharp
+public override Task OnStartAsync(StartKind startKind, IActivatedEventArgs args)
+{
+    var shareArgs = args as ShareTargetActivatedEventArgs;
+    if (shareArgs != null)
+    {
+        var key = nameof(ShareOperation);
+        SessionState.Add(key, shareArgs.ShareOperation);
+        NavigationService.Navigate(typeof(Views.MainPage), key);
+    }
+    else
+    {
+        NavigationService.Navigate(typeof(Views.MainPage));
+    }
+    return Task.CompletedTask;
+}
+````
+
+> The code above is from the Share Target sample project.
+
+**Note**: The helper method `DetermineStartCause` in Bootstrapper can help a developer determine the subtle startup causes that are otherwise unclear. For example, determining if the primary or secondary tile, or toast caused of the startup. 
+
+````csharp
+public override Task OnStartAsync(StartKind startKind, IActivatedEventArgs args)
+{
+    switch (DetermineStartCause(args))
+    {
+        case AdditionalKinds.SecondaryTile:
+            var tileargs = args as LaunchActivatedEventArgs;
+            NavigationService.Navigate(typeof(Views.DetailPage), tileargs.Arguments);
+            break;
+        case AdditionalKinds.Toast:
+            var toastargs = args as ToastNotificationActivatedEventArgs;
+            NavigationService.Navigate(typeof(Views.DetailPage), toastargs.Argument);
+            break;
+        case AdditionalKinds.Primary:
+        case AdditionalKinds.Other:
+            NavigationService.Navigate(typeof(Views.MainPage));
+            break;
+    }
+	return Task.CompletedTask;
+}
+````
+
+> The code above is from the Toast and Tiles sample project.
 
 ##Suspension management
 
