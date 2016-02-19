@@ -7,6 +7,7 @@ XAML behaviors are a mechanism to encapsulate code with logic and configuration 
 1. `EllipseBehavior`
 1. `NavButtonBehavior`
 1. `TextBoxEnterKeyBehavior`
+1. `KeyBehavior`
 1. What is a XAML Action?
 1. `CloseFlyoutAction`
 1. `ConditionalAction`
@@ -14,10 +15,11 @@ XAML behaviors are a mechanism to encapsulate code with logic and configuration 
 1. `OpenFlyoutAction`
 1. `TimeoutAction`
 
-**XAML Behavior**
+##XAML Behavior
 
 A XAML behavior (implementing [IBehavior](https://msdn.microsoft.com/en-us/library/microsoft.xaml.interactivity.ibehavior(v=vs.120).aspx)) is typically, though not necessarily, responsible to listen for an preconfigured or manually configured event. An example of a XAML behavior is the PropertyChangedBehavior (which is native to the framework) which waits for the value of a property to change (using INotifypropertyChanged). XAML behaviors, once triggered, invoke one or more XAML actions - also part of the behavior framework. 
 
+####Syntax
 ````csharp
 [ContentProperty(Name = nameof(Actions))]
 public class MyBehavior : DependencyObject, IBehavior
@@ -49,16 +51,25 @@ public class MyBehavior : DependencyObject, IBehavior
 }
 ````
 
-###EllipseBehavior
-The intent of the `EllipseBehavior` is to fix a flaw in the native XAML `CommandBar` control. The ellipse to show either labels and secondary commands is always visible, even when not necessary (even in Windows 10.1). 
+###EllipsisBehavior
+The intent of the `EllipsisBehavior` is to fix a flaw in the native XAML `CommandBar` control. By default, the ellipsis which is used to show additional elements is always visible, even when not necessary. This behavior allows the developer to specify whether the ellipsis is always `Visible`, `Collapsed` or `Auto` (determines visibility based upon whether there is content present).
 > This is valuable when your design requires you to remove the ellipse.
 
-`syntax`
+####Syntax
+````XAML
+<!--  header  -->
+<controls:PageHeader Frame="{x:Bind Frame}" Text="{x:Bind ViewModel.Article.Headline, Mode=OneWay}">
+    <Interactivity:Interaction.Behaviors>
+        <Behaviors:EllipsisBehavior Visibility="Auto" />
+    </Interactivity:Interaction.Behaviors>
+</controls:PageHeader>
+````
 
 ###NavButtonBehavior
 The intent of the `NavButtonBehavior` is to add behavior to any native XAML `Button` or `AppBarButton`. Once set to either [ Forward | Back ] then clicking the `Button` will navigate the referenced `Frame` accordingly.
 > This is valuable when wanting to create navigation buttons.
 
+####Syntax
 ````XAML
 <AppBarButton Icon="Forward" Label="Forward">
     <Interactivity:Interaction.Behaviors>
@@ -68,23 +79,48 @@ The intent of the `NavButtonBehavior` is to add behavior to any native XAML `But
 ````
 
 ###TextBoxEnterKeyBehavior
-The intent of the `TextBoxEnterKeyBehavior` is to add behavior to any native XAML `TextBox` to invoke any child action when the user hits the `Enter` key. 
-> This is valuable in a form with a Submit button.
+This is now obsolete - use `KeyBehavior` instead.
 
+###KeyBehavior
+The intent of the `KeyBehavior` is to add behavior to any `UIElement` that supports key events. 
+> This is valuable when you wish to perform an action based upon a key press.
+
+####Properties
+````CSHARP
+// The key that triggers the behavior
+public VirtualKey Key { get; set; } = VirtualKey.None;
+// true if Control must be held also; otherwise false
+public bool AndControl { get; set; } = false;
+// true if Alt must be held also; otherwise false
+public bool AndAlt { get; set; } = false;
+// true if Shift must be held also; otherwise false
+public bool AndShift { get; set; } = false;
+// Detemines if the behavior is triggered on the KeyUp or the KeyDown event
+public Kinds Event { get; set; } = Kinds.KeyUp;
+````
+####Syntax
 ````XAML
-<TextBox>
+<TextBox MinWidth="250" MinHeight="62"
+            Header="Parameter to pass"
+            Text="{Binding Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
     <Interactivity:Interaction.Behaviors>
-        <Behaviors:TextBoxEnterKeyBehavior>
+        <!--  enable submit on enter key  -->
+        <Behaviors:KeyBehavior Key="Enter">
             <Core:CallMethodAction MethodName="GotoDetailsPage" TargetObject="{Binding}" />
-        </Behaviors:TextBoxEnterKeyBehavior>
+        </Behaviors:KeyBehavior>
+        <!--  focus on textbox when page loads  -->
+        <Core:EventTriggerBehavior>
+            <Behaviors:FocusAction />
+        </Core:EventTriggerBehavior>
     </Interactivity:Interaction.Behaviors>
 </TextBox>
-````
+`````
 
 ##XAML Action
 
 A XAML action (implementing [IAction](https://msdn.microsoft.com/en-us/library/microsoft.xaml.interactivity.iaction(v=vs.120).aspx)) does not typically listen to events, but instead takes some action - which is limited only by the developer's imagination. An example of a XAML action is the ChangePropertyAction (which is native to the framework) which changes the value of some property to a new value, typically leveraging data-binding. 
 
+####Syntax
 ````csharp
 public sealed class MyAction : DependencyObject, IAction
 {
@@ -99,12 +135,14 @@ public sealed class MyAction : DependencyObject, IAction
 The intent of the `CloseFlyoutAction` is to close the first `FlyOut` parent in the Visual Tree. When invoked by a behavior, it will hunt up the XAML tree for the first `FlyOut` and set its `IsOpen` property to false. 
 > This is valuable for small forms inside a `FlyOut` and is commonly used on Submit buttons in those forms.
 
+####Syntax
 `syntax`
 
 ###ConditionalAction
 The intent of the `ConditionalAction` is to prevent subsequent actions unless a condition is met. When invoked by a behavior, it will evaluate the condition and invoke child actions if the condition is met.
 > This is valuable if a child action cannot be executed until some condition is satisfied.
 
+####Syntax
 ````XAML
 <Button>
     <Core:EventTriggerBehavior EventName="Clicked"> 
@@ -120,12 +158,29 @@ The intent of the `ConditionalAction` is to prevent subsequent actions unless a 
 The intent of the `FocusAction` is to call `Control.Focus()` on some referenced control. When invoked by a behavior, it will call Focus() and ignore if it succeed or not.
 > This is valuable in situations like Page.Load, focusing on the first element. It can also change the focus when used in conjunction with `TextBoxEnterBehavior`.
 
-`syntax`
+####Syntax
+````XAML
+<TextBox MinWidth="250" MinHeight="62"
+            Header="Parameter to pass"
+            Text="{Binding Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+    <Interactivity:Interaction.Behaviors>
+        <!--  enable submit on enter key  -->
+        <Behaviors:KeyBehavior Key="Enter">
+            <Core:CallMethodAction MethodName="GotoDetailsPage" TargetObject="{Binding}" />
+        </Behaviors:KeyBehavior>
+        <!--  focus on textbox when page loads  -->
+        <Core:EventTriggerBehavior>
+            <Behaviors:FocusAction />
+        </Core:EventTriggerBehavior>
+    </Interactivity:Interaction.Behaviors>
+</TextBox>
+`````
 
 ###OpenFlyoutAction
 The intent of the `OpenFlyoutAction` is to open the FlyoutBase on the specified XAML element. When invoked by a behavior, it will look for the `FlyOut` and call `Show()`.
 > This is valuable because it can be coupled with actions like `ConditionalAction` that can prevent the `FlyOut` until a condition. Or on controls that otherwise don't support a `FlyOut`.
 
+####Syntax
 ````XAML
          <AppBarButton Icon="Find" Label="Search">
              <FlyoutBase.AttachedFlyout>
@@ -146,6 +201,8 @@ The intent of the `OpenFlyoutAction` is to open the FlyoutBase on the specified 
 ###TimeoutAction
 The intent of the `TimeoutAction` is to invoke child actions only after a specified number of seconds passes. When invoked by a behavior, a timer starts and child Actions are called once the time has passed. 
 > This is valuable when you want to delay a response or invoke a secondary action after some time.
+
+####Syntax
 ````XAML
 <Button>
     <Interactivity:Interaction.Behaviors>
@@ -158,5 +215,3 @@ The intent of the `TimeoutAction` is to invoke child actions only after a specif
     </Interactivity:Interaction.Behaviors>
 </Button>
 ````
-
-
