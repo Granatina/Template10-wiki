@@ -234,7 +234,26 @@ The modal dialog control is documented elsewhere, however, it's important to und
 
 The bootstrapper automatically wraps the root frame in a modal dialog. It exposes this through the `Bootstrapper.ModalDialog` property. Here, a developer can set their own ModalContent and the ModalDialog's IsModal value. 
 
-> Note: developers who intercept the standard Frame creation pipeline - for example, using the HamburgerMenu Shell approach - will find the Bootstrapper.ModalDialog property to be null. 
+> Note: developers who intercept the standard Frame creation pipeline - for example, using the HamburgerMenu Shell approach - will find the Bootstrapper.ModalDialog property to be null. But this can be custom-implemented by the developer.
+
+````csharp
+public override Task OnInitializeAsync(IActivatedEventArgs args)
+{
+    // content may already be shell when resuming
+    if ((Window.Current.Content as ModalDialog) == null)
+    {
+        // setup hamburger shell
+        var nav = NavigationServiceFactory(BackButton.Attach, ExistingContent.Include);
+        Window.Current.Content = new ModalDialog
+        {
+            DisableBackButtonWhenModal = true,
+            Content = new Views.Shell(nav),
+            ModalContent = new Views.Busy(),
+        };
+    }
+    return Task.CompletedTask;
+}
+````
 
 ##Dependecy injection
 
