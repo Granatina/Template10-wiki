@@ -85,25 +85,25 @@ The intent of the `DeviceDispositionBehavior` is to add behavior to any page tha
 
 ####Properties
 ````CSHARP
-\\ true if the behavior applies to IoT devices; otherwise false
+// true if the behavior applies to IoT devices; otherwise false
 public bool IoT { get; set }
-\\ true if the behavior applies to Xbox devices; otherwise false
+// true if the behavior applies to Xbox devices; otherwise false
 public bool Xbox { get; set }
-\\ true if the behavior applies to Team devices; otherwise false
-\\ note: Team is the Surface Hub
+// true if the behavior applies to Team devices; otherwise false
+// note: Team is the Surface Hub
 public bool Team { get; set }
-\\ true if the behavior applies to HoloLens devices; otherwise false
+// true if the behavior applies to HoloLens devices; otherwise false
 public bool HoloLens { get; set }
-\\ true if the behavior applies to Desktop devices; otherwise false
+// true if the behavior applies to Desktop devices; otherwise false
 public bool Desktop { get; set }
-\\ true if the behavior applies to Mobile devices; otherwise false
+// true if the behavior applies to Mobile devices; otherwise false
 public bool Mobile { get; set }
-\\ true if the behavior applies to Phone devices; otherwise false
-\\ note: determined if diagonal inches is less 7
+// true if the behavior applies to Phone devices; otherwise false
+// note: determined if diagonal inches is less 7
 public bool Phone { get; set }
-\\ true if the behavior applies to Continuum devices; otherwise false
+// true if the behavior applies to Continuum devices; otherwise false
 public bool Continuum { get; set }
-\\ true if the behavior applies to Virtual devices; otherwise false
+// true if the behavior applies to Virtual devices; otherwise false
 public bool Virtual { get; set }
 ````
 
