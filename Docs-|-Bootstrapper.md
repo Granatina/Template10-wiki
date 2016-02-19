@@ -35,6 +35,61 @@ namespace Sample
 
 > This implementation comes from the blank template. You can install all templates through the Visual Studio extension gallery. Simply search for "Template 10".
 
+##Properties, methods and overrides
+
+````csharp
+// show shell button when necessary
+bool ShowShellBackButton { get; set; }
+
+// show shell button regardless of necessity
+bool ForceShowShellBackButton { get; set; }
+
+// refreshes shell button visiblity
+void UpdateShellBackButton();
+
+// automatically clear suspensionState
+TimeSpan CacheMaxDuration { get; set; }
+
+// expose automatic root wrapper 
+ModalDialog ModalDialog { get; }
+
+// default service for first frame
+INavigationService NavigationService { get; }
+
+// in-memory property bag
+StateItems SessionState { get; set; }
+
+// method to create splash ui
+Func<SplashScreen, UserControl> SplashFactory { get; }
+
+// event that exposes window created operations
+event EventHandler<WindowCreatedEventArgs> WindowCreated;
+
+// creates new navigation with new/existing frame
+INavigationService NavigationServiceFactory();
+
+// pipeline override, occurs even when resuming from terminated
+Task OnInitializeAsync(IActivatedEventArgs args);
+
+// pipeline override, occurs before OnStartAsync
+Task OnPrelaunchAsync(IActivatedEventArgs args, out bool runOnStartAsync);
+
+// pipeline override, occurs when resuming
+void OnResuming(object s, object e, BootStrapper.AppExecutionState previousExecutionState);
+
+// pipeline override, does not occur when resuming from terminated
+Task OnStartAsync(BootStrapper.StartKind startKind, IActivatedEventArgs args);
+
+// pipeline override, occurs when suspending
+Task OnSuspendingAsync(object s, SuspendingEventArgs e, bool prelaunchActivated);
+
+// dictionary of page keys for optional page key navigation
+Dictionary<T, Type> PageKeys<T>() where T : struct, IConvertible;
+
+// optional dependency injection endpoint for creating view-models
+INavigable ResolveForPage(Page page, NavigationService navigationService);
+````
+
 ##Splash page
 
 Your app has a limited number of seconds (currently 10s) to activate before the platform automatically, punitively terminates your app. This means, costly operations cannot be front-loaded at app startup. A common work-around is the extended splash screen. This view mimics the default splash screen while executing long-running startup tasks. 
