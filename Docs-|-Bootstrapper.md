@@ -90,15 +90,20 @@ public override Task OnInitializeAsync(IActivatedEventArgs args)
 
 The navigation service is documented in the services wiki, however, the important thing to know here is that Template 10 relies on every XAML frame control to have a companion Template 10 navigation service. The Bootstrapper creates the root frame using several methods in concert: `InitializeFrameAsync` -> `CreateRootFrame` & `NavigationServiceFactory` -> `CreateNavigationService`. Developers can intercept this process along several steps:
 
-1. Override **CreateRootFrame** - the return type of this override is a XAML Frame. If default content, properties, or registration in your app is custom, you can implement it here.
-1. Override **CreateNavigationService** - the return type of this override is a Template 10 INavigationService. If it is necessary for your to create the service in s a special way, including mocking, do it here.
+1. Override `CreateRootFrame` - the return type of this override is a XAML Frame. If default content, properties, or registration in your app is custom, you can implement it here.
+1. Override `CreateNavigationService` - the return type of this override is a Template 10 INavigationService. If it is necessary for your to create the service in s a special way, including mocking, do it here.
+ 
+> Note: the root frame and the subsequent navivgation service are created after the OnInitializeAsync override is called by the Bootstrapper. See below.
 
 ##Activation paths
 
-The Bootstrapper seals away many of the overrides that ship with the out-of-the-box Application class. Where a standard UWP app overrides OnActivated(), OnLaunched(), and several other activation variations, Template 10 simplifies the startup pipeline to the following:
+The Bootstrapper seals away many of the overrides that ship with the out-of-the-box Application class. Where a standard UWP app overrides `OnActivated()`, `OnLaunched()`, and several other activation variations, Template 10 simplifies the startup pipeline to the following:
 
-1. Application constructor
-1. OnInitializeAsync()
-1. OnPrelaunchAsync()
-1. OnStartAsync()
-1
+> `constructor` -> `OnInitializeAsync` -> `OnPrelaunchAsync()` -> `OnStartAsync()`
+
+1. Application `constructor` - several Application properties, including `RequestedTheme` can only be set in the constructor of Application. Typically, applications setup global settings here.
+1. `OnInitializeAsync` executes first. And it executes every time, even if the application is coming out of suspension. The type of code appropriate here would be authentication and cache checks. If the developer is creating a custom frame, spoiling the automatic implementation of the Bootstrapper, that code should also be here - since the Bootstrapper automatically creates the frame+navigation service after this override is called. 
+1. `OnPrelaunchAsync` optionally executes before `OnStartAsync` and only during prelaunch. Prelaunch is a feature of the platform that launches an app for 16 seconds without UI, then suspends it. Prelaunch is not guaranteed, as it is influenced by available resources. A developer would handle Prelaunch if they need to prevent UI (for example: marking a user as 'available') that might occur on start. When handled, the developer can prevent `OnStartAsync` from continuing - if prevented, Template 10 will automatically call `OnStartAsync` when the app resumes from the prelaunch suspend. 
+1. `OnStartAsync` if is the one and only entry point to an application that is not resuming from suspension. `OnStartAsync` combines every launch and activation scenario into a single, simple override. A developer can test the launch arguments of the method to determine the startup kind. A developer can also use the custom StartKind argument to the method to determine if the original startup method was intended to be launch or activate (if that is important to the startup logic). 
+
+> Note: The helper method `DetermineStartCause` in Bootstrapper can help a developer determine the subtle startup causes that are otherwise unclear. For example, determining if the primary or secondary tile, or toast caused of the startup. 
