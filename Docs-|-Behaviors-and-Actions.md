@@ -120,7 +120,7 @@ public bool Virtual { get; set }
 ````
 
 ###BackButtonBehavior
-The intent of the `BackButtonBehavior` is to add behavior to any page or view. The behavior will be triggered whenever the `BootStrapper.BackRequested` event is raised. Setting `e.Handled = true` will prevent the the system from executing a back navigation. **Note:** this behavior is typically added to a top level element as it is listening to the `BootStrapper.BackRequested` rather than element level events.
+The intent of the `BackButtonBehavior` is to add behavior to any page or view. The behavior will be triggered whenever the `BootStrapper.BackRequested` event is raised. Setting `e.Handled = true` in the code invoked by the behavior/action will prevent the the system from executing a back navigation. **Note:** this behavior is typically added to a top level element as it is listening to the `BootStrapper.BackRequested` rather than element level events.
 > This is valuable when you want to intercept the `BootStrapper.BackRequested` and perform a specific action, then mark the event as handled. An example would be intecepting the `BootStrapper.BackRequested` event and closing a `PopUp` instead of navigating back.
 
 ####Properties
