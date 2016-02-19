@@ -180,6 +180,17 @@ public override Task OnNavigatedFromAsync(IDictionary<string, object> suspension
 
 Automatically, the Bootstrapper will save and restore the navigation state of every active navigation service. This means, when the app is restored from termimation, the navigation stack (including the back and forward stacks) will be restored. The current page will be re-created, the `OnNavigatedTo` overrides will be called on the page and the view-model, and the suspensionState passed to those methods will be populated.
 
+````csharp
+public override Task OnNavigatedToAsync(object parameter, NavigationMode mode, IDictionary<string, object> suspensionState)
+{
+    if (suspensionState.Any())
+    {
+        Value = suspensionState[nameof(Value)]?.ToString();
+    }
+    return Task.CompletedTask;
+}
+````
+
 In addition to those automatic operations, a developer may also use:
 
 1. `OnSuspendingAsync()` in Bootstrapper is an override that is called after the OnNavigatedFrom() methods in every view-model are called. With whatever time remains, the developer can implement global logic to handle suspension.
@@ -194,6 +205,24 @@ Since an app can have more tha one window, there can also be more than one windo
 ###Window created
 
 If this is an important part of the lifecycle to your app, your code can handle the Bootstrapper's `WindowCreated` event, which will include the `WindowCreatedEventArgs` from the original override. This is an edge case most developers will not need.  
+
+Here's the internal implementation:
+
+````csharp
+public event EventHandler<WindowCreatedEventArgs> WindowCreated;
+protected sealed override void OnWindowCreated(WindowCreatedEventArgs args)
+{
+    DebugWrite();
+
+    if (!WindowWrapper.ActiveWrappers.Any())
+        Loaded();
+
+    // handle window
+    var window = new WindowWrapper(args.Window);
+    WindowCreated?.Invoke(this, args);
+    base.OnWindowCreated(args);
+}
+````
 
 ##Dispatcher wrapper
 
