@@ -93,3 +93,12 @@ The navigation service is documented in the services wiki, however, the importan
 1. Override **CreateRootFrame** - the return type of this override is a XAML Frame. If default content, properties, or registration in your app is custom, you can implement it here.
 1. Override **CreateNavigationService** - the return type of this override is a Template 10 INavigationService. If it is necessary for your to create the service in s a special way, including mocking, do it here.
 
+##Activation paths
+
+The Bootstrapper seals away many of the overrides that ship with the out-of-the-box Application class. Where a standard UWP app overrides OnActivated(), OnLaunched(), and several other activation variations, Template 10 simplifies the startup pipeline to the following:
+
+1. Application constructor
+1. OnInitializeAsync()
+1. OnPrelaunchAsync()
+1. OnStartAsync()
+1
