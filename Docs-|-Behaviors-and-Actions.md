@@ -80,7 +80,8 @@ The intent of the `NavButtonBehavior` is to add behavior to any native XAML `But
 </AppBarButton>
 ````
 ###DeviceDispositionBehavior
-The intent of the `DeviceDispositionBehavior` is to add behavior to any page that should occur one one or more specified device families. Note:
+The intent of the `DeviceDispositionBehavior` is to add behavior to any page that should occur on one or more specified device families. **Note:** this behavior is typically added to a top level element as it is listening to system events, (say transitioning to Continuity) rather than element level events.
+
 > This is valuable when you want to change some aspect of your apps behavior based upon one or more device families. An example could be hiding UIElements that are not applicable on a device, such as in-app back buttons on a Phone.
 
 ####Properties
@@ -119,19 +120,20 @@ public bool Virtual { get; set }
 ````
 
 ###BackButtonBehavior
-yada yada
-> This is valuable when
+The intent of the `BackButtonBehavior` is to add behavior to any page or view. The behavior will be triggered whenever the `BootStrapper.BackRequested` event is raised. Setting `e.Handled = true` will prevent the the system from executing a back navigation. **Note:** this behavior is typically added to a top level element as it is listening to the `BootStrapper.BackRequested` rather than element level events.
+> This is valuable when you want to intercept the `BootStrapper.BackRequested` and perform a specific action, then mark the event as handled. An example would be intecepting the `BootStrapper.BackRequested` event and closing a `PopUp` instead of navigating back.
 
 ####Properties
 `none`
 
 ####Syntax
 ````XAML
-<AppBarButton Icon="Forward" Label="Forward">
+<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <Interactivity:Interaction.Behaviors>
-        <Behaviors:NavButtonBehavior Direction="Forward" Frame="{x:Bind Frame, Mode=OneWay}" />
+        <Behaviors:BackButtonBehavior>
+            <Core:CallMethodAction MethodName="ClosePopUp" TargetObject="{Binding ElementName=page}"/>
+        </Behaviors:BackButtonBehavior>
     </Interactivity:Interaction.Behaviors>
-</AppBarButton>
 ````
 
 ###KeyBehavior
