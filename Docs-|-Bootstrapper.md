@@ -6,10 +6,10 @@ It's responsibilities include:
 1. Creating the root frame
 1. Creating the navigation service
 1. Aggregating activation paths
+1. Automate suspension management
 
 In addition, it also handles:
 
-1. Mapping keystrokes to navigation
 1. Creating the initial window wrapper
 1. Creating the initial dispatcher wrapper
 1. Wrapping the root frame with a modal dialog
@@ -107,3 +107,44 @@ The Bootstrapper seals away many of the overrides that ship with the out-of-the-
 1. `OnStartAsync` if is the one and only entry point to an application that is not resuming from suspension. `OnStartAsync` combines every launch and activation scenario into a single, simple override. A developer can test the launch arguments of the method to determine the startup kind. A developer can also use the custom StartKind argument to the method to determine if the original startup method was intended to be launch or activate (if that is important to the startup logic). 
 
 > Note: The helper method `DetermineStartCause` in Bootstrapper can help a developer determine the subtle startup causes that are otherwise unclear. For example, determining if the primary or secondary tile, or toast caused of the startup. 
+
+##Suspension management
+
+With UWP, an app may be suspended into memory at any time. Suspended apps may be terminated, due to resource constraints, at any time. Handling these states, their transitions, and providing a seamless user experience is the responsibility of the developer. Template 10 helps automate this.
+
+Automatically, the Bootstrapper calls `OnNavigatedFrom` on every active view-model. In most apps, there will be only one active view-model; but, should there be more, Bootstrapper will call them all. Each call will be wrapped in a single Differal, and enable await in the calls. Template 10 cannot extend the 10 second limitation imposed by the platform, so the developer remains responsible to limit the suspend-time operation.
+
+Automatically, the Bootstrapper will save and restore the navigation state of every active navigation service. This means, when the app is restored from termimation, the navigation stack (including the back and forward stacks) will be restored. The current page will be re-created, the `OnNavigatedTo` overrides will be called on the page and the view-model, and the suspensionState passed to those methods will be populated.
+
+In addition to those automatic operations, a developer may also use:
+
+1. `OnSuspendingAsync()` in Bootstrapper is an override that is called after the OnNavigatedFrom() methods in every view-model are called. With whatever time remains, the developer can implement global logic to handle suspension.
+1. `OnResume()` is in Bootstrapper is an override that is called when the application is resuming. A developer can check cache for staleness or anything else that makes sense, and is important to the specific application. The developer does NOT need to restore navigation state, unless they have introduced a custom navigation pattern. In addition to standard suspension, resume from prelaunch may also be handled here.
+ 
+#Window wrapper
+
+The window wrapper class is documented elsewhere, however, it is important to understand what each window wrapper maps to a  window. The platform refers to this as a view, but since we call XAML pages views, this is confusing. We do not mean XAML view, in this case, we mean something that has a title bar. Something we typically call a window. 
+
+Since an app can have more tha one window, there can also be more than one window wrapper. The bootstrapper keeps track of the creation of windows and adds them to the static `ActiveWindows` collection in the window wrapper class. This occurs in the WindowCreated overload which is not available to developers using Bootstrapper. 
+
+###Window created
+
+If this is an important part of the lifecycle to your app, your code can handle the Bootstrapper's `WindowCreated` event, which will include the `WindowCreatedEventArgs` from the original override. This is an edge case most developers will not need.  
+
+##Dispatcher wrapper
+
+The dispatcher wrapper is documented elsewhere, however, here's the summary: the XAML CoreDispatcher is how an operation that is off the UI thread can execute an operation on the UI thread. The dispatcher is generally not available to non-UI threads, but can be accessed in Template 10 through the current window wrapper. The dispather wrapper, however, is really just a series of helper methods intended to make disatching code simpler.
+
+##Modal dialog
+
+The modal dialog control is documented elsewhere, however, it's important to understand that it is used to display one of two content. The main content or the overlaying content, meantintended to be an overlay of some kind, or a modal dialog dialog. An example of this might be a login form or a busy indicator.  
+
+The bootstrapper automatically wraps the root frame in a modal dialog. It exposes this through the `Bootstrapper.ModalDialog` property. Here, a developer can set their own ModalContent and the ModalDialog's IsModal value. 
+
+> Note: developers who intercept the standard Frame creation pipeline - for example, using the HamburgerMenu Shell approach - will find the Bootstrapper.ModalDialog property to be null. 
+
+##Dependecy injection
+
+Dependency injection is a common design pattern that Template 10 supoprts, but does not natively implement. That being said, Template 10 enables dependency injection specifically with Bootstrapper.`ResolveForPage()`. Overriding this method, allows a developer to inject (or return) any `INavigable` view-model into a page immediately after initial navigation, while still maintaining the standard navigation pipeline.
+
+// ENDOFFILE
