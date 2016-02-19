@@ -6,8 +6,10 @@ XAML behaviors are a mechanism to encapsulate code with logic and configuration 
 1. What is a XAML Behavior?
 1. `EllipseBehavior`
 1. `NavButtonBehavior`
-1. `TextBoxEnterKeyBehavior`
+1. `DeviceDispositionBehavior`
+1. `BackButtonBehavior`
 1. `KeyBehavior`
+1. `TextBoxEnterKeyBehavior`
 1. What is a XAML Action?
 1. `CloseFlyoutAction`
 1. `ConditionalAction`
@@ -77,13 +79,67 @@ The intent of the `NavButtonBehavior` is to add behavior to any native XAML `But
     </Interactivity:Interaction.Behaviors>
 </AppBarButton>
 ````
+###DeviceDispositionBehavior
+The intent of the `DeviceDispositionBehavior` is to add behavior to any page that should occur one one or more specified device families. Note:
+> This is valuable when you want to change some aspect of your apps behavior based upon one or more device families. An example could be hiding UIElements that are not applicable on a device, such as in-app back buttons on a Phone.
 
-###TextBoxEnterKeyBehavior
-This is now obsolete - use `KeyBehavior` instead.
+####Properties
+````CSHARP
+\\ true if the behavior applies to IoT devices; otherwise false
+public bool IoT { get; set }
+\\ true if the behavior applies to Xbox devices; otherwise false
+public bool Xbox { get; set }
+\\ true if the behavior applies to Team devices; otherwise false
+\\ note: Team is the Surface Hub
+public bool Team { get; set }
+\\ true if the behavior applies to HoloLens devices; otherwise false
+public bool HoloLens { get; set }
+\\ true if the behavior applies to Desktop devices; otherwise false
+public bool Desktop { get; set }
+\\ true if the behavior applies to Mobile devices; otherwise false
+public bool Mobile { get; set }
+\\ true if the behavior applies to Phone devices; otherwise false
+\\ note: determined if diagonal inches is less 7
+public bool Phone { get; set }
+\\ true if the behavior applies to Continuum devices; otherwise false
+public bool Continuum { get; set }
+\\ true if the behavior applies to Virtual devices; otherwise false
+public bool Virtual { get; set }
+````
+
+####Syntax
+````XAML
+<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Interactivity:Interaction.Behaviors>
+        <Behaviors:DeviceDispositionBehavior Desktop="True">
+            <Core:GoToStateAction StateName="DesktopOnlyState"/>
+        </Behaviors:DeviceDispositionBehavior>
+    </Interactivity:Interaction.Behaviors>
+</Grid>
+````
+
+###BackButtonBehavior
+yada yada
+> This is valuable when
+
+####Properties
+`none`
+
+####Syntax
+````XAML
+<AppBarButton Icon="Forward" Label="Forward">
+    <Interactivity:Interaction.Behaviors>
+        <Behaviors:NavButtonBehavior Direction="Forward" Frame="{x:Bind Frame, Mode=OneWay}" />
+    </Interactivity:Interaction.Behaviors>
+</AppBarButton>
+````
 
 ###KeyBehavior
 The intent of the `KeyBehavior` is to add behavior to any `UIElement` that supports key events. The behavior has properties that allow the developer to specifiy whether the action is performed on key up or key down, and whether modifier keys can also be used.
 > This is valuable when you wish to perform an action based upon a key press.
+
+###TextBoxEnterKeyBehavior
+This is now obsolete - use `KeyBehavior` instead.
 
 ####Properties
 ````CSHARP
