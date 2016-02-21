@@ -69,6 +69,7 @@ With the resource in place, you can use the resource as the **Converter** when b
 
 This converter can convert the type used in a binding - this is especially helpful when using the x:Bind syntax to bind a strongly-typed property in a View Model to a XAML control property that is declared as `object` - such as the `SelectedItem` on a `ListView`.
 
+### Syntax
 ````XAML
 <Page.Resources>
     <converters:ChangetTypeConverter x:Key="TypeConverter"/>
