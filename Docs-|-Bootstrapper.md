@@ -157,7 +157,7 @@ public override Task OnStartAsync(StartKind startKind, IActivatedEventArgs args)
 }
 ````
  
-> Note: the root frame and the subsequent navivgation service are created after the OnInitializeAsync override is called by the Bootstrapper. See below.
+> Note: the root frame and the subsequent navigation service are created after the OnInitializeAsync override is called by the Bootstrapper. See below.
 
 ##Activation paths
 
@@ -233,7 +233,7 @@ public override Task OnNavigatedFromAsync(IDictionary<string, object> suspension
 }
 ````
 
-Automatically, the Bootstrapper will save and restore the navigation state of every active navigation service. This means, when the app is restored from termimation, the navigation stack (including the back and forward stacks) will be restored. The current page will be re-created, the `OnNavigatedTo` overrides will be called on the page and the view-model, and the suspensionState passed to those methods will be populated.
+Automatically, the Bootstrapper will save and restore the navigation state of every active navigation service. This means, when the app is restored from termination, the navigation stack (including the back and forward stacks) will be restored. The current page will be re-created, the `OnNavigatedTo` overrides will be called on the page and the view-model, and the suspensionState passed to those methods will be populated.
 
 ````csharp
 public override Task OnNavigatedToAsync(object parameter, NavigationMode mode, IDictionary<string, object> suspensionState)
@@ -255,7 +255,7 @@ In addition to those automatic operations, a developer may also use:
 
 The window wrapper class is documented elsewhere, however, it is important to understand what each window wrapper maps to a  window. The platform refers to this as a view, but since we call XAML pages views, this is confusing. We do not mean XAML view, in this case, we mean something that has a title bar. Something we typically call a window. 
 
-Since an app can have more tha one window, there can also be more than one window wrapper. The bootstrapper keeps track of the creation of windows and adds them to the static `ActiveWindows` collection in the window wrapper class. This occurs in the WindowCreated overload which is not available to developers using Bootstrapper. 
+Since an app can have more than one window, there can also be more than one window wrapper. The bootstrapper keeps track of the creation of windows and adds them to the static `ActiveWindows` collection in the window wrapper class. This occurs in the WindowCreated overload which is not available to developers using Bootstrapper. 
 
 ###Window created
 
@@ -281,11 +281,11 @@ protected sealed override void OnWindowCreated(WindowCreatedEventArgs args)
 
 ##Dispatcher wrapper
 
-The dispatcher wrapper is documented elsewhere, however, here's the summary: the XAML CoreDispatcher is how an operation that is off the UI thread can execute an operation on the UI thread. The dispatcher is generally not available to non-UI threads, but can be accessed in Template 10 through the current window wrapper. The dispather wrapper, however, is really just a series of helper methods intended to make disatching code simpler.
+The dispatcher wrapper is documented elsewhere, however, here's the summary: the XAML CoreDispatcher is how an operation that is off the UI thread can execute an operation on the UI thread. The dispatcher is generally not available to non-UI threads, but can be accessed in Template 10 through the current window wrapper. The dispatcher wrapper, however, is really just a series of helper methods intended to make dispatching code simpler.
 
 ##Modal dialog
 
-The modal dialog control is documented elsewhere, however, it's important to understand that it is used to display one of two content. The main content or the overlaying content, meantintended to be an overlay of some kind, or a modal dialog dialog. An example of this might be a login form or a busy indicator.  
+The modal dialog control is documented elsewhere, however, it's important to understand that it is used to display one of two content. The main content or the overlaying content, meant/intended to be an overlay of some kind, or a modal dialog dialog. An example of this might be a login form or a busy indicator.  
 
 The bootstrapper automatically wraps the root frame in a modal dialog. It exposes this through the `Bootstrapper.ModalDialog` property. Here, a developer can set their own ModalContent and the ModalDialog's IsModal value. 
 
@@ -310,8 +310,8 @@ public override Task OnInitializeAsync(IActivatedEventArgs args)
 }
 ````
 
-##Dependecy injection
+##Dependency injection
 
-Dependency injection is a common design pattern that Template 10 supoprts, but does not natively implement. That being said, Template 10 enables dependency injection specifically with Bootstrapper.`ResolveForPage()`. Overriding this method, allows a developer to inject (or return) any `INavigable` view-model into a page immediately after initial navigation, while still maintaining the standard navigation pipeline.
+Dependency injection is a common design pattern that Template 10 supports, but does not natively implement. That being said, Template 10 enables dependency injection specifically with Bootstrapper.`ResolveForPage()`. Overriding this method, allows a developer to inject (or return) any `INavigable` view-model into a page immediately after initial navigation, while still maintaining the standard navigation pipeline.
 
 // ENDOFFILE
