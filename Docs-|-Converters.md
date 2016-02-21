@@ -3,7 +3,7 @@
 Template10 ships with a collection of useful converters that you can use in your application.
 - [StringFormatConverter](#stringformatconverter)
 - [ValueWhenConverter](#valuewhenconverter)
-- [ChangeTypeConveter](#changetypeconverter)
+- [ChangeTypeConverter](#changetypeconverter)
 
 ## <a name="stringformatconverter" /> StringFormatConverter
 
@@ -65,7 +65,7 @@ With the resource in place, you can use the resource as the **Converter** when b
 <TextBlock Text="{Binding ExternalValue, Converter={StaticResource VWConverter}}" />
 ````
 
-ChangeTypeConverter
+## <a name="changetypeconverter" /> ChangeTypeConverter
 
 This converter can convert the type used in a binding - this is especially helpful when using the x:Bind syntax to bind a strongly-typed property in a View Model to a XAML control property that is declared as `object` - such as the `SelectedItem` on a `ListView`.
 
