@@ -8,6 +8,7 @@ Template 10 is a set of Visual Studio project templates. They sling-shot develop
 
 1. `Template 10 (Blank)` project template ([link](https://visualstudiogallery.msdn.microsoft.com/60bb885a-44e9-4cbf-a380-270803b3f6e5))
 1. `Template 10 (Minimal)` project template ([link](https://visualstudiogallery.msdn.microsoft.com/60bb885a-44e9-4cbf-a380-270803b3f6e5))
+1. `Template 10 (Hamburger)` project template ([link](https://visualstudiogallery.msdn.microsoft.com/60bb885a-44e9-4cbf-a380-270803b3f6e5))
 
 Template 10 is intended for Window XAML apps written in C#. You can install Template 10 by searching for "Template 10" in the Visual Studio 2015 Extension Manager. Once installed, Template 10 templates will show up in the New Project dialog.
 
