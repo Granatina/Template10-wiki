@@ -40,14 +40,11 @@ This converter can display data from one of two binary choices.  If the data bei
 
 ### Properties
 
-- **When** (object)
-> This is the object evaluated for equivalence with the bound value.  The bound value is technically an input parameter to this converter.
-
-- **Value** (object)
-> This object is the result of the binding conversion if the originally bound value is equivalent to the value of the **When** property.
-
-- **Otherwise** (object)
-> This object is the result of the binding conversion if the originally bound value is **NOT** equivalent to the value of the **When** property.
+| Name | Type | Notes |
+|:---|:---|:---|
+| When | object | This is the object evaluated for equivalence with the bound value.  The bound value is technically an input parameter to this converter.|
+| Value| object | This object is the result of the binding conversion if the originally bound value is equivalent to the value of the **When** property.|
+| Otherwise| object | This object is the result of the binding conversion if the originally bound value is **NOT** equivalent to the value of the **When** property.|
 
 ### Implementation
 
