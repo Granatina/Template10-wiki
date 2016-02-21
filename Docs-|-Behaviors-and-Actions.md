@@ -138,12 +138,12 @@ The intent of the `BackButtonBehavior` is to add behavior to any page or view. T
     </Interactivity:Interaction.Behaviors>
 ````
 
+###TextBoxEnterKeyBehavior
+This is now obsolete - use `KeyBehavior` instead.
+
 ###KeyBehavior
 The intent of the `KeyBehavior` is to add behavior to any `UIElement` that supports key events. The behavior has properties that allow the developer to specifiy whether the action is performed on key up or key down, and whether modifier keys can also be used.
 > This is valuable when you wish to perform an action based upon a key press.
-
-###TextBoxEnterKeyBehavior
-This is now obsolete - use `KeyBehavior` instead.
 
 ####Properties
 ````CSHARP
