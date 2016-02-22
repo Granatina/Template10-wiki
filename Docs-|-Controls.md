@@ -63,7 +63,7 @@ In Universal Windows Platform the CommandBar control can be placed anywhere - no
 | SecondaryButtons| IEnumerable<IAppBarItem>| This property allows developers to add any IAppBarItem to the collection of buttons only visible when the user clicks the ellipses button. This, in effect, is the SecondaryButtons property of the CommandBar.|
 | Text| string| This simple property sets the header text for the control. The text is displayed on the left side of the header and does not wrap. The color of the font is controlled by the HeaderForegroundBrush property.|
 | VisualStateNarrowMinWidth| integer| This property indicates the width when the Narrow Visual State will be applied. This Visual State does only one thing, it increases the left margin of the Text by 48 pixels to accommodate a hamburger button.|
-| VisualStateNormalMinWidth| integer| ThThis property indicates the width when the Normal Visual State will be applied. This Visual State has no visual impact on the PageHeader other than removing the effects of the VisualStateNarrowMinWidth property.|
+| VisualStateNormalMinWidth| integer| This property indicates the width when the Normal Visual State will be applied. This Visual State has no visual impact on the PageHeader other than removing the effects of the VisualStateNarrowMinWidth property.|
 
 ## Syntax
 
