@@ -182,11 +182,13 @@ The following sample code shows how to define a set of commands:
 
     <controls:PageHeader Text="Main Page" Frame="{x:Bind Frame}">
         <controls:PageHeader.PrimaryCommands>
-            <AppBarButton Icon="Forward" Label="Next" Click="Next_Clicked" />
+            <AppBarButton Icon="Save" Label="Save" Click="Save_Clicked" />
+            <AppBarButton Icon="Undo" Label="Undo" Click="Undo_Clicked" />
         </controls:PageHeader.PrimaryCommands>
         <controls:PageHeader.SecondaryCommands>
             <AppBarButton Label="Option 1" Click="Op1_Clicked" />
             <AppBarButton Label="Option 2" Click="Op2_Clicked" />
+            <AppBarButton Label="Option 3" Click="Op3_Clicked" />
         </controls:PageHeader.SecondaryCommands>
     </controls:PageHeader>
 
