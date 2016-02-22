@@ -52,45 +52,18 @@ In Universal Windows Platform the CommandBar control can be placed anywhere - no
 
 ## Properties
 
-- **BackButtonVisiblity** (Visible|Collapsed) default=Collapsed
-
-> This property controls the visibility of the on-canvas back button. The on-canvas back button requires the PageHeader.Frame property to be set in order to function properly.
-
-- **Content** (object)
-
-> This property allows ****for advanced scenarios for developers. With the Text property, the developer can set a simple string header. Content allows for any XAML control for a custom experience.
-
-- **Frame** (XAML Frame)
-
-> This property sets the context for the on-canvas back button. This property not only enables the back button but allows it to operate against any off-canvas frame, if desired.
-
-- **HeaderBackgroundBrush** (Brush)
-
-> This property overrides the default background of the PageHeader. This property can be applied through a style to allow developers the ability to theme their application.
-
-- **HeaderForegroundBrush** (Brush)
-
-> This property overrides the default foreground (text) of the PageHeader. This property can be applied through a style to allow developers the ability to theme their application.
-
-- **PrimaryButtons** (IEnumerable<IAppBarItem>)
-
-> This property allows developers to add any IAppBarItem to the always-visible collection of buttons in the header. This, in effect, is the PrimaryButtons property of the CommandBar.
-
-- **SecondaryButtons** (IEnumerable<IAppBarItem>)
-
-> This property allows developers to add any IAppBarItem to the collection of buttons only visible when the user clicks the ellipses button. This, in effect, is the SecondaryButtons property of the CommandBar.
-
-- **Text** (string)
-
-> This simple property sets the header text for the control. The text is displayed on the left side of the header and does not wrap. The color of the font is controlled by the HeaderForegroundBrush property.
-
-- **VisualStateNarrowMinWidth** (integer)
-
-> This property indicates the width when the Narrow Visual State will be applied. This Visual State does only one thing, it increases the left margin of the Text by 48 pixels to accommodate a hamburger button.
-
-- **VisualStateNormalMinWidth** (integer)
-
-> This property indicates the width when the Normal Visual State will be applied. This Visual State has no visual impact on the PageHeader other than removing the effects of the VisualStateNarrowMinWidth property. 
+| Name | Type | Notes |
+|:---|:---|:---|
+| BackButtonVisiblity| Visibility (default: Collapsed)| This property controls the visibility of the on-canvas back button. The on-canvas back button requires the PageHeader.Frame property to be set in order to function properly.|
+| Content| object| This property allows ****for advanced scenarios for developers. With the Text property, the developer can set a simple string header. Content allows for any XAML control for a custom experience.|
+| Frame| Frame| This property sets the context for the on-canvas back button. This property not only enables the back button but allows it to operate against any off-canvas frame, if desired.|
+| HeaderBackgroundBrush| Brush| This property overrides the default background of the PageHeader. This property can be applied through a style to allow developers the ability to theme their application.|
+| HeaderForegroundBrush| Brush| This property overrides the default foreground (text) of the PageHeader. This property can be applied through a style to allow developers the ability to theme their application.|
+| PrimaryButtons| IEnumerable<IAppBarItem>| This property allows developers to add any IAppBarItem to the always-visible collection of buttons in the header. This, in effect, is the PrimaryButtons property of the CommandBar.|
+| SecondaryButtons| IEnumerable<IAppBarItem>| This property allows developers to add any IAppBarItem to the collection of buttons only visible when the user clicks the ellipses button. This, in effect, is the SecondaryButtons property of the CommandBar.|
+| Text| string| This simple property sets the header text for the control. The text is displayed on the left side of the header and does not wrap. The color of the font is controlled by the HeaderForegroundBrush property.|
+| VisualStateNarrowMinWidth| integer| This property indicates the width when the Narrow Visual State will be applied. This Visual State does only one thing, it increases the left margin of the Text by 48 pixels to accommodate a hamburger button.|
+| VisualStateNormalMinWidth| integer| ThThis property indicates the width when the Normal Visual State will be applied. This Visual State has no visual impact on the PageHeader other than removing the effects of the VisualStateNarrowMinWidth property.|
 
 ## Syntax
 
