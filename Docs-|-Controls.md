@@ -610,6 +610,8 @@ In the case above, when the width of the window is greater than 0 effective pixe
 ![](http://i.imgur.com/uRfQur0.gif)
 
 #CustomTitleBar
+The control to provide the means to customize the application `TitleBar`.
+
 ## Inspiration
 
 Every app has a `TitleBar` and most designers enjoy branding as much of the application visuals as possible. The out of the box customization experience requires a fair degree of effort to achieve this, so the `CustomTitleBar` control endeavors to simplify that.
