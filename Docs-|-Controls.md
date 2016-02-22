@@ -610,7 +610,68 @@ In the case above, when the width of the window is greater than 0 effective pixe
 ![](http://i.imgur.com/uRfQur0.gif)
 
 #CustomTitleBar
-`documentation needed`
+## Inspiration
+
+Every app has a `TitleBar` and most designers enjoy branding as much of the application visuals as possible. The out of the box customization experience requires a fair degree of effort to achieve this, so the `CustomTitleBar` control endeavors to simplify that.
+
+## Key features
+
+- Easy way to specify if the application extends rendering into the `TitleBar` area.
+- Easy look & feel style customization
+
+## Properties
+
+| Name | Type | Notes |
+|:---|:---|:---|
+| BackgroundColor| Brush| The default background color of the `TitleBar`. |
+| ButtonBackgroundColor| Brush| The default background color of all buttons on the `TitleBar`. |
+| ButtonForegroundColor| Brush| The default color for the foreground of all buttons on the `TitleBar`. |
+| ButtonHoverBackgroundColor| Brush| The background color used when the mouse cursor hovers over a button on the `TitleBar`. |
+| ButtonHoverForegroundColor| Brush| The foreground color used when the mouse cursor hovers over a button on the `TitleBar`. |
+| ButtonInactiveBackgroundColor| Brush| The background color of all buttons on the `TitleBar` when the application is inactive. |
+| ButtonInactiveForegroundColor| Brush| The foreground color of all buttons on the `TitleBar` when the application is inactive. |
+| ButtonPressedBackgroundColor| Brush| The background color used when a button on the `TitleBar` is in a pressed state. |
+| ButtonPressedForegroundColor| Brush| The foreground color used when a button on the `TitleBar` is in a pressed state. |
+| Extended| bool| true if the client area of the application is extended into the `TitleBar` area; otherwise false. This setting allows the developer to take control of rendering into the `TitleBar`.|
+| ForegroundColor| Brush| The default background color of the `TitleBar` - i.e. the title text color. |
+| InactiveBackgroundColor| Brush| The background color of the `TitleBar` when the application is inactive. |
+| InactiveForegroundColor| Brush| The foreground color of the `TitleBar` when the application is inactive. |
+
+## Syntax
+
+Before you can use the control, you should specify your desired colors in App.xaml:
+
+````XAML
+<Application.Resources>
+    <Style TargetType="controls:CustomTitleBar">
+        <Setter Property="BackgroundColor" Value="SteelBlue" />
+        <Setter Property="ButtonBackgroundColor" Value="Maroon" />
+        <Setter Property="ButtonForegroundColor" Value="White" />
+        <Setter Property="ButtonHoverBackgroundColor" Value="Orange" />
+        <Setter Property="ButtonHoverForegroundColor" Value="White" />
+        <Setter Property="ButtonInactiveBackgroundColor" Value="DimGray" />
+        <Setter Property="ButtonInactiveForegroundColor" Value="White" />
+        <Setter Property="ButtonPressedBackgroundColor" Value="Green" />
+        <Setter Property="ButtonPressedForegroundColor" Value="White" />
+        <Setter Property="Extended" Value="False" />
+        <Setter Property="ForegroundColor" Value="White" />
+        <Setter Property="InactiveBackgroundColor" Value="LightSteelBlue" />
+        <Setter Property="InactiveForegroundColor" Value="DimGray" />
+    </Style>
+</Application.Resources>
+````
+
+If you are using the Template10 BootStrapper to start your application (and why wouldn't you...?), the presence of the style in App.xaml will be detected and your color scheme applied to the `TitleBar` for you. If, however, you are striking out alone, the following code in your start up class will achieve the same effect:
+
+````CSHARP
+// setup custom titlebar
+foreach (var resource in Application.Current.Resources
+    .Where(x => x.Key.Equals(typeof(Controls.CustomTitleBar))))
+{
+    var control = new Controls.CustomTitleBar();
+    control.Style = resource.Value as Style;
+}
+````
 #ModalDialog 
 `documentation needed`
 #Resizer 
