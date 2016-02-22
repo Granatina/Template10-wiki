@@ -295,66 +295,23 @@ The HamburgerMenu control helps you to quickly implement this kind of experience
 - Works best with the PageHeader control
 
 ##Properties
-
-- **HamburgerBackground** (SolidColorBrush)
-
-> This property controls the background color of the button used to show / hide the panel of the hamburger menu.
-
-- **HamburgerForeground** (SolidColorBrush)
-
->This property controls the foreground color of the button used to show / hide the panel of the hamburger menu.
-
-- **NavAreaBackground** (SolidColorBrush)
-
->This property controls the background color of the panel.
-
-- **NavButtonBackground** (SolidColorBrush)
-
->This property controls the background color of the button connected to the currently selected section.
-
-- **NavButtonForeground** (SolidColorBrush)
-
->This property controls the foreground color of the button connected to the currently selected section.
-
-- **SecondarySeparator** (SolidColorBrush)
-
->This property controls the color of the separator line which is added before the secondary commands.
-
-- **NavigationService** (NavigationService)
-
->This property holds a reference to the NavigationService instance provided by Template10. It's required to handle the navigation between the different sections of the application.
-
-- **PrimaryButtons** (IEnumerable)
-
-> This property allows developers to add in the panel the main sections of the application, which are displayed at the top. Each section is represented with a HamburgerButtonInfo control, which offers some built in features like predefined styles, automaticatic navigation, etc.
-
-- **SecondaryButtons** (IEnumerable)
-
-> This property works in the same way of the PrimaryButtons one, but it's used to add to the panel the secondary sections of the applications, which are displayed on the bottom.
-
-- **IsOpen** (boolean)
-
-> This property controls the visibility of the panel.
-
-- **IsFullScreen** (boolean)
-
-> This property controls the visibility of the entire splitview pane
-
-- **PaneWidth** (double)
-
-> This property controls the size of the panel.
-
-- **Selected** (HamburgerButtonInfo)
-
-> This property contains a reference to the selected section in the panel.
-
-- **VisualStateNarrowMinWidth** (integer)
-
-> This property indicates the width when the Narrow Visual State will be applied. This Visual State does only one thing, it completely hides the panel when the window is too small (like on a smarpthone).
-
-- **VisualStateNormalMinWidth** (integer)
-
-> This property indicates the width when the Normal Visual State will be applied. In this state, the SplitView control is displayed in Minimal mode.
+| Name | Type | Notes |
+|:---|:---|:---|
+| HamburgerBackground| SolidColorBrush| This property controls the background color of the button used to show / hide the panel of the hamburger menu. |
+| HamburgerForeground| SolidColorBrush| This property controls the foreground color of the button used to show / hide the panel of the hamburger menu. |
+| NavAreaBackground| SolidColorBrush| This property controls the background color of the panel. |
+| NavButtonBackground| SolidColorBrush| This property controls the background color of the button connected to the currently selected section. |
+| NavButtonForeground| SolidColorBrush| This property controls the foreground color of the button connected to the currently selected section. |
+| SecondarySeparator| SolidColorBrush| This property controls the color of the separator line which is added before the secondary commands. |
+| NavigationService| SolidColorBrush| This property holds a reference to the NavigationService instance provided by Template10. It's required to handle the navigation between the different sections of the application. |
+| PrimaryButtons| IEnumerable| This property allows developers to add in the panel the main sections of the application, which are displayed at the top. Each section is represented with a HamburgerButtonInfo control, which offers some built in features like predefined styles, automaticatic navigation, etc. |
+| SecondaryButtons| IEnumerable| This property works in the same way of the PrimaryButtons one, but it's used to add to the panel the secondary sections of the applications, which are displayed on the bottom. |
+| IsOpen| bool| This property controls the visibility of the panel. |
+| IsFullScreen| bool| This property controls the visibility of the entire splitview pane. |
+| PaneWidth| double| This property controls the size of the panel. |
+| Selected| HamburgerButtonInfo| This property contains a reference to the selected section in the panel. |
+| VisualStateNarrowMinWidth| integer| This property indicates the width when the Narrow Visual State will be applied. This Visual State does only one thing, it completely hides the panel when the window is too small (like on a smarpthone). |
+| VisualStateNormalMinWidth| integer| This property indicates the width when the Normal Visual State will be applied. In this state, the SplitView control is displayed in Minimal mode. |
 
 ##IMPLEMENTATION 
 
