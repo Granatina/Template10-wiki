@@ -81,7 +81,9 @@ With the namespace in place, add the PageHeader control to your page:
 <Page x:Class="Controls.MainPage"
       xmlns:controls="using:Template10.Controls">
 
-    <controls:PageHeader Frame="{x:Bind Frame}">
+    <controls:PageHeader Frame="{x:Bind Frame}" 
+        BackButtonVisibility="Visible"
+        Text="Detail" />
 
 </Page>
 ```
