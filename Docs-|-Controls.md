@@ -1,7 +1,5 @@
 ##Controls
 
-Lorem Ipsum
-
 ### Table of contents
 
 1. [PageHeader](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#pageheader)
