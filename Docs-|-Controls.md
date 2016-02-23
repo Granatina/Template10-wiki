@@ -9,7 +9,6 @@ Lorem Ipsum
 1. [CustomTitleBar](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#customtitlebar)
 1. [ModalDialog](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#modaldialog)
 1. [Resizer](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#resizer)
-1. [PiePiece](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#piepiece)
 
 #PageHeader
 The control to create a common page element including header text, primary buttons, and secondary buttons. 
