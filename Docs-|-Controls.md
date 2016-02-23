@@ -634,8 +634,75 @@ foreach (var resource in Application.Current.Resources
 }
 ````
 #ModalDialog 
-`documentation needed`
+The control to provide the means to display a Modal dialog in your application.
+
+## Inspiration
+
+Almost every app has the need to display some form of a Modal Dialog - a UI element that blocks interaction with the rest of an application until either the user has dismissed it or some application task has completed.
+
+## Key features
+
+- Easy way to display content on top of the rest of the application UI and an opacity layer that blocks access to UI elements displayed "beneath" the `ModalContent`.
+- Easy look & feel style customization
+
+## Properties
+
+| Name | Type | Notes |
+|:---|:---|:---|
+| IsModal| bool <br/> default: false| true if the modal content is being displayed; otherwise false.|
+| CanBackButtonDismiss| bool <br/> default: false| true if the modal dialog can be closed by hitting a back button; otherwise false. **note** if true, the modal is closed and the back navigation request is marked as handled, therefore no page navigation will occur. |
+| Content| UIElement | Optional content that will be overlaid by the modal content when the dialog is open. |
+| DisableBackButtonWhenModal| bool <br\> default: false| true if back navigation is not allowed if the modal is open; otherwise false; **note** For true modality, this should be set to true. |
+| ModalBackground| Brush | The background color for the dialog. |
+| ModalContent| UIElement | The content to be displayed in the modal dialog when open. |
+
+
+## Syntax
+````XAML
+<Controls:ModalDialog x:Name="BusyModal" CanBackButtonDismiss="False" DisableBackButtonWhenModal="True">
+    <Controls:ModalDialog.ModalContent>
+        <Viewbox Height="32" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <ProgressRing x:Name="BusyRing" Width="24" Height="24" Margin="12,0"
+                            Foreground="White" IsActive="{Binding IsModal, ElementName=BusyModal}" />
+                <TextBlock x:Name="BusyText" VerticalAlignment="Center" Foreground="White" />
+            </StackPanel>
+        </Viewbox>
+    </Controls:ModalDialog.ModalContent>
+</Controls:ModalDialog>
+
+````
+
 #Resizer 
-`documentation needed`
-#PiePiece 
-`documentation needed`
+A container that will size the a single UIElement by dragging a customizable thumb control.
+
+## Inspiration
+You have all seen web sites that provide the ability to stretch a textbox to give you more room to type - well this control can provide the same capability for the TextBox, Image and more!
+
+## Properties
+
+| Name | Type | Notes |
+|:---|:---|:---|
+|ElementControl| Control| The control that will be resized.|
+|GrabberVisibility |Visibility | The visibility of the grabber control. |
+|GrabberSize |Size | The size of the grabber control. |
+|GrabberBrush| Brush| The color of the grabber control. |
+
+## Syntax
+
+The `ResizerControl` can be styled:
+````XAML
+<Style TargetType="controls:Resizer">
+    <Setter Property="GrabberBrush" Value="{StaticResource CustomColorBrush}" />
+    <Setter Property="GrabberVisibility" Value="Visible" />
+</Style>
+````
+The `ResizerControl` is used:
+````XAML
+<controls:Resizer x:Name="parameterResizer" Margin="16,16,16,0">
+    <TextBox MinWidth="250" MinHeight="62"
+                Header="Parameter to pass"
+                Text="{Binding Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+    </TextBox>
+</controls:Resizer>
+````
