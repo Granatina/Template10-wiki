@@ -706,3 +706,6 @@ The `ResizerControl` is used:
     </TextBox>
 </controls:Resizer>
 ````
+![](http://i.imgur.com/1uyPXaT.png)
+
+![](http://i.imgur.com/np2VACX.png)
