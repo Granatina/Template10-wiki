@@ -52,17 +52,23 @@ This converter can display data from one of two binary choices.  If the data bei
 You can add this binding as a Resource to another XAML element.
 
 ````xaml
-<converters:ValueWhenConverter 
-    Value="The bound value is the string 'Test'" 
-    Otherwise="The bound value is something other than the string 'Test'"
-    When="Test"
-    x:Key="VWConverter" />
+<c:ValueWhenConverter x:Key="VisibleWhenTrueConverter">
+    <c:ValueWhenConverter.When>
+        <x:Boolean>True</x:Boolean>
+    </c:ValueWhenConverter.When>
+    <c:ValueWhenConverter.Value>
+        <Visibility>Visible</Visibility>
+    </c:ValueWhenConverter.Value>
+    <c:ValueWhenConverter.Otherwise>
+        <Visibility>Collapsed</Visibility>
+    </c:ValueWhenConverter.Otherwise>
+</c:ValueWhenConverter>
 ````
 
 With the resource in place, you can use the resource as the **Converter** when binding a value on your page.
 
 ````xaml
-<TextBlock Text="{Binding ExternalValue, Converter={StaticResource VWConverter}}" />
+<TextBlock Text="Hello Admin" Visibility="{Binding IsAdmin, Converter={StaticResource VisibleWhenTrueConverter}}" />
 ````
 
 ## <a name="changetypeconverter" /> ChangeTypeConverter
