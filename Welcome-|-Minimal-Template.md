@@ -1,4 +1,4 @@
-#Welcome to the Template 10 Minimal template
+#Welcome to the Minimal template
 ![T10](https://raw.githubusercontent.com/Windows-XAML/Template10/master/Assets/T10%20256x256.png) 
 
 Hit `F5` right now and run your new app! To refresh Visual Studio's intellisense, follow this: 
