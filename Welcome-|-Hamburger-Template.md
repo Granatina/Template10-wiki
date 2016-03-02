@@ -1,5 +1,5 @@
 #Welcome to the Hamburger template
-![T10](https://raw.githubusercontent.com/Windows-XAML/Template10/master/Assets/T10%20256x256.png) 
+![T10](https://raw.githubusercontent.com/Windows-XAML/Template10/master/Assets/T10%20128x128.png) 
 
 > Do you have technical questions you want to ask the community? Use the `Template10` tag on StackOverflow. http://stackoverflow.com/questions/tagged/template10
 
