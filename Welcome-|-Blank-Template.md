@@ -1,12 +1,7 @@
-#Welcome!
+#Welcome to the Template 10 Blank template
+![T10](https://raw.githubusercontent.com/Windows-XAML/Template10/master/Assets/T10%20256x256.png) 
 
-![T10](https://raw.githubusercontent.com/Windows-XAML/Template10/master/Assets/T10%2056x56.png) 
-
-This page is about the Blank template, which provides a starting point for any application. Since most of the hard stuff is already implemented in Template 10 [Library], you're free to design and build your app without worrying about the basics, since Template 10 implements them for you. 
-
-##First, are you having trouble building your new Template 10 project? We can fix that.
-
-Template 10 templates (both Blank and Minimal) use NuGet 3. Visual Studio tooling for NuGet 3 is quite new; you must restore your packages from NuGet before they will build. Here are the one-time steps to do so. 
+Hit `F5` right now and run your new app! To refresh Visual Studio's intellisense, follow this: 
 
 1. Press Ctrl+Q, type `pac man gen` 
 1. Ensure `Allow NuGet to download missing packages` is checked.
