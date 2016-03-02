@@ -1,6 +1,8 @@
 #Welcome to the Minimal template
 ![T10](https://raw.githubusercontent.com/Windows-XAML/Template10/master/Assets/T10%20256x256.png) 
 
+> Do you have technical questions you want to ask the community? Use the `Template10` tag on StackOverflow. http://stackoverflow.com/questions/tagged/template10
+
 Hit `F5` right now and run your new app! To refresh Visual Studio's intellisense, follow this: 
 
 1. Press Ctrl+Q, type `pac man gen` 
