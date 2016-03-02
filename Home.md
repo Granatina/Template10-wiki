@@ -40,7 +40,7 @@ The philosophy is this: we want you do it our way unless you want to do it your 
 ###What's in Template 10?
 
 1. There are [controls](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls)
-1. There are [behaviors](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Behaviors).
+1. There are [behaviors](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Behaviors-And-Actions).
 1. There are [services](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Services)
 1. There are [converters](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Converters)
 1. There are MVVM classes (BindableBase, DelegateCommand, and ViewModelBase)
