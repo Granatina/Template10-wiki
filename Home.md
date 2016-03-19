@@ -5,6 +5,7 @@
 ####[Converters](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Converters)
 ####[Navigation Cache](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Navigation-Cache)
 ####[Services](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Services)
+####[Code Snippets](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Snippets)
 
 #What is Template 10?
 
