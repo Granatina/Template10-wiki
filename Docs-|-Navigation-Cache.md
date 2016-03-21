@@ -43,7 +43,7 @@ public DetailPage()
 
 Perhaps the biggest benefit of Template 10 is INavigable. If your view-model implements that interface, such as inheriting from Template10.Mvvm.ViewModelBase, there is an OnNavigatedTo method you can override. This method is called whenever the user navigates to a view that sets the view-model to its DataContext property. It’s awesome.
 
-One of the parameters of OnNavigatedTo is NavigationMode. When the user is navigating forward or back along the navigation stack this argument has the corresponding forward or back ENUM value. Handling this value allows you to property handle data loading – in most cases you will not re-load your data if the user is only navigating forward or back.
+One of the parameters of OnNavigatedTo is NavigationMode. When the user is navigating forward or back along the navigation stack this argument has the corresponding forward or back ENUM value. Handling this value allows you to properly handle data loading – in most cases you will not re-load your data if the user is only navigating forward or back.
 
 ```C#
 // (optional) When NavigationCacheMode = NavigationCacheMode.Enabled;
