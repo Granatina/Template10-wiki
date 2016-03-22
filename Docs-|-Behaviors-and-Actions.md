@@ -136,6 +136,7 @@ The intent of the `BackButtonBehavior` is to add behavior to any page or view. T
             <Core:CallMethodAction MethodName="ClosePopUp" TargetObject="{Binding ElementName=page}"/>
         </Behaviors:BackButtonBehavior>
     </Interactivity:Interaction.Behaviors>
+</Grid>
 ````
 
 ###TextBoxEnterKeyBehavior
@@ -262,11 +263,11 @@ The intent of the `OpenFlyoutAction` is to open the FlyoutBase on the specified 
                       </StackPanel>
                   </Flyout>
               </FlyoutBase.AttachedFlyout>
-              <interactivity:Interaction.Behaviors>
+              <Interactivity:Interaction.Behaviors>
                   <core:EventTriggerBehavior EventName="Tapped">
                       <behaviors:OpenFlyoutAction />
                   </core:EventTriggerBehavior>
-              </interactivity:Interaction.Behaviors>
+              </Interactivity:Interaction.Behaviors>
           </AppBarButton>
 ````
 
