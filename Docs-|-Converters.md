@@ -52,17 +52,17 @@ This converter can display data from one of two binary choices.  If the data bei
 You can add this binding as a Resource to another XAML element.
 
 ````xaml
-<c:ValueWhenConverter x:Key="VisibleWhenTrueConverter">
-    <c:ValueWhenConverter.When>
+<converters:ValueWhenConverter x:Key="VisibleWhenTrueConverter">
+    <converters:ValueWhenConverter.When>
         <x:Boolean>True</x:Boolean>
-    </c:ValueWhenConverter.When>
-    <c:ValueWhenConverter.Value>
+    </converters:ValueWhenConverter.When>
+    <converters:ValueWhenConverter.Value>
         <Visibility>Visible</Visibility>
-    </c:ValueWhenConverter.Value>
-    <c:ValueWhenConverter.Otherwise>
+    </converters:ValueWhenConverter.Value>
+    <converters:ValueWhenConverter.Otherwise>
         <Visibility>Collapsed</Visibility>
-    </c:ValueWhenConverter.Otherwise>
-</c:ValueWhenConverter>
+    </converters:ValueWhenConverter.Otherwise>
+</converters:ValueWhenConverter>
 ````
 
 With the resource in place, you can use the resource as the **Converter** when binding a value on your page.
