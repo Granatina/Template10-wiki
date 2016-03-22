@@ -85,6 +85,6 @@ This converter can convert the type used in a binding - this is especially helpf
 <Grid>
     <ListView ItemsSource='{x:Bind ViewModel.Items, Mode=OneWay}'
               SelectedItem='{x:Bind ViewModel.CurrentItem, Mode=TwoWay, Converter={StaticResource TypeConverter}}'/>
-<Grid\>
+</Grid>
 
 ````
