@@ -78,7 +78,7 @@ This converter can convert the type used in a binding - this is especially helpf
 ### Syntax
 ````XAML
 <Page.Resources>
-    <converters:ChangetTypeConverter x:Key="TypeConverter"/>
+    <converters:ChangeTypeConverter x:Key="TypeConverter"/>
 </Page.Resources>
 
 
