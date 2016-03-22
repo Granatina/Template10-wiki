@@ -255,20 +255,20 @@ The intent of the `OpenFlyoutAction` is to open the FlyoutBase on the specified 
 
 ####Syntax
 ````XAML
-         <AppBarButton Icon="Find" Label="Search">
-             <FlyoutBase.AttachedFlyout>
-                  <Flyout>
-                      <StackPanel>
-                          <TextBlock Text="Awesome Flyout!" />
-                      </StackPanel>
-                  </Flyout>
-              </FlyoutBase.AttachedFlyout>
-              <Interactivity:Interaction.Behaviors>
-                  <core:EventTriggerBehavior EventName="Tapped">
-                      <behaviors:OpenFlyoutAction />
-                  </core:EventTriggerBehavior>
-              </Interactivity:Interaction.Behaviors>
-          </AppBarButton>
+<AppBarButton Icon="Find" Label="Search">
+	<FlyoutBase.AttachedFlyout>
+		<Flyout>
+			<StackPanel>
+				<TextBlock Text="Awesome Flyout!" />
+			</StackPanel>
+		</Flyout>
+	</FlyoutBase.AttachedFlyout>
+	<Interactivity:Interaction.Behaviors>
+		<core:EventTriggerBehavior EventName="Tapped">
+			<behaviors:OpenFlyoutAction />
+		</core:EventTriggerBehavior>
+	</Interactivity:Interaction.Behaviors>
+</AppBarButton>
 ````
 
 ###TimeoutAction
