@@ -71,6 +71,19 @@ With the resource in place, you can use the resource as the **Converter** when b
 <TextBlock Text="Hello Admin" Visibility="{Binding IsAdmin, Converter={StaticResource VisibleWhenTrueConverter}}" />
 ````
 
+> Note, if you want to use a value of Null, use the following syntax:
+
+```xaml
+        <converters:ValueWhenConverter x:Key="VisibleWhenNullConverter"
+                                       When="{x:Null}">
+            <converters:ValueWhenConverter.Value>
+                <Visibility>Visible</Visibility>
+            </converters:ValueWhenConverter.Value>
+            <converters:ValueWhenConverter.Otherwise>
+                <Visibility>Collapsed</Visibility>
+            </converters:ValueWhenConverter.Otherwise>
+        </converters:ValueWhenConverter>
+```
 ## <a name="changetypeconverter" /> ChangeTypeConverter
 
 This converter can convert the type used in a binding - this is especially helpful when using the x:Bind syntax to bind a strongly-typed property in a View Model to a XAML control property that is declared as `object` - such as the `SelectedItem` on a `ListView`.
