@@ -74,15 +74,14 @@ With the resource in place, you can use the resource as the **Converter** when b
 > Note, if you want to use a value of Null, use the following syntax:
 
 ```xaml
-        <converters:ValueWhenConverter x:Key="VisibleWhenNullConverter"
-                                       When="{x:Null}">
-            <converters:ValueWhenConverter.Value>
-                <Visibility>Visible</Visibility>
-            </converters:ValueWhenConverter.Value>
-            <converters:ValueWhenConverter.Otherwise>
-                <Visibility>Collapsed</Visibility>
-            </converters:ValueWhenConverter.Otherwise>
-        </converters:ValueWhenConverter>
+<converters:ValueWhenConverter x:Key="VisibleWhenNullConverter" When="{x:Null}">
+	<converters:ValueWhenConverter.Value>
+		<Visibility>Visible</Visibility>
+	</converters:ValueWhenConverter.Value>
+	<converters:ValueWhenConverter.Otherwise>
+		<Visibility>Collapsed</Visibility>
+	</converters:ValueWhenConverter.Otherwise>
+</converters:ValueWhenConverter>
 ```
 ## <a name="changetypeconverter" /> ChangeTypeConverter
 
