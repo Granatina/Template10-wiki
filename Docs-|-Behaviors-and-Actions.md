@@ -82,7 +82,7 @@ The intent of the `NavButtonBehavior` is to add behavior to any native XAML `But
 </AppBarButton>
 ````
 ###DeviceDispositionBehavior
-The intent of the `DeviceDispositionBehavior` is to add behavior to any page that should occur on one or more specified device families. **Note:** this behavior is typically added to a top level element as it is listening to system events, (say transitioning to Continuity) rather than element level events.
+The intent of the `DeviceDispositionBehavior` is to add behavior to any page that should occur on one or more specified device families. **Note:** this behavior is typically added to a top level element as it is listening to system events, (say transitioning to Continuum) rather than element level events.
 
 > This is valuable when you want to change some aspect of your apps behavior based upon one or more device families. An example could be hiding UIElements that are not applicable on a device, such as in-app back buttons on a Phone.
 
