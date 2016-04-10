@@ -1,5 +1,5 @@
 ##Behaviors
-XAML behaviors are a mechanism to encapsulate code with logic and configuration parameters such that it can then be declared in XAML without requiring code-behind. Most XAML Behaviors have design-time support. They can easily be written in C# and have a simple interface `IBehavior` and are typically contain XAML Actions `IAction`.
+XAML behaviors are a mechanism to encapsulate code with logic and configuration parameters such that it can then be declared in XAML without requiring code-behind. Most XAML Behaviors have design-time support. They can easily be written in C# and implement the simple interface `IBehavior` and typically contain XAML Actions `IAction`.
 
 ###Table of Contents
 
