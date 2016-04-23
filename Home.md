@@ -86,4 +86,8 @@ No. Though it's difficult to imagine any XAML app not using model-view-view-mode
 Probably. Template 10 packs in as many time-saving lessons-learned as possible. It's perfect for new apps, or apps wanting to leverage the library. That being said, it's not for everyone (probably 90% of Windows XAML apps). 
 
 ##Known Issues with Template10
-There are no known issues with version 1.1.0 of the Template 10 library.
+There are a couple of known issues with Template 10 v1.1.10. 
+ - When HamburgerButtonInfo.ButtonType is set to Command, the Visibility property of the button isn't respected.
+ - On initial load, the state of the HamburgerMenu can be incorrect (in some instances).
+ - HamburgerButtonInfo.Visibility defaults to Visible when the HamburgerMenu is full screen.
+ - The HamburgerMenu's initial color is transparent, which looks stupid.
