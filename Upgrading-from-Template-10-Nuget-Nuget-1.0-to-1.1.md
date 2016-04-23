@@ -2,8 +2,8 @@ Congratulations, you are about to upgrade to the best build of Template 10. 1.1.
 
 ##Step by step
 
-1. Update Windows 10 to 1511, UWP 10586 (your project can still target 10240).
-1. Install the Windows 10586 SDK to Visual Studio 2015 {any edition} Update 1. 
+1. Update Windows 10 to the November Update (version 1511) (your project can still target 10240).
+1. Install the Windows 10586 SDK to Visual Studio 2015 {any edition} Update 1/2. 
 1. Use NuGet to upgrade Template 10 v1.0.* to v1.1.* in your project(s).
 1. In Project/Resources delete "Behaviors SDK (XAML)" or "BehaviorsXamlSDKManaged".
 1. In Project.JSON change `"Newtonsoft.Json": "7.0.1"` to `"Newtonsoft.Json": "8.0.0"`.
