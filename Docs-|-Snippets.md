@@ -2,7 +2,7 @@
 1. [T10_Command](#T10_Command)
 2. [T10_CommandTyped](#T10_CommandTyped)
 3. [T10_Dispatch](#T10_Dispatch)
-3. [T10_DispatchAwait](#T10_DispatchAwait)
+3. [T10_DispatchAwait](#t10_dispatchawait)
 3. [T10_DispatchAwaitResult](#T10_DispatchAwaitResult)
 3. [T10_Event](#T10_Event)
 3. [T10_INotifyPropertyChanged](#T10_INotifyPropertyChanged)
