@@ -1,6 +1,8 @@
 ##Helpful Tips
 
-* [Technique 1](https://github.com/Windows-XAML/Template10/wiki/Techniques#technique-1) "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+* [ Nested Controls w/ Behaviors ](https://github.com/Windows-XAML/Template10/wiki/Techniques#technique-1) 
+   Set `TargetObject` to the respective root of the page.  `<Core:GoToState StateName="ListVisualState" TargetObject="{Binding ElementName=ThisPage}" />`
+
 * [Technique 2](https://github.com/Windows-XAML/Template10/wiki/Techniques#technique-2) "Lorem ipsum dolor sit amet, consectetur adipiscing elit." 
 
 ##Technique 1
