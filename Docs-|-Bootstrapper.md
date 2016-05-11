@@ -94,7 +94,7 @@ INavigable ResolveForPage(Page page, NavigationService navigationService);
 
 Your app has a limited number of seconds (currently 10s) to activate before the platform automatically, punitively terminates your app. This means, costly operations cannot be front-loaded at app startup. A common work-around is the extended splash screen. This view mimics the default splash screen while executing long-running startup tasks. 
 
-In the Bootstrapper, identify your extended splash factory, like this:
+In the **Bootstrapper**, identify your extended splash factory, like this:
 
 ````csharp
 sealed partial class App : Template10.Common.BootStrapper
@@ -106,10 +106,10 @@ sealed partial class App : Template10.Common.BootStrapper
     }
 
     // runs only when not restored from state
-    public override Task OnStartAsync(StartKind startKind, IActivatedEventArgs args)
+    public override async Task OnStartAsync(StartKind startKind, IActivatedEventArgs args)
     {
-        NavigationService.Navigate(typeof(Views.MainPage));
-        return Task.CompletedTask;
+        // TODO: do your long-running work here
+        await NavigationService.NavigateAsync(typeof(Views.MainPage));
     }
 }
 ````
