@@ -1,11 +1,14 @@
 ## Template 10 Documentation 
-####[Behaviors and Actions](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Behaviors-and-Actions)
-####[Bootstrapper](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Bootstrapper)
-####[Controls](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls)
-####[Converters](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Converters)
-####[Navigation Cache](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Navigation-Cache)
-####[Services](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Services)
-####[Code Snippets](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Snippets)
+
+###Table of contents
+
+1. [Behaviors and Actions](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Behaviors-and-Actions)
+1. [Bootstrapper](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Bootstrapper)
+1. [Controls](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls)
+1. [Converters](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Converters)
+1. [Navigation Cache](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Navigation-Cache)
+1. [Services](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Services)
+1. [Code Snippets](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Snippets)
 
 #What is Template 10?
 
