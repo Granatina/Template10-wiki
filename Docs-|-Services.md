@@ -19,11 +19,11 @@ this.NavigationService.Navigate(typeof(Views.MainPage));
 this.NavigationService.Navigate(typeof(Views.DetailPage), this.Value);
 
 // from inside any window
-var nav = WindowWrapper.Current().NavigationService;
+var nav = WindowWrapper.Current().NavigationServices.FirstOrDefault();
 nav.Navigate(typeof(Views.DetailPage), this.Value);
 
 // from/with a reference to a Frame
-var nav = WindowWrapper.Current(MyFrame).NavigationService;
+var nav = WindowWrapper.Current(MyFrame).NavigationServices.FirstOrDefault();
 nav.Navigate(typeof(Views.DetailPage), this.Value);
 ````
 
