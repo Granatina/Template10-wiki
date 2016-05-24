@@ -121,21 +121,15 @@ sealed partial class App : Template10.Common.BootStrapper
 The Bootstrapper automatically creates your app's root frame. However, the developer can intercept this by creating their own root frame in the OnInitializeAsync() override. Why? Sometimes, like when using the Hamburger Menu, you want a custom root to your application. If you want to do this, you can do something like this:
 
 ````csharp
-public override Task OnInitializeAsync(IActivatedEventArgs args)
+public override UIElement CreateRootElement(IActivatedEventArgs e)
 {
-    // content may already be shell when resuming
-    if ((Window.Current.Content as ModalDialog) == null)
+    var service = NavigationServiceFactory(BackButton.Attach, ExistingContent.Exclude);
+    return new ModalDialog
     {
-        // setup hamburger shell
-        var nav = NavigationServiceFactory(BackButton.Attach, ExistingContent.Include);
-        Window.Current.Content = new ModalDialog
-        {
-            DisableBackButtonWhenModal = true,
-            Content = new Views.Shell(nav),
-            ModalContent = new Views.Busy(),
-        };
-    }
-    return Task.CompletedTask;
+        DisableBackButtonWhenModal = true,
+        Content = new Views.Shell(service),
+        ModalContent = new Views.Busy(),
+    };
 }
 ````
 
