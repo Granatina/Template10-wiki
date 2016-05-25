@@ -61,7 +61,7 @@ In Universal Windows Platform the CommandBar control can be placed anywhere - no
 | Text| string| This simple property sets the header text for the control. The text is displayed on the left side of the header and does not wrap. The color of the font is controlled by the HeaderForegroundBrush property.|
 | VisualStateNarrowMinWidth| integer| This property indicates the width when the Narrow Visual State will be applied. This Visual State does only one thing, it increases the left margin of the Text by 48 pixels to accommodate a hamburger button.|
 | VisualStateNormalMinWidth| integer| This property indicates the width when the Normal Visual State will be applied. This Visual State has no visual impact on the PageHeader other than removing the effects of the VisualStateNarrowMinWidth property.|
-| EllipsisVisibility| Visibility (default: Auto)| By default is set to Auto.  Either Secondary or Primary has children Ellipsis will be shown. This can be forced to not be shown by settings to Collapsed.
+| EllipsisVisibility| Visibility (default: Auto)| By default is set to Auto.  If either Primary or Secondary has children Ellipsis will be shown. This can be force hidden by setting to Collapsed.
 
 ## Syntax
 
