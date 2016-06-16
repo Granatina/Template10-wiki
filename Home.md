@@ -1,5 +1,7 @@
 ## Template 10 Documentation 
 
+[Microsoft Virtual Academy Template 10 Training Videos](https://mva.microsoft.com/en-US/training-courses/getting-started-with-template-10-16336)
+
 ###Table of contents
 
 1. [Behaviors and Actions](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Behaviors-and-Actions)
