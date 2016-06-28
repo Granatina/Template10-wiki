@@ -34,9 +34,15 @@ public override async Task OnNavigatedToAsync(object parameter,
 
 ####Using a standard XAML Page
 
+All XAML pages have a default `Frame` property which can be used to discover the corresponding Template 10 `NavigationService` by using the `GetNavigationService()` extension method available in the `Template10.Utils` namespace. This is only necessary because the Template 10 NavigationService is the only supported method to navigate in Template 10.  
+
+````csharp
+using Template10.Utils;
+````
+
 **Send**
 
-All XAML pages have a default `Frame` property which can be used to discover the corresponding Template 10 `NavigationService` by using the `GetNavigationService()` extension method available in the `Template10.Utils` namespace. This is only necessary because the Template 10 NavigationService is the only supported method to navigate in Template 10.  
+Other than acquiring the `NavigationService`, there is no special logic in this implementation.
 
 ````csharp
 using Template10.Utils;
