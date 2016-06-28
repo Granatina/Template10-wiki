@@ -3,7 +3,7 @@
 * [Passing simple Parameters to a Page] (#PassingParameters1) 
 * [Passing complex Parameters to a Page] (#PassingParameters2) 
 
-###[Passing Parameters to a Page](PassingParameters1)
+###[Passing Simple Parameters to a Page](PassingParameters1)
 
 A simple parameter is a C# string, integer, boolean, or some other data type - sometimes called simple types, reference types, or integral type. The easiest way to understand it is: it's a base type that is not a class. Passing these in Template 10 is simple. 
 
@@ -61,13 +61,15 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 }
 ````
 
-###[Passing Parameters to a Page](PassingParameters2)
-
-Because the Template 10 `NavigationService` serializes all parameters, not all types can be successfully passed to a page. The solution to this is simple, save your parameter value into `SessionState` and retrieve if when your page loads. `SessionState` is a Template 10-specific, in-memory dictionary accessible everywhere. You can use it all you want, for anything you want, but it will not persist if your application is terminated. For this reason, write your code defensively.
+###[Passing Complex Parameters to a Page](PassingParameters2)
 
 > If your type serializes easily, and you do not need a specific instance, you don't need to obey this section. In this case, you can use the `Simple Type` approach indicated above.
 
-**Here's how to pass a complex type from app.xaml.cs or a view-model**
+####Using app.xaml.cs or a view-model
+
+**Send**
+
+Because the Template 10 `NavigationService` serializes all parameters, not all types can be successfully passed to a page. The solution to this is simple, save your parameter value into `SessionState` and retrieve if when your page loads. `SessionState` is a Template 10-specific, in-memory dictionary accessible everywhere. You can use it all you want, for anything you want, but it will not persist if your application is terminated. For this reason, write your code defensively.
 
 The strategy here is to save the value into `SessionState` pass only the key
 
@@ -77,18 +79,9 @@ SessionState.Add("MyKey", value);
 await NavigationService.NavigateAsync(typeof(Views.MainPage), "MyKey");
 ````
 
-**Here's how to pass from a page**
+**Receive**
 
-All XAML pages have a default `Frame` property which can be used to discover the corresponding Template 10 `NavigationService` by using the `GetNavigationService()` extension method available in the `Template10.Utils` namespace. This is only necessary because the Template 10 NavigationService is the only supported method to navigate in Template 10.  
-
-````csharp
-using Template10.Utils;
-
-var value = new MyType();
-var state = Template10.Common.BootStrapper.Current.SessionState;
-state.Add("MyKey", value);
-await this.Frame.GetNavigationService().NavigateAsync(typeof(Views.MainPage), "MyKey");
-````
+`SessionState` is a standard property in Template 10 view-models that inherit ViewModelBase. This is the same, identical SessionState available in every view-model and app.xaml.cs. 
 
 **Here's how to receive in a view-model**
 
@@ -109,7 +102,29 @@ public override async Task OnNavigatedToAsync(object parameter, NavigationMode m
 }
 ````
 
-**Here's how to receive in a page**
+####Using a standard XAML Page
+
+Since `SessionState` is a Template 10 artifact and not part of XAML, the standard `Page` does not have the `SessionState` property. Since there can be only one instance of `BootStrapper`, fetching it using the `Current` property allows you to then retrieve its `SessionState` which you can then use to persist or retrieve values.
+
+````csharp
+var state = Template10.Common.BootStrapper.Current.SessionState;
+
+````
+
+**Send**
+
+All XAML pages have a default `Frame` property which can be used to discover the corresponding Template 10 `NavigationService` by using the `GetNavigationService()` extension method available in the `Template10.Utils` namespace. This is only necessary because the Template 10 NavigationService is the only supported method to navigate in Template 10.  
+
+````csharp
+using Template10.Utils;
+
+var value = new MyType();
+var state = Template10.Common.BootStrapper.Current.SessionState;
+state.Add("MyKey", value);
+await this.Frame.GetNavigationService().NavigateAsync(typeof(Views.MainPage), "MyKey");
+````
+
+**Receive**
 
 Like the `OnNavigatedTo` in the view-model, the parameter argument receives the incoming parameter value. In Template 10, however, this value cannot be cast from object to the expected type. This is because the incoming value is always a string. Why? Because the `NavigationService` always serializes the parameter before Navigation. To use the parameter, you must both deserialize it and cast it. This can be done using Template 10's `SerializationService`. 
 
