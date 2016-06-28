@@ -1,5 +1,3 @@
-##Helpful Tips
-
 * [Passing simple Parameters to a Page] (#PassingParameters1) 
 * [Passing complex Parameters to a Page] (#PassingParameters2) 
 
@@ -86,7 +84,8 @@ await NavigationService.NavigateAsync(typeof(Views.MainPage), "MyKey");
 **Here's how to receive in a view-model**
 
 ````csharp
-public override async Task OnNavigatedToAsync(object parameter, NavigationMode mode, IDictionary<string, object> suspensionState)
+public override async Task OnNavigatedToAsync(object parameter, NavigationMode mode, 
+    IDictionary<string, object> suspensionState)
 {
     var key = parameter as string;
     if (SessionState.ContainsKey(key))
