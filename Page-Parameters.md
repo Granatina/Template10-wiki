@@ -42,7 +42,8 @@ All XAML pages have a default `Frame` property which can be used to discover the
 using Template10.Utils;
 
 var value = "Hello world";
-await this.Frame.GetNavigationService().NavigateAsync(typeof(Views.MainPage), value);
+var service = this.Frame.GetNavigationService();
+await service.NavigateAsync(typeof(Views.MainPage), value);
 ````
 
 **Receive**
@@ -120,7 +121,8 @@ using Template10.Utils;
 var value = new MyType();
 var state = Template10.Common.BootStrapper.Current.SessionState;
 state.Add("MyKey", value);
-await this.Frame.GetNavigationService().NavigateAsync(typeof(Views.MainPage), "MyKey");
+var service = this.Frame.GetNavigationService();
+await service.NavigateAsync(typeof(Views.MainPage), "MyKey");
 ````
 
 **Receive**
