@@ -325,7 +325,7 @@ Dependency injection is a common design pattern that Template 10 supports, but d
 }
 ````
 
-2.- Clean The Page XAML, remove '<Page.DataContext>' section and leave xaml.cs like:
+2.- Clean The Page XAML, remove '`<Page.DataContext>`' section and leave xaml.cs like:
 
 ````csharp
 public sealed partial class MainPage : Page
