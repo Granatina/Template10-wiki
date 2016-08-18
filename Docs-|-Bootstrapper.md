@@ -308,4 +308,18 @@ public override Task OnInitializeAsync(IActivatedEventArgs args)
 
 Dependency injection is a common design pattern that Template 10 supports, but does not natively implement. That being said, Template 10 enables dependency injection specifically with Bootstrapper.`ResolveForPage()`. Overriding this method, allows a developer to inject (or return) any `INavigable` view-model into a page immediately after initial navigation, while still maintaining the standard navigation pipeline.
 
+In App.xaml.cs ovverride ResolveForPage to resolve your ViewModel:
+
+````csharp
+ public override INavigable ResolveForPage(Page page, NavigationService navigationService)
+ {
+    if (page is MainPage)
+    {
+        return SimpleIoc.Default.GetInstance<MainPageViewModel>();
+        //(AppController.UnityContainer as UnityContainer).Resolve<INavigable>();
+    }
+    else
+       return base.ResolveForPage(page, navigationService);
+}
+````
 // ENDOFFILE
