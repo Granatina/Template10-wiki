@@ -96,7 +96,7 @@ public class MyViewModel : INotifiyPropertyChanged
 ```
 
 ## T10_Property
-Expands to create a proerty definition that raises the ProertyChanged event:
+Expands to create a property definition that raises the PropertyChanged event:
 ```csharp
 string _MyProperty = default(string);
 public string MyProperty { get { return _MyProperty; } set { Set(ref _MyProperty, value); } }
