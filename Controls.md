@@ -2,32 +2,32 @@
 
 ### Table of contents
 
-1. [PageHeader](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#pageheader)
-1. [HamburgerMenu](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#hamburgermenu)
-1. [CustomTitleBar](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#customtitlebar)
-1. [ModalDialog](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#modaldialog)
-1. [Resizer](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#resizer)
+1. [PageHeader](https://github.com/Windows-XAML/Template10/wiki/Controls#pageheader)
+1. [HamburgerMenu](https://github.com/Windows-XAML/Template10/wiki/Controls#hamburgermenu)
+1. [CustomTitleBar](https://github.com/Windows-XAML/Template10/wiki/Controls#customtitlebar)
+1. [ModalDialog](https://github.com/Windows-XAML/Template10/wiki/Controls#modaldialog)
+1. [Resizer](https://github.com/Windows-XAML/Template10/wiki/Controls#resizer)
 
 #PageHeader
 The control to create a common page element including header text, primary buttons, and secondary buttons. 
 
 ![](http://i.imgur.com/BFG3pSB.png)
 
-1. [Inspiration](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#inspiration)
-1. [CommandBar](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#commandbar)
-1. [Key Features](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#key-features)
-1. [Properties](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#properties)
-1. [Syntax](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#syntax)
-1. [Customization](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#customization)
-1. [Navigation](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#navigation)
-1. [Built-in behavior](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#built-in-behavior)
-1. [Overriding built-in behavior](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#overriding-built-in-behavior)
-1. [Commands](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#commands)
-1. [Phone versus Desktop](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#phone-versus-desktop)
-1. [PageHeader and the HamburgerMenu](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#pageheader-and-the-hamburgermenu)
-1. [Visual States for the Hamburger Button](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#visual-states-for-the-hamburger-button)
-1. [Controlling the Visual States](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#controlling-the-visual-states)
-1. [Disable the Visual States](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-Controls#disable-the-visual-states)
+1. [Inspiration](https://github.com/Windows-XAML/Template10/wiki/Controls#inspiration)
+1. [CommandBar](https://github.com/Windows-XAML/Template10/wiki/Controls#commandbar)
+1. [Key Features](https://github.com/Windows-XAML/Template10/wiki/Controls#key-features)
+1. [Properties](https://github.com/Windows-XAML/Template10/wiki/Controls#properties)
+1. [Syntax](https://github.com/Windows-XAML/Template10/wiki/Controls#syntax)
+1. [Customization](https://github.com/Windows-XAML/Template10/wiki/Controls#customization)
+1. [Navigation](https://github.com/Windows-XAML/Template10/wiki/Controls#navigation)
+1. [Built-in behavior](https://github.com/Windows-XAML/Template10/wiki/Controls#built-in-behavior)
+1. [Overriding built-in behavior](https://github.com/Windows-XAML/Template10/wiki/Controls#overriding-built-in-behavior)
+1. [Commands](https://github.com/Windows-XAML/Template10/wiki/Controls#commands)
+1. [Phone versus Desktop](https://github.com/Windows-XAML/Template10/wiki/Controls#phone-versus-desktop)
+1. [PageHeader and the HamburgerMenu](https://github.com/Windows-XAML/Template10/wiki/Controls#pageheader-and-the-hamburgermenu)
+1. [Visual States for the Hamburger Button](https://github.com/Windows-XAML/Template10/wiki/Controls#visual-states-for-the-hamburger-button)
+1. [Controlling the Visual States](https://github.com/Windows-XAML/Template10/wiki/Controls#controlling-the-visual-states)
+1. [Disable the Visual States](https://github.com/Windows-XAML/Template10/wiki/Controls#disable-the-visual-states)
 
 
 
@@ -537,7 +537,7 @@ To get a reference to the NavigationService we need for the HamburgerMenu contro
 After these changes, we'll notice that the application, at startup, will be indeed redirected to the main page (as per the navigation triggered in the **OnStartAsync()** method), but the HamburgerMenu control defined in the shell page will be visible too.
 
 ##PageHeader and the HamburgerMenu
-The HamburgerMenu control is a great companion of the PageHeader one, also provided by Template10. You can learn more about how to use them together in the [PageHeader documentation](https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-PageHeader#pageheader-and-the-hamburgermenu)
+The HamburgerMenu control is a great companion of the PageHeader one, also provided by Template10. You can learn more about how to use them together in the [PageHeader documentation](https://github.com/Windows-XAML/Template10/wiki/PageHeader#pageheader-and-the-hamburgermenu)
 
 ##Visual States for the HamburgerMenu
 
