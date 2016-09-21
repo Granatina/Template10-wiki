@@ -130,7 +130,7 @@ Specifically:
 
 1. The developer may choose to let the operating system draw a back button in the chrome of the application. This can be set using the Bootstrapper.ShowShellBackButton property. When the shell-drawn back button is visible, the PageHeader's on-canvas back button will not be visible. 
 
-- When DeviceFamily=Desktop + Mode=Mouse, the shell-drawn back button in the application's title bar. 
+- When DeviceFamily=Desktop + Mode=Mouse, the shell-drawn back button is in the application's title bar. 
 - When DeviceFamily=Desktop + Mode=Touch, the shell-drawn back button is in the task bar.
 - When DeviceFamily=Mobile, the shell-drawn back button is in the navigation bar.
 
