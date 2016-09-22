@@ -326,9 +326,20 @@ The intent of the `NavToPageAction` is to navigate to the specified page using t
 
 ####Properties
 ````CSHARP
-insert
+* **Frame**, Window.UI.XAML.Controls.Frame, required
+* **Page**, string, required, full name (App.Views.MainPage)
+* **Parameter**, string, optional
+* **InfoOverride**, optional, Window.UI.XAML.Media.Animation.NavigationTransitionInfo
 ````
 ####Syntax
 ````XAML
-syntax
+<Button Content="Click me">
+    <Interactivity:Interaction.Behaviors>
+        <Core:EventTriggerBehavior EventName="Click">
+            <b:NavToPageAction 
+                Frame="{x:Bind Frame}" 
+                Page="MultiplePageHeaders.Views.ContainerPage" />
+        </Core:EventTriggerBehavior>
+    </Interactivity:Interaction.Behaviors>
+</Button>
 ````
